@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
 
     const whatsappMessage = `*Novo Contato via Site*%0A%0A*Nome:* ${formData.name}%0A*Email:* ${formData.email}%0A*Serviço:* ${formData.service}%0A*Mensagem:* ${formData.message}`;
 
-    window.open(`https://wa.me/551127815588?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/5511947483910?text=${whatsappMessage}`, '_blank');
 
     setFormSent(true);
     setTimeout(() => setFormSent(false), 5000);

@@ -209,7 +209,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/551127815588"
+        href="https://wa.me/5511947483910"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 animate-in slide-in-from-bottom-5"
