@@ -210,6 +210,124 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria VRLA GetPower 07Ah 12V Selada, custo-benefício para proteção básica.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 7Ah', 'Custo-Benfício']
+  },
+
+  // --- Estabilizadores APC & Schneider ---
+  {
+    id: 'stab-cubic-300',
+    name: 'Estabilizador 300 W',
+    category: 'stabilizers',
+    series: 'APC Microsol CUBIC',
+    description: 'Estabilizador 300 W APC Microsol CUBIC300-BR 115V para proteção de eletrônicos domésticos.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH', // Placeholder Map
+    badge: '115V',
+    specs: ['300W', '4 Tomadas']
+  },
+  {
+    id: 'stab-cubic-300bi',
+    name: 'Estabilizador 300 W Bivolt',
+    category: 'stabilizers',
+    series: 'APC Microsol CUBIC',
+    description: 'Estabilizador 300 W APC Microsol CUBIC300BI-BR Bivolt/115 automatico.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    badge: 'Bivolt',
+    specs: ['300W', 'Entrada Bivolt']
+  },
+  {
+    id: 'stab-cubic-500',
+    name: 'Estabilizador 500 W',
+    category: 'stabilizers',
+    series: 'APC Microsol CUBIC',
+    description: 'Estabilizador 500 W APC Microsol CUBIC500-BR 115V para maior capacidade.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['500W', 'Design Compacto']
+  },
+  {
+    id: 'stab-hexus-500',
+    name: 'Estabilizador 500 W Hexus',
+    category: 'stabilizers',
+    series: 'APC Microsol HEXUS',
+    description: 'Estabilizador 500 W APC Microsol HEXUS500BI, proteção ideal para computadores.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    badge: 'Hexus',
+    specs: ['500W', 'Microprocessado']
+  },
+  {
+    id: 'stab-sol-1000',
+    name: 'Estabilizador 1000 W',
+    category: 'stabilizers',
+    series: 'APC Sol',
+    description: 'Estabilizador 1000 W APC Sol SOL1000G4BI-BR Bivolt/115 para escritórios.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['1000W', '8 Tomadas']
+  },
+  {
+    id: 'stab-sol-1500',
+    name: 'Estabilizador 1500 W',
+    category: 'stabilizers',
+    series: 'APC Sol',
+    description: 'Estabilizador 1500 W APC Microsol SOL1500BI para equipamentos de alto consumo.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    badge: '1500W',
+    specs: ['1500W', 'Proteção Fax/Modem']
+  },
+  {
+    id: 'stab-sol-2000',
+    name: 'Estabilizador 2000 W',
+    category: 'stabilizers',
+    series: 'APC Sol',
+    description: 'Estabilizador 2000 W APC Microsol SOL2000BI, potência elevada para servidores.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['2000W', 'Gerenciamento Inteligente']
+  },
+  {
+    id: 'stab-fridge-2000',
+    name: 'Estabilizador 2000 W Geladeira',
+    category: 'stabilizers',
+    series: 'APC Fridge Plus',
+    description: 'Estabilizador 2000 W APC Fridge Plus FR2000PI-BR ideal para eletrodomésticos.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    badge: 'Eletro',
+    specs: ['2000W', 'Delay de Partida']
+  },
+
+  // --- Estabilizadores Schneider Tempo ---
+  {
+    id: 'schneider-5kva',
+    name: 'Estabilizador 5 KVA',
+    category: 'stabilizers',
+    series: 'Schneider Tempo',
+    description: 'Estabilizador 5 KVA SCHNEIDER Tempo, robustez industrial.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    badge: 'Industrial',
+    specs: ['5 KVA', 'Alta Precisão']
+  },
+  {
+    id: 'schneider-7.5kva',
+    name: 'Estabilizador 7.5 KVA',
+    category: 'stabilizers',
+    series: 'Schneider Tempo',
+    description: 'Estabilizador 7.5 KVA SCHNEIDER Tempo para cargas críticas.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['7.5 KVA', 'Isolação Opcional']
+  },
+  {
+    id: 'schneider-10kva',
+    name: 'Estabilizador 10 KVA',
+    category: 'stabilizers',
+    series: 'Schneider Tempo',
+    description: 'Estabilizador 10 KVA SCHNEIDER Tempo, proteção máxima para grandes sistemas.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['10 KVA', 'Monitoramento Digital']
+  },
+  {
+    id: 'schneider-15kva',
+    name: 'Estabilizador 15 KVA',
+    category: 'stabilizers',
+    series: 'Schneider Tempo',
+    description: 'Estabilizador 15 KVA SCHNEIDER Tempo para infraestrutura corporativa.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
+    specs: ['15 KVA', 'Trifásico']
   }
 ];
 
