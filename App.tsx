@@ -18,6 +18,10 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
+  useEffect(() => {
+    console.log("App mounted successfully");
+  }, []);
+
   return (
     <HashRouter>
       <ScrollToTop />
