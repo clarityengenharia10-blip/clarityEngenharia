@@ -7,10 +7,10 @@ const Services: React.FC = () => {
     <div className="animate-in fade-in slide-in-from-right-4 duration-500">
       {/* Hero Header */}
       <section className="mx-auto max-w-[1280px] p-4 md:p-6">
-        <div 
+        <div
           className="flex min-h-[350px] md:min-h-[420px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-2xl items-center justify-center p-6 md:p-8 text-center relative overflow-hidden"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(16, 24, 34, 0.7) 0%, rgba(16, 24, 34, 0.95) 100%), url("${IMAGES.substation}")` 
+          style={{
+            backgroundImage: `linear-gradient(rgba(16, 24, 34, 0.7) 0%, rgba(16, 24, 34, 0.95) 100%), url("${IMAGES.substation}")`
           }}
         >
           <div className="flex flex-col gap-4 max-w-3xl z-10">
@@ -56,6 +56,17 @@ const Services: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-8 pt-6 border-t border-slate-100 dark:border-white/5">
+                  <a
+                    href={`https://wa.me/5511947483910?text=${encodeURIComponent(`Olá, gostaria de saber mais sobre ${s.title}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-bold text-white transition-all hover:bg-blue-600 hover:shadow-lg active:scale-95"
+                  >
+                    <span className="material-symbols-outlined text-lg">chat</span>
+                    Falar com Especialista
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -87,23 +98,23 @@ const Services: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-             <div className="absolute -inset-4 bg-primary/10 rounded-2xl rotate-2 z-0"></div>
-             <div className="relative z-10 bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-2xl border border-slate-200 dark:border-white/5">
-                <div className="space-y-6">
-                   <div className="flex items-center gap-4 border-b border-slate-100 dark:border-white/5 pb-4">
-                      <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">500+</div>
-                      <p className="text-sm font-bold">Projetos de Engenharia Concluídos</p>
-                   </div>
-                   <div className="flex items-center gap-4 border-b border-slate-100 dark:border-white/5 pb-4">
-                      <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">24/7</div>
-                      <p className="text-sm font-bold">Suporte Técnico e Monitoramento Remoto</p>
-                   </div>
-                   <div className="flex items-center gap-4">
-                      <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">100%</div>
-                      <p className="text-sm font-bold">Conformidade com Normas de Segurança</p>
-                   </div>
+            <div className="absolute -inset-4 bg-primary/10 rounded-2xl rotate-2 z-0"></div>
+            <div className="relative z-10 bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-2xl border border-slate-200 dark:border-white/5">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 border-b border-slate-100 dark:border-white/5 pb-4">
+                  <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">500+</div>
+                  <p className="text-sm font-bold">Projetos de Engenharia Concluídos</p>
                 </div>
-             </div>
+                <div className="flex items-center gap-4 border-b border-slate-100 dark:border-white/5 pb-4">
+                  <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">24/7</div>
+                  <p className="text-sm font-bold">Suporte Técnico e Monitoramento Remoto</p>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="size-10 md:size-12 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-primary font-black text-sm md:text-base">100%</div>
+                  <p className="text-sm font-bold">Conformidade com Normas de Segurança</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
