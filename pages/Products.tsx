@@ -1,27 +1,54 @@
 
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
 
 const Products: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryParam = searchParams.get('category');
+
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Sync state with URL param
+  useEffect(() => {
+    if (categoryParam) {
+      setActiveCategory(categoryParam);
+    } else {
+      setActiveCategory('all');
+    }
+  }, [categoryParam]);
+
+  const handleCategoryChange = (catId: string) => {
+    setActiveCategory(catId);
+    if (catId === 'all') {
+      searchParams.delete('category');
+    } else {
+      searchParams.set('category', catId);
+    }
+    setSearchParams(searchParams);
+  };
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(p => {
       const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
-      const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                           p.series.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.series.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [activeCategory, searchQuery]);
 
   const categories = [
-    { id: 'all', label: 'Todos os Produtos', icon: 'grid_view' },
-    { id: 'ups', label: 'No-breaks (UPS)', icon: 'bolt' },
-    { id: 'stabilizers', label: 'Estabilizadores', icon: 'energy_savings_leaf' },
+    { id: 'all', label: 'Todos', icon: 'grid_view' },
+    { id: 'accessories', label: 'Acessórios', icon: 'cable' },
     { id: 'batteries', label: 'Baterias', icon: 'battery_full' },
-    { id: 'monitoring', label: 'Monitoramento', icon: 'analytics' },
+    { id: 'stabilizers', label: 'Estabilizador', icon: 'energy_savings_leaf' },
+    { id: 'generators', label: 'Geradores', icon: 'electric_bolt' },
+    { id: 'battery_modules', label: 'Módulo de Bateria', icon: 'battery_charging_full' },
+    { id: 'ups', label: 'Nobreak', icon: 'bolt' },
+    { id: 'solar_ups', label: 'Nobreak Solar', icon: 'solar_power' },
+    { id: 'rectifiers', label: 'Retificadores', icon: 'electrical_services' },
+    { id: 'monitoring', label: 'Serviços', icon: 'design_services' },
   ];
 
   return (
@@ -32,16 +59,16 @@ const Products: React.FC = () => {
           <h1 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight">Soluções de Energia</h1>
         </div>
         <div className="flex gap-4">
-           <div className="relative w-full md:w-auto">
-             <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
-             <input 
-               type="text" 
-               placeholder="Buscar equipamento..." 
-               className="pl-10 pr-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none w-full md:w-64"
-               value={searchQuery}
-               onChange={(e) => setSearchQuery(e.target.value)}
-             />
-           </div>
+          <div className="relative w-full md:w-auto">
+            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+            <input
+              type="text"
+              placeholder="Buscar equipamento..."
+              className="pl-10 pr-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none w-full md:w-64"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
         </div>
       </div>
 
@@ -56,11 +83,10 @@ const Products: React.FC = () => {
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all whitespace-nowrap lg:whitespace-normal ${
-                      activeCategory === cat.id 
-                        ? 'bg-primary text-white shadow-lg shadow-primary/20' 
-                        : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-100 dark:border-white/5'
-                    }`}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all whitespace-nowrap lg:whitespace-normal ${activeCategory === cat.id
+                      ? 'bg-primary text-white shadow-lg shadow-primary/20'
+                      : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-100 dark:border-white/5'
+                      }`}
                   >
                     <span className="material-symbols-outlined text-xl">{cat.icon}</span>
                     <span className="font-semibold text-sm">{cat.label}</span>
@@ -111,8 +137,8 @@ const Products: React.FC = () => {
               ))
             ) : (
               <div className="col-span-full py-20 text-center">
-                 <span className="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700 mb-4">search_off</span>
-                 <p className="text-slate-500 dark:text-slate-400 font-medium">Nenhum equipamento encontrado com esses termos.</p>
+                <span className="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700 mb-4">search_off</span>
+                <p className="text-slate-500 dark:text-slate-400 font-medium">Nenhum equipamento encontrado com esses termos.</p>
               </div>
             )}
           </div>

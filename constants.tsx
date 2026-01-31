@@ -62,6 +62,154 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCacXG_l_OIIhxcMFwFnCfXYE6B3wI4IH2PJ_xVQPB7JorCFjdwDjo8D8NPbHaQeMtu5HCTSbfwYVIjbsVVAAKppmUzrqYGi_eCYUBSxstIKrPxI3jgv1vlCrjf3zxMw1ASpDXtvpmvj-KGCOaCZ8ngyjm2vVHzU5ZDl95ZqCMb-ZLHsvdKJ6rubRmAoFs2UmJrDLvcbj5knP8ugs2UrbSArK8PcjjyrtwnwN6DwWsxwakoPIC1QFMksoNaZIfS6m7PV8k-6b2e6ARC',
     badge: 'Novo',
     specs: ['Manutenção Preditiva', 'Telemetria em Tempo Real']
+  },
+  {
+    id: 'card-ap9635',
+    name: 'Cartão AP9635 de Gerenciamento',
+    category: 'accessories',
+    series: 'APC Accessories',
+    description: 'Cartão de gerenciamento de rede 2 AP9635 (NMC2) para monitoramento remoto seguro e eficiente.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos', // Placeholder recycled
+    badge: 'Rede',
+    specs: ['Monitoramento Remoto', 'Compatível com NMC2']
+  },
+  {
+    id: 'card-ap9630',
+    name: 'Cartão AP9630 de Gerenciamento',
+    category: 'accessories',
+    series: 'APC Accessories',
+    description: 'Cartão de Gerenciamento de rede APC AP9630 para no-breaks UPS com suporte a protocolos padrão.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['Protocolos SNMP', 'Fácil Integração']
+  },
+  {
+    id: 'acc-ap9810',
+    name: 'Acessório de E/S AP9810',
+    category: 'accessories',
+    series: 'APC Accessories',
+    description: 'Acessório de E/S de contato seco APC AP9810 para monitoramento ambiental preciso.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['Contato Seco', 'Monitoramento Ambiental']
+  },
+  {
+    id: 'ats-ap4423',
+    name: 'Sistema ATS para Rack AP4423',
+    category: 'accessories',
+    series: 'APC Transfer Switch',
+    description: 'Sistema ATS para rack APC AP4423 230 V, 16 A, com entrada C20 para redundância de energia.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ', // Recycled Rack image
+    badge: 'ATS',
+    specs: ['230V 16A', 'Entrada C20']
+  },
+  {
+    id: 'ats-ap4450',
+    name: 'Sistema ATS para Rack AP4450',
+    category: 'accessories',
+    series: 'APC Transfer Switch',
+    description: 'Sistema ATS para rack APC AP4450, 100/120 V, 15 A, ideal para aplicações críticas de baixa tensão.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
+    specs: ['100/120V 15A', 'Entrada 5-15P']
+  },
+  {
+    id: 'rack-ar3100',
+    name: 'Rack NetShelter SX AR3100',
+    category: 'accessories',
+    series: 'NetShelter SX',
+    description: 'Gabinete para servidores APC NetShelter SX AR3100 42 U, 600mm x 1070mm, otimizado para refrigeração.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
+    badge: 'Rack 42U',
+    specs: ['42U Altura', '600mm Largura']
+  },
+  // --- Baterias VRLA CSB ---
+  {
+    id: 'csb-gp1272',
+    name: 'Bateria VRLA CSB 7Ah',
+    category: 'batteries',
+    series: 'CSB GP Series',
+    description: 'Bateria selada VRLA CSB 12V 7Ah GP1272, ideal para no-breaks e sistemas de segurança.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    badge: 'VRLA',
+    specs: ['12V 7Ah', 'Vida Útil estendida']
+  },
+  {
+    id: 'csb-gp12170',
+    name: 'Bateria VRLA CSB 17Ah',
+    category: 'batteries',
+    series: 'CSB GP Series',
+    description: 'Bateria VRLA CSB 17Ah 12V GP12170 para aplicações de alta descarga.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['12V 17Ah', 'Alta Confiabilidade']
+  },
+
+  // --- Baterias Estacionárias Freedom ---
+  {
+    id: 'freedom-df500',
+    name: 'Bateria Estacionária Freedom DF500',
+    category: 'batteries',
+    series: 'Freedom Estacionária',
+    description: 'Bateria estacionária FREEDOM DF500 36Ah/40Ah para energia solar e backup.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    badge: 'Estacionária',
+    specs: ['36Ah/40Ah', 'Livre de Manutenção']
+  },
+  {
+    id: 'freedom-df1000',
+    name: 'Bateria Estacionária Freedom DF1000',
+    category: 'batteries',
+    series: 'Freedom Estacionária',
+    description: 'Bateria estacionária FREEDOM DF1000 60Ah/70Ah, robustez para sistemas críticos.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['60Ah/70Ah', 'Tecnologia PowerFrame']
+  },
+  {
+    id: 'freedom-df2000',
+    name: 'Bateria Estacionária Freedom DF2000',
+    category: 'batteries',
+    series: 'Freedom Estacionária',
+    description: 'Bateria estacionária de alta capacidade FREEDOM DF2000 para longos períodos de autonomia.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['105Ah/115Ah', 'Alta Durabilidade']
+  },
+
+  // --- Baterias VRLA Moura ---
+  {
+    id: 'moura-12v-7ah',
+    name: 'Bateria VRLA Moura 7Ah',
+    category: 'batteries',
+    series: 'Moura VRLA',
+    description: 'Bateria Moura 12V 7Ah para alarmes e no-breaks residenciais.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['12V 7Ah', 'Qualidade Moura']
+  },
+  {
+    id: 'moura-12v-18ah',
+    name: 'Bateria VRLA Moura 18Ah',
+    category: 'batteries',
+    series: 'Moura VRLA',
+    description: 'Bateria Moura 12V 18Ah para sistemas de UPS de médio porte.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['12V 18Ah', 'Máxima Segurança']
+  },
+
+  // --- Baterias Duracell / Outras ---
+  {
+    id: 'duracell-12te60',
+    name: 'Bateria Estacionária Duracell 12TE60',
+    category: 'batteries',
+    series: 'Duracell Estacionária',
+    description: 'Bateria estacionária Duracell 12TE60 12V/60Ah, energia premium para seu negócio.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    badge: 'Premium',
+    specs: ['60Ah', 'Garantia Estendida']
+  },
+  {
+    id: 'getpower-gpk12-7',
+    name: 'Bateria VRLA GetPower 7Ah',
+    category: 'batteries',
+    series: 'GetPower VRLA',
+    description: 'Bateria VRLA GetPower 07Ah 12V Selada, custo-benefício para proteção básica.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
+    specs: ['12V 7Ah', 'Custo-Benfício']
   }
 ];
 

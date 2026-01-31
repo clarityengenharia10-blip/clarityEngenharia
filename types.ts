@@ -2,7 +2,7 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'ups' | 'stabilizers' | 'batteries' | 'monitoring';
+  category: 'ups' | 'stabilizers' | 'batteries' | 'monitoring' | 'accessories' | 'generators' | 'solar_ups' | 'rectifiers' | 'battery_modules';
   series: string;
   description: string;
   image: string;
