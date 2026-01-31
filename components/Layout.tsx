@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useCart } from '../contexts/CartContext';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,6 +10,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getCartTotal } = useCart();
+  const cartTotal = getCartTotal();
   const location = useLocation();
 
   useEffect(() => {
@@ -54,11 +57,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-semibold transition-colors ${
-                    location.pathname === link.path 
-                      ? 'text-primary' 
-                      : 'text-slate-600 dark:text-slate-300 hover:text-primary'
-                  }`}
+                  className={`text-sm font-semibold transition-colors ${location.pathname === link.path
+                    ? 'text-primary'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-primary'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -75,6 +77,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </span>
               </button>
               <Link
+                to="/cart"
+                className="relative p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                aria-label="Carrinho de Orçamento"
+              >
+                <span className="material-symbols-outlined">shopping_cart</span>
+                {cartTotal > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full animate-in zoom-in">
+                    {cartTotal}
+                  </span>
+                )}
+              </Link>
+              <Link
                 to="/contact"
                 className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
               >
@@ -85,12 +99,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* Mobile Actions */}
           <div className="lg:hidden flex items-center gap-2">
-             <button onClick={toggleDarkMode} className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
-                <span className="material-symbols-outlined">{isDarkMode ? 'light_mode' : 'dark_mode'}</span>
-             </button>
-             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-lg text-slate-900 dark:text-white">
-                <span className="material-symbols-outlined text-2xl">{isMenuOpen ? 'close' : 'menu'}</span>
-             </button>
+            <button onClick={toggleDarkMode} className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
+              <span className="material-symbols-outlined">{isDarkMode ? 'light_mode' : 'dark_mode'}</span>
+            </button>
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-lg text-slate-900 dark:text-white">
+              <span className="material-symbols-outlined text-2xl">{isMenuOpen ? 'close' : 'menu'}</span>
+            </button>
           </div>
         </div>
 
@@ -102,9 +116,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-base font-bold px-4 py-2 rounded-lg ${
-                    location.pathname === link.path ? 'bg-primary/10 text-primary' : 'text-slate-600 dark:text-slate-300'
-                  }`}
+                  className={`text-base font-bold px-4 py-2 rounded-lg ${location.pathname === link.path ? 'bg-primary/10 text-primary' : 'text-slate-600 dark:text-slate-300'
+                    }`}
                 >
                   {link.name}
                 </Link>

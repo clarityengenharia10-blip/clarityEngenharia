@@ -2,11 +2,14 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
+import { useCart } from '../contexts/CartContext';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const product = PRODUCTS.find((p) => p.id === id);
   const [activeThumb, setActiveThumb] = useState(0);
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
 
   if (!product) {
     return (
@@ -24,17 +27,17 @@ const ProductDetail: React.FC = () => {
     <div className="bg-white dark:bg-background-dark min-h-screen">
       <div className="max-w-[1200px] mx-auto px-4 py-10">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
-          
+
           {/* Lado Esquerdo: Galeria de Imagens */}
           <div className="w-full lg:w-2/3 flex flex-col md:flex-row gap-4">
             <div className="flex-1 bg-white border border-slate-200 rounded-lg p-4 flex items-center justify-center min-h-[400px] md:min-h-[500px]">
-              <img 
-                src={thumbnails[activeThumb]} 
-                alt={product.name} 
+              <img
+                src={thumbnails[activeThumb]}
+                alt={product.name}
                 className="max-w-full max-h-full object-contain"
               />
             </div>
-            
+
             {/* Coluna de Miniaturas Vertical */}
             <div className="flex md:flex-col gap-2 order-first md:order-none">
               <div className="hidden md:flex flex-col items-center mb-2">
@@ -42,15 +45,14 @@ const ProductDetail: React.FC = () => {
                   <span className="material-symbols-outlined text-3xl">expand_less</span>
                 </button>
               </div>
-              
+
               <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible no-scrollbar">
                 {thumbnails.map((img, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     onClick={() => setActiveThumb(idx)}
-                    className={`size-20 md:size-24 border-2 rounded-lg p-1 flex-shrink-0 bg-white flex items-center justify-center transition-all ${
-                      activeThumb === idx ? 'border-primary' : 'border-slate-200 hover:border-slate-300'
-                    }`}
+                    className={`size-20 md:size-24 border-2 rounded-lg p-1 flex-shrink-0 bg-white flex items-center justify-center transition-all ${activeThumb === idx ? 'border-primary' : 'border-slate-200 hover:border-slate-300'
+                      }`}
                   >
                     <img src={img} className="max-w-full max-h-full object-contain" />
                   </button>
@@ -70,7 +72,7 @@ const ProductDetail: React.FC = () => {
             <h1 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white leading-tight">
               {product.name}
             </h1>
-            
+
             <div className="h-1 w-16 bg-primary"></div>
 
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
@@ -90,12 +92,27 @@ const ProductDetail: React.FC = () => {
             </div>
 
             {/* Botão Principal de Orçamento */}
-            <Link 
-              to="/contact"
-              className="w-full bg-[#2b6592] hover:bg-[#1e4a6d] text-white text-center py-4 rounded font-bold transition-colors shadow-md"
+            <button
+              onClick={() => {
+                addToCart(product);
+                setAdded(true);
+                setTimeout(() => setAdded(false), 2000);
+              }}
+              disabled={added}
+              className={`w-full text-center py-4 rounded font-bold transition-all shadow-md flex items-center justify-center gap-2 ${added
+                ? 'bg-green-500 text-white cursor-default'
+                : 'bg-[#2b6592] hover:bg-[#1e4a6d] text-white hover:scale-[1.02] active:scale-95'
+                }`}
             >
-              Adicionar ao orçamento
-            </Link>
+              {added ? (
+                <>
+                  <span className="material-symbols-outlined">check</span>
+                  Adicionado ao Orçamento
+                </>
+              ) : (
+                'Adicionar ao orçamento'
+              )}
+            </button>
 
             {/* Links de Documentação */}
             <div className="flex flex-col gap-4 mt-2">
@@ -122,13 +139,13 @@ const ProductDetail: React.FC = () => {
 
           <div className="flex flex-col gap-6 text-slate-600 dark:text-slate-400 leading-relaxed text-base">
             <p>
-              O {product.name} é a solução ideal para garantir a estabilidade elétrica em ambientes que não podem sofrer interrupções. 
-              Desenvolvido com foco em alta eficiência e durabilidade, este equipamento protege seus computadores e periféricos contra 
+              O {product.name} é a solução ideal para garantir a estabilidade elétrica em ambientes que não podem sofrer interrupções.
+              Desenvolvido com foco em alta eficiência e durabilidade, este equipamento protege seus computadores e periféricos contra
               flutuações de tensão e picos de energia que podem comprometer a integridade dos dados e do hardware.
             </p>
             <p>
-              Equipado com sistemas de notificação inteligente, ele informa em tempo real sobre mudanças nas condições de energia da linha 
-              e do próprio sistema de baterias. O recurso de auto-teste periódico assegura que o sistema esteja sempre pronto para atuar, 
+              Equipado com sistemas de notificação inteligente, ele informa em tempo real sobre mudanças nas condições de energia da linha
+              e do próprio sistema de baterias. O recurso de auto-teste periódico assegura que o sistema esteja sempre pronto para atuar,
               detectando precocemente a necessidade de manutenção ou substituição de componentes internos.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 mt-6">
