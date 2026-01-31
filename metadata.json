@@ -1,0 +1,8 @@
+
+{
+  "name": "Clarity Engenharia - Excelência em Energia",
+  "description": "Soluções de engenharia elétrica de alta performance, manutenção de no-breaks, painéis e suporte técnico especializado.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
