@@ -1,12 +1,13 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 export const getTechnicalAdvice = async (userPrompt: string) => {
-  if (!process.env.API_KEY) return "O suporte técnico por IA está offline no momento. Por favor, entre em contato por telefone.";
+  const apiKey = process.env.API_KEY || '';
+  if (!apiKey) return "O suporte técnico por IA está offline no momento. Por favor, entre em contato por telefone.";
 
   try {
+    const ai = new GoogleGenAI({ apiKey });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: userPrompt,
