@@ -9,6 +9,13 @@ const Contact: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [formSent, setFormSent] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: 'Manutenção Preventiva',
+    message: ''
+  });
+
   const handleAiChat = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!prompt.trim()) return;
@@ -18,10 +25,21 @@ const Contact: React.FC = () => {
     setLoading(false);
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const whatsappMessage = `*Novo Contato via Site*%0A%0A*Nome:* ${formData.name}%0A*Email:* ${formData.email}%0A*Serviço:* ${formData.service}%0A*Mensagem:* ${formData.message}`;
+
+    window.open(`https://wa.me/551127815588?text=${whatsappMessage}`, '_blank');
+
     setFormSent(true);
     setTimeout(() => setFormSent(false), 5000);
+    setFormData({ name: '', email: '', service: 'Manutenção Preventiva', message: '' });
   };
 
   return (
@@ -58,23 +76,44 @@ const Contact: React.FC = () => {
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 p-8 rounded-2xl text-center">
               <span className="material-symbols-outlined text-green-500 text-6xl mb-4 fill-icon">check_circle</span>
               <h3 className="text-xl font-bold text-green-800 dark:text-green-300 mb-2">Mensagem Enviada!</h3>
-              <p className="text-green-700 dark:text-green-400">Obrigado por contatar a Clarity Engenharia. Um engenheiro entrará em contato em breve.</p>
+              <p className="text-green-700 dark:text-green-400">Obrigado por contatar a Clarity Engenharia. Você será redirecionado para o WhatsApp.</p>
             </div>
           ) : (
             <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Nome Completo</label>
-                  <input required type="text" placeholder="Ex: João Silva" className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm" />
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Ex: João Silva"
+                    className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                  />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">E-mail Corporativo</label>
-                  <input required type="email" placeholder="joao@empresa.com.br" className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm" />
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="joao@empresa.com.br"
+                    className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                  />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Serviço de Interesse</label>
-                <select className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm">
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleInputChange}
+                  className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                >
                   <option>Manutenção Preventiva</option>
                   <option>Manutenção Corretiva</option>
                   <option>Instalação de Equipamentos</option>
@@ -83,10 +122,18 @@ const Contact: React.FC = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <label className="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">Sua Mensagem</label>
-                <textarea required rows={5} placeholder="Descreva os requisitos técnicos do seu projeto..." className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all resize-none text-sm"></textarea>
+                <textarea
+                  required
+                  rows={5}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Descreva os requisitos técnicos do seu projeto..."
+                  className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all resize-none text-sm"
+                ></textarea>
               </div>
               <button type="submit" className="bg-primary hover:bg-primary/90 text-white py-5 rounded-xl font-black text-lg shadow-xl shadow-primary/20 transition-all active:scale-95">
-                Enviar Orçamento
+                Enviar Orçamento via WhatsApp
               </button>
             </form>
           )}
