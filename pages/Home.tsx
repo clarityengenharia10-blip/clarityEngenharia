@@ -5,8 +5,8 @@ import { useCart } from '../contexts/CartContext';
 import { IMAGES, SERVICES, BRANDS, CLIENTS, TESTIMONIALS, PRODUCTS } from '../constants';
 
 const Home: React.FC = () => {
-    const { cart } = useCart();
-    const cartTotal = cart.reduce((total, item) => total + item.quantity, 0);
+    const { cartItems } = useCart();
+    const cartTotal = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
