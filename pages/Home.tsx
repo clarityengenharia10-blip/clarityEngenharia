@@ -103,13 +103,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Brands Section */}
-      <section className="py-12 border-t border-slate-100">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-10 text-center">
-          <h3 className="text-xl font-bold text-slate-400 uppercase tracking-widest mb-10">Marcas</h3>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500">
-            {BRANDS.map((brand, idx) => (
-              <img key={idx} src={brand.logo} alt={brand.name} className="h-10 md:h-14 object-contain" />
-            ))}
+      <section className="py-12 border-t border-slate-100 overflow-hidden bg-white">
+        <div className="max-w-full">
+          <h3 className="text-center text-xl font-bold text-slate-400 uppercase tracking-widest mb-10">Marcas</h3>
+
+          <div className="relative w-full overflow-hidden mask-image-linear-gradient">
+            <div className="flex w-max animate-scroll hover:pause-animation">
+              {/* Duplicate brands for infinite loop effect */}
+              {[...BRANDS, ...BRANDS, ...BRANDS].map((brand, idx) => (
+                <div key={idx} className="mx-8 md:mx-14 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-70 hover:opacity-100">
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="h-12 md:h-16 w-auto object-contain max-w-[150px]"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
