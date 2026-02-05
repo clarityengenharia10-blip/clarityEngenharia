@@ -354,25 +354,108 @@ export const PRODUCTS: Product[] = [
 
 export const SERVICES: Service[] = [
   {
-    id: 'consultoria',
-    title: 'Consultoria Técnica',
-    icon: 'engineering',
-    description: 'Análise detalhada e projetos personalizados para a segurança energética da sua empresa.',
-    details: ['Projetos Elétricos', 'Eficiência Energética', 'Dimensionamento de Carga']
+    id: 'manutencao-preventiva',
+    title: 'Manutenção Preventiva de Nobreaks',
+    icon: 'health_and_safety',
+    description: 'Garanta a confiabilidade do seu sistema de energia com inspeções periódicas, limpeza e testes preventivos.',
+    details: [
+      'Inspeção visual e limpeza técnica',
+      'Testes de baterias e capacitores',
+      'Verificação de conexões e torque',
+      'Relatório técnico detalhado',
+      'Minimização de riscos de paradas inesperadas'
+    ]
   },
   {
-    id: 'locacao',
-    title: 'Locação de Sistemas',
+    id: 'manutencao-corretiva',
+    title: 'Manutenção Corretiva de Nobreaks',
+    icon: 'build_circle',
+    description: 'Atendimento emergencial e reparo especializado para restabelecer o funcionamento do seu nobreak rapidamente.',
+    details: [
+      'Diagnóstico preciso de falhas',
+      'Substituição de componentes danificados',
+      'Testes de carga e funcionamento',
+      'Atendimento ágil para minimizar downtime',
+      'Garantia nos serviços realizados'
+    ]
+  },
+  {
+    id: 'locacao-nobreak',
+    title: 'Locação de Nobreak',
     icon: 'inventory_2',
-    description: 'Soluções flexíveis de locação de nobreaks e infraestrutura para demandas temporárias ou fixas.',
-    details: ['Contratos Fléxiveis', 'Manutenção Inclusa', 'Equipamentos de Última Geração']
+    description: 'Soluções flexíveis de locação de nobreaks para demandas temporárias, eventos ou backup de emergência.',
+    details: [
+      'Equipamentos de diversas potências',
+      'Instalação e desinstalação inclusas',
+      'Manutenção total durante o período',
+      'Substituição imediata em caso de falha',
+      'Contratos diários, mensais ou anuais'
+    ]
   },
   {
-    id: 'manutencao',
-    title: 'Manutenção de Nobreak',
-    icon: 'build',
-    description: 'Serviços especializados de manutenção preventiva e corretiva para garantir operação contínua.',
-    details: ['Atendimento 24/7', 'Peças Originais', 'Técnicos Certificados']
+    id: 'contrato-manutencao',
+    title: 'Contrato de Manutenção de Nobreak',
+    icon: 'assignment_turned_in',
+    description: 'Tenha tranquilidade total com nossos contratos de manutenção que garantem prioridade e SLA definido.',
+    details: [
+      'Atendimento prioritário 24/7',
+      'Visitas preventivas programadas',
+      'Descontos em peças de reposição',
+      'Back-up de equipamentos (opcional)',
+      'Gestão completa do ciclo de vida do ativo'
+    ]
+  },
+  {
+    id: 'ativacao-startup',
+    title: 'Ativação (Startup) de Nobreaks',
+    icon: 'power_settings_new',
+    description: 'Partida técnica certificada para garantir que seu equipamento novo seja instalado conforme as normas do fabricante.',
+    details: [
+      'Verificação da infraestrutura elétrica',
+      'Configuração de parâmetros operacionais',
+      'Treinamento operacional básico',
+      'Validação da garantia do fabricante',
+      'Emissão de relatório de start-up'
+    ]
+  },
+  {
+    id: 'calibracao-parametrizacao',
+    title: 'Calibração e Parametrização',
+    icon: 'tune',
+    description: 'Ajuste fino dos parâmetros do seu nobreak para operar com máxima eficiência e compatibilidade com sua rede.',
+    details: [
+      'Ajuste de tensões de carga e flutuação',
+      'Configuração de limites de transferência',
+      'Atualização de firmware',
+      'Calibração de sensores de medição',
+      'Otimização para bancos de baterias específicos'
+    ]
+  },
+  {
+    id: 'troca-baterias',
+    title: 'Troca de Baterias de Nobreak',
+    icon: 'battery_charging_full',
+    description: 'Substituição profissional de bancos de baterias com descarte ecológico e certificação.',
+    details: [
+      'Fornecimento de baterias homologadas',
+      'Instalação com segurança e técnica',
+      'Equalização do banco de baterias',
+      'Teste de autonomia real',
+      'Certificado de destinação ambiental (Logística Reversa)'
+    ]
+  },
+  {
+    id: 'consultoria-tecnica',
+    title: 'Consultoria Técnica Especializada',
+    icon: 'engineering',
+    description: 'Análise aprofundada da sua infraestrutura elétrica para propor as melhores soluções de proteção de energia.',
+    details: [
+      'Estudo de qualidade de energia',
+      'Dimensionamento de carga atual e futura',
+      'Projetos de infraestrutura elétrica para TI',
+      'Análise de viabilidade técnica e econômica',
+      'Especificação técnica de equipamentos'
+    ]
   }
 ];
 

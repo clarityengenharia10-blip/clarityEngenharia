@@ -33,7 +33,7 @@ const BlogPost: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-6 md:p-20 text-white">
                     <div className="max-w-4xl mx-auto">
-                        <span className="bg-amber-400 text-[#004e9a] px-3 py-1 rounded font-bold text-xs uppercase tracking-widest mb-4 inline-block">
+                        <span className="bg-sky-500 text-white px-3 py-1 rounded font-bold text-xs uppercase tracking-widest mb-4 inline-block">
                             {post.category}
                         </span>
                         <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6">
@@ -58,7 +58,7 @@ const BlogPost: React.FC = () => {
                 />
 
                 <div className="mt-20 pt-10 border-t border-slate-200">
-                    <Link to="/blog" className="inline-flex items-center gap-2 font-bold text-[#004e9a] hover:text-amber-500 transition-colors">
+                    <Link to="/blog" className="inline-flex items-center gap-2 font-bold text-[#002b5c] hover:text-sky-500 transition-colors">
                         <span className="material-symbols-outlined">arrow_back</span>
                         Voltar para o Blog
                     </Link>

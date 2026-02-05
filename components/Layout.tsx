@@ -30,42 +30,42 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen font-sans">
       {/* Top Bar */}
-      <div className="bg-[#004e9a] text-white text-xs py-2 px-4 md:px-10 hidden lg:flex justify-between items-center">
+      <div className="bg-[#002b5c] text-white text-xs py-2 px-4 md:px-10 hidden lg:flex justify-between items-center">
         <div className="flex gap-6">
-          <Link to="/about" className="hover:text-amber-400 transition-colors">A Empresa</Link>
-          <Link to="/contact" className="hover:text-amber-400 transition-colors">Fale Conosco</Link>
-          <Link to="/partners" className="hover:text-amber-400 transition-colors">Seja um Credenciado</Link>
-          <Link to="/careers" className="hover:text-amber-400 transition-colors">Trabalhe Conosco</Link>
+          <Link to="/about" className="hover:text-sky-400 transition-colors">A Empresa</Link>
+          <Link to="/contact" className="hover:text-sky-400 transition-colors">Fale Conosco</Link>
+          <Link to="/partners" className="hover:text-sky-400 transition-colors">Seja um Credenciado</Link>
+          <Link to="/careers" className="hover:text-sky-400 transition-colors">Trabalhe Conosco</Link>
         </div>
         <div className="flex gap-4">
-          <a href="#" className="hover:text-amber-400"><i className="fab fa-facebook-f"></i> FB</a>
-          <a href="#" className="hover:text-amber-400"><i className="fab fa-instagram"></i> IG</a>
-          <a href="#" className="hover:text-amber-400"><i className="fab fa-linkedin-in"></i> LI</a>
+          <a href="#" className="hover:text-sky-400"><i className="fab fa-facebook-f"></i> FB</a>
+          <a href="#" className="hover:text-sky-400"><i className="fab fa-instagram"></i> IG</a>
+          <a href="#" className="hover:text-sky-400"><i className="fab fa-linkedin-in"></i> LI</a>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b-4 border-amber-400">
+      <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b-4 border-sky-500">
         <div className="max-w-[1400px] mx-auto px-4 md:px-10 h-24 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col leading-none">
-              <span className="text-[#004e9a] font-black text-3xl tracking-tighter italic">CLARITY</span>
-              <span className="text-amber-400 font-bold text-sm tracking-widest text-right">ENGENHARIA</span>
+              <span className="text-[#002b5c] font-black text-3xl tracking-tighter italic">CLARITY</span>
+              <span className="text-sky-500 font-bold text-sm tracking-widest text-right">ENGENHARIA</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-6">
             <nav className="flex items-center gap-6">
-              <Link to="/" className="text-sm font-bold uppercase text-[#004e9a] hover:text-amber-500 transition-colors">Home</Link>
+              <Link to="/" className="text-sm font-bold uppercase text-[#002b5c] hover:text-sky-500 transition-colors">Home</Link>
 
               {/* Produtos Dropdown */}
               <div className="group relative">
-                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
                   Produtos <span className="material-symbols-outlined text-lg">expand_more</span>
                 </button>
-                <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
                       { name: 'Nobreak', link: '/products?category=ups' },
@@ -79,13 +79,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       { name: 'Gabinete', link: '/products?category=accessories' },
                     ].map((item) => (
                       <li key={item.name}>
-                        <Link to={item.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                        <Link to={item.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
                           {item.name}
                         </Link>
                       </li>
                     ))}
                     <li className="border-t border-slate-100 mt-2 pt-2">
-                      <Link to="/products" className="block px-4 py-2 text-sm font-bold text-[#004e9a] hover:underline">
+                      <Link to="/products" className="block px-4 py-2 text-sm font-bold text-[#002b5c] hover:underline">
                         Ver todos os produtos
                       </Link>
                     </li>
@@ -95,16 +95,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Marcas Dropdown */}
               <div className="group relative">
-                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
                   Marcas <span className="material-symbols-outlined text-lg">expand_more</span>
                 </button>
-                <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
                       'Sirius', 'APC Schneider', 'Eaton', 'Vertiv', 'SMS Legrand', 'Delta', 'Intelbras', 'NHS'
                     ].map((brand) => (
                       <li key={brand}>
-                        <Link to={`/products?brand=${brand}`} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                        <Link to={`/products?brand=${brand}`} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
                           {brand}
                         </Link>
                       </li>
@@ -115,10 +115,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Serviços Dropdown */}
               <div className="group relative">
-                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
                   Serviços <span className="material-symbols-outlined text-lg">expand_more</span>
                 </button>
-                <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
                       'Manutenção Preventiva de Nobreaks',
@@ -131,7 +131,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       'Consultoria Técnica Especializada em Nobreak'
                     ].map((service) => (
                       <li key={service}>
-                        <Link to="/services" className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                        <Link to="/services" className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
                           {service}
                         </Link>
                       </li>
@@ -140,8 +140,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
               </div>
 
-              <Link to="/blog" className="text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors">Blog</Link>
-              <Link to="/contact" className="text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors">Contato</Link>
+              <Link to="/blog" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Blog</Link>
+              <Link to="/contact" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Contato</Link>
             </nav>
 
             {/* Search Bar - Visual only for now */}
@@ -149,25 +149,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <input
                 type="text"
                 placeholder="O que você procura?"
-                className="pl-3 pr-8 py-2 border border-slate-300 rounded text-sm w-48 focus:outline-none focus:border-[#004e9a]"
+                className="pl-3 pr-8 py-2 border border-slate-300 rounded text-sm w-48 focus:outline-none focus:border-[#002b5c]"
               />
               <span className="material-symbols-outlined absolute right-2 top-2 text-slate-400 text-lg">search</span>
             </div>
 
             <Link
               to="/contact"
-              className="bg-[#004e9a] hover:bg-[#003b7a] text-white px-5 py-2.5 rounded font-bold text-xs transition-all shadow-md uppercase whitespace-nowrap"
+              className="bg-[#002b5c] hover:bg-[#001f42] text-white px-5 py-2.5 rounded font-bold text-xs transition-all shadow-md uppercase whitespace-nowrap"
             >
               Orçamento
             </Link>
 
             <Link
               to="/cart"
-              className="relative text-[#004e9a] hover:text-amber-500 transition-colors"
+              className="relative text-[#002b5c] hover:text-sky-500 transition-colors"
             >
               <span className="material-symbols-outlined text-3xl">shopping_cart</span>
               {cartTotal > 0 && (
-                <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                <span className="absolute -top-2 -right-2 bg-sky-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
                   {cartTotal}
                 </span>
               )}
@@ -176,15 +176,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* Mobile Toggle */}
           <div className="lg:hidden flex items-center gap-4">
-            <Link to="/cart" className="relative text-[#004e9a]">
+            <Link to="/cart" className="relative text-[#002b5c]">
               <span className="material-symbols-outlined text-2xl">shopping_cart</span>
               {cartTotal > 0 && (
-                <span className="absolute -top-1 -right-1 bg-amber-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-1 bg-sky-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                   {cartTotal}
                 </span>
               )}
             </Link>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#004e9a]">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#002b5c]">
               <span className="material-symbols-outlined text-3xl">{isMenuOpen ? 'close' : 'menu'}</span>
             </button>
           </div>
@@ -199,14 +199,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link to="/contact" className="text-xs text-slate-500 uppercase font-bold">Fale Conosco</Link>
               </div>
 
-              <Link to="/" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-[#004e9a] bg-blue-50">Home</Link>
+              <Link to="/" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-[#002b5c] bg-blue-50">Home</Link>
 
               <div className="px-4 py-2">
                 <p className="text-xs font-bold text-slate-400 uppercase mb-2">Produtos</p>
                 <div className="flex flex-col gap-2 pl-2 border-l-2 border-slate-100">
                   <Link to="/products?category=ups" className="text-sm text-slate-600">Nobreaks</Link>
                   <Link to="/products?category=batteries" className="text-sm text-slate-600">Baterias</Link>
-                  <Link to="/products" className="text-sm text-[#004e9a] font-bold">Ver todos</Link>
+                  <Link to="/products" className="text-sm text-[#002b5c] font-bold">Ver todos</Link>
                 </div>
               </div>
 
@@ -225,7 +225,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <Link
                 to="/contact"
-                className="bg-[#004e9a] text-white text-center px-4 py-3 rounded-lg font-bold mt-4 uppercase"
+                className="bg-[#002b5c] text-white text-center px-4 py-3 rounded-lg font-bold mt-4 uppercase"
               >
                 Peça um orçamento
               </Link>
@@ -247,65 +247,65 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Logo & About */}
             <div className="flex flex-col gap-6">
               <div className="flex flex-col leading-none mb-2">
-                <span className="text-[#004e9a] font-black text-2xl tracking-tighter italic">NOBREAK</span>
-                <span className="text-amber-400 font-bold text-sm tracking-widest text-right">BRASIL</span>
+                <span className="text-[#002b5c] font-black text-2xl tracking-tighter italic">CLARITY</span>
+                <span className="text-sky-500 font-bold text-sm tracking-widest text-right">ENGENHARIA</span>
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
                 Líderes em soluções de energia ininterrupta. Protegendo seu patrimônio e garantindo a produtividade da sua empresa com tecnologia de ponta.
               </p>
               <div className="flex gap-3 mt-2">
-                <a href="#" className="w-8 h-8 rounded bg-[#004e9a] text-white flex items-center justify-center hover:bg-amber-400 transition-colors"><span className="text-xs font-bold">FB</span></a>
-                <a href="#" className="w-8 h-8 rounded bg-[#004e9a] text-white flex items-center justify-center hover:bg-amber-400 transition-colors"><span className="text-xs font-bold">IG</span></a>
+                <a href="#" className="w-8 h-8 rounded bg-[#002b5c] text-white flex items-center justify-center hover:bg-sky-400 transition-colors"><span className="text-xs font-bold">FB</span></a>
+                <a href="#" className="w-8 h-8 rounded bg-[#002b5c] text-white flex items-center justify-center hover:bg-sky-400 transition-colors"><span className="text-xs font-bold">IG</span></a>
               </div>
             </div>
 
             {/* Institucional */}
             <div>
-              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Institucional</h5>
+              <h5 className="font-bold text-[#002b5c] uppercase tracking-wide mb-6">Institucional</h5>
               <ul className="flex flex-col gap-3 text-sm font-medium">
-                <li><Link to="/" className="hover:text-amber-400 transition-colors">Home</Link></li>
-                <li><Link to="/about" className="hover:text-amber-400 transition-colors">Quem Somos</Link></li>
-                <li><Link to="/products" className="hover:text-amber-400 transition-colors">Produtos</Link></li>
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Serviços</Link></li>
-                <li><Link to="/cases" className="hover:text-amber-400 transition-colors">Cases de Sucesso</Link></li>
-                <li><Link to="/contact" className="hover:text-amber-400 transition-colors">Política de Privacidade</Link></li>
+                <li><Link to="/" className="hover:text-sky-400 transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-sky-400 transition-colors">Quem Somos</Link></li>
+                <li><Link to="/products" className="hover:text-sky-400 transition-colors">Produtos</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Serviços</Link></li>
+                <li><Link to="/cases" className="hover:text-sky-400 transition-colors">Cases de Sucesso</Link></li>
+                <li><Link to="/contact" className="hover:text-sky-400 transition-colors">Política de Privacidade</Link></li>
               </ul>
             </div>
 
             {/* Serviços */}
             <div>
-              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Nossos Serviços</h5>
+              <h5 className="font-bold text-[#002b5c] uppercase tracking-wide mb-6">Nossos Serviços</h5>
               <ul className="flex flex-col gap-3 text-sm font-medium">
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Manutenção de Nobreaks</Link></li>
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Locação de Equipamentos</Link></li>
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Instalação e Start-up</Link></li>
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Consultoria Técnica</Link></li>
-                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Contratos de Manutenção</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Manutenção de Nobreaks</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Locação de Equipamentos</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Instalação e Start-up</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Consultoria Técnica</Link></li>
+                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Contratos de Manutenção</Link></li>
               </ul>
             </div>
 
             {/* Contato */}
             <div>
-              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Fale Conosco</h5>
+              <h5 className="font-bold text-[#002b5c] uppercase tracking-wide mb-6">Fale Conosco</h5>
               <ul className="flex flex-col gap-4 text-sm">
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-amber-500 mt-0.5">location_on</span>
+                  <span className="material-symbols-outlined text-sky-500 mt-0.5">location_on</span>
                   <span className="flex-1">R. Aparecida de São Manuel, 338 - Vila Nova York, São Paulo - SP, 03480-010</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-amber-500">call</span>
+                  <span className="material-symbols-outlined text-sky-500">call</span>
                   <span className="font-bold text-lg">(11) 2781-5588</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-amber-500">mail</span>
-                  <a href="mailto:contato@clarity.eng.br" className="hover:text-[#004e9a]">contato@clarity.eng.br</a>
+                  <span className="material-symbols-outlined text-sky-500">mail</span>
+                  <a href="mailto:contato@clarity.eng.br" className="hover:text-[#002b5c]">contato@clarity.eng.br</a>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400">
-            <p>© 2024 Nobreak Brasil. Todos os direitos reservados.</p>
+            <p>© 2024 Clarity Engenharia. Todos os direitos reservados.</p>
             <p>Desenvolvido com excelência.</p>
           </div>
         </div>

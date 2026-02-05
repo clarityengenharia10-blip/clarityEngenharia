@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import ServiceDetail from './pages/ServiceDetail';
 import Cart from './pages/Cart';
 import { CartProvider } from './contexts/CartContext';
 
@@ -39,6 +40,8 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/services" element={<ServiceDetail />} /> {/* Fallback or main list if needed, or redirect */}
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/cart" element={<Cart />} />
             {/* Fallback to home */}
             <Route path="*" element={<Home />} />
