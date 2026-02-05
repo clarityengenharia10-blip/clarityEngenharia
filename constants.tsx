@@ -140,7 +140,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 17Ah', 'Alta Confiabilidade']
   },
-
   // --- Baterias Estacionárias Freedom ---
   {
     id: 'freedom-df500',
@@ -170,7 +169,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['105Ah/115Ah', 'Alta Durabilidade']
   },
-
   // --- Baterias VRLA Moura ---
   {
     id: 'moura-12v-7ah',
@@ -190,7 +188,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 18Ah', 'Máxima Segurança']
   },
-
   // --- Baterias Duracell / Outras ---
   {
     id: 'duracell-12te60',
@@ -211,7 +208,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 7Ah', 'Custo-Benfício']
   },
-
   // --- Estabilizadores APC & Schneider ---
   {
     id: 'stab-cubic-300',
@@ -290,7 +286,6 @@ export const PRODUCTS: Product[] = [
     badge: 'Eletro',
     specs: ['2000W', 'Delay de Partida']
   },
-
   // --- Estabilizadores Schneider Tempo ---
   {
     id: 'schneider-5kva',
@@ -333,32 +328,25 @@ export const PRODUCTS: Product[] = [
 
 export const SERVICES: Service[] = [
   {
-    id: 'preventive',
-    title: 'Manutenção Preventiva',
-    icon: 'shield',
-    description: 'Focada na confiabilidade e longevidade dos ativos através de inspeções térmicas e testes de componentes agendados.',
-    details: ['Termografia', 'Testes de Banco de Carga', 'Auditoria de Saúde de Baterias']
-  },
-  {
-    id: 'corrective',
-    title: 'Manutenção Corretiva',
-    icon: 'build',
-    description: 'Resposta rápida e precisão técnica para restaurar operações de forma eficiente em falhas inesperadas.',
-    details: ['Suporte de Campo 24/7', 'Peças de Reposição Originais', 'Análise de Falhas Rápida']
-  },
-  {
-    id: 'support',
-    title: 'Suporte Técnico',
-    icon: 'support_agent',
-    description: 'Consultoria especializada e disponibilidade 24/7 para resolução de problemas em sistemas complexos.',
-    details: ['Monitoramento Remoto', 'Hotline Técnica', 'Consultoria de Engenharia']
-  },
-  {
-    id: 'installation',
-    title: 'Instalação de Equipamentos',
+    id: 'consultoria',
+    title: 'Consultoria Técnica',
     icon: 'engineering',
-    description: 'Implementação profissional e comissionamento de transformadores, painéis e infraestrutura crítica.',
-    details: ['Comissionamento de Subestações', 'Retrofitting', 'Certificação de Site']
+    description: 'Análise detalhada e projetos personalizados para a segurança energética da sua empresa.',
+    details: ['Projetos Elétricos', 'Eficiência Energética', 'Dimensionamento de Carga']
+  },
+  {
+    id: 'locacao',
+    title: 'Locação de Sistemas',
+    icon: 'inventory_2',
+    description: 'Soluções flexíveis de locação de nobreaks e infraestrutura para demandas temporárias ou fixas.',
+    details: ['Contratos Fléxiveis', 'Manutenção Inclusa', 'Equipamentos de Última Geração']
+  },
+  {
+    id: 'manutencao',
+    title: 'Manutenção de Nobreak',
+    icon: 'build',
+    description: 'Serviços especializados de manutenção preventiva e corretiva para garantir operação contínua.',
+    details: ['Atendimento 24/7', 'Peças Originais', 'Técnicos Certificados']
   }
 ];
 
@@ -368,3 +356,41 @@ export const IMAGES = {
   substation: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB14pl16jH11L_zRMO8B3XdWAlMWvO-ARh2bTbEJ83kHy4fWfPoXIWnMJ3Lv9q0wch48g3U8EmbaN4zzEQc-ryJGyR_XvaoAyrT0_ZNYBGxssPgemToCCQo-MuIpuHObO01uZk76MzduJhTthZj70Oq2TExkAvibKQv1L18ksnMkPohsM6E1X5nDxDRtthBmVgbC53LqtGpn3ZiVQuj5IQ-dB-BBGYamXfV0DS64RB81mTI6kV2JElU5-oLS_566bo7wgB8ZtSWcJsf',
   map: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH'
 };
+
+export const BRANDS = [
+  { name: 'Intelbras', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Intelbras_logo.svg/2560px-Intelbras_logo.svg.png' },
+  { name: 'NHS', logo: 'https://www.nhs.com.br/wp-content/uploads/2021/08/logo-nhs.png' },
+  //   { name: 'Sirius', logo: 'https://siriusenergia.com.br/wp-content/uploads/2021/03/Logo-Sirius.png' }, // Placeholder or try to find a real one
+  { name: 'SMS', logo: 'https://logospng.org/wp-content/uploads/sms-tecnologia-logo.png' },
+  { name: 'Legrand', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Legrand_logo.svg/2560px-Legrand_logo.svg.png' }
+];
+
+export const CLIENTS = [
+  { name: 'Caloi', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Caloi_brand_logo.png' },
+  { name: 'Cinemas Uniplex', logo: 'https://cinemasuniplex.com.br/img/logo.png' }, // Placeholder
+  { name: 'Banco BMG', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Logo_Banco_BMG.svg/2560px-Logo_Banco_BMG.svg.png' },
+  { name: 'Dexco', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Dexco_logo.png' },
+  { name: 'Unimed', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Unimed_Logo.svg/2560px-Unimed_Logo.svg.png' },
+  { name: 'Alibra', logo: 'https://www.alibra.com.br/wp-content/themes/alibra/assets/images/logo.png' },
+];
+
+export const TESTIMONIALS = [
+  {
+    name: 'Wilma Leite',
+    text: 'A empresa é extremamente competente, com ótimos profissionais, super recomendo!',
+    rating: 5,
+    avatar: 'W'
+  },
+  {
+    name: 'Manoel Lucas',
+    text: 'Atendimento muito rápido e eficiente. Resolveram meu problema com agilidade.',
+    rating: 5,
+    avatar: 'M'
+  },
+  {
+    name: 'Paula Zau',
+    text: 'Excelentes profissionais, entrega rápida e ótimo custo benefício. Recomendo!',
+    rating: 5,
+    avatar: 'P'
+  }
+];

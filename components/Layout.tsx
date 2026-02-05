@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
@@ -8,115 +7,130 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getCartTotal } = useCart();
   const cartTotal = getCartTotal();
   const location = useLocation();
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
 
   // Fecha o menu ao mudar de rota
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
-  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
-
   const navLinks = [
-    { name: 'Início', path: '/' },
+    { name: 'Home', path: '/' },
     { name: 'Produtos', path: '/products' },
+    { name: 'Marcas', path: '/#marcas' },
     { name: 'Serviços', path: '/services' },
+    { name: 'Deals', path: '/#deals' }, // Placeholder for specific links if needed
+    { name: 'Blog', path: '/#blog' },
     { name: 'Contato', path: '/contact' },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen transition-colors duration-300">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-white/10">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-10 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="text-primary size-8 transform group-hover:scale-110 transition-transform">
-              <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" />
-              </svg>
+    <div className="flex flex-col min-h-screen font-sans">
+      {/* Top Bar */}
+      <div className="bg-[#004e9a] text-white text-xs py-2 px-4 md:px-10 hidden lg:flex justify-between items-center">
+        <div className="flex gap-6">
+          <Link to="/about" className="hover:text-amber-400 transition-colors">A Empresa</Link>
+          <Link to="/contact" className="hover:text-amber-400 transition-colors">Fale Conosco</Link>
+          <Link to="/partners" className="hover:text-amber-400 transition-colors">Seja um Credenciado</Link>
+          <Link to="/careers" className="hover:text-amber-400 transition-colors">Trabalhe Conosco</Link>
+        </div>
+        <div className="flex gap-4">
+          <a href="#" className="hover:text-amber-400"><i className="fab fa-facebook-f"></i> FB</a>
+          <a href="#" className="hover:text-amber-400"><i className="fab fa-instagram"></i> IG</a>
+          <a href="#" className="hover:text-amber-400"><i className="fab fa-linkedin-in"></i> LI</a>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b-4 border-amber-400">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-10 h-24 flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <div className="flex flex-col leading-none">
+              <span className="text-[#004e9a] font-black text-3xl tracking-tighter italic">NOBREAK</span>
+              <span className="text-amber-400 font-bold text-sm tracking-widest text-right">BRASIL</span>
             </div>
-            <h2 className="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Clarity Engenharia</h2>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
-            <nav className="flex items-center gap-8">
+            <nav className="flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-sm font-semibold transition-colors ${location.pathname === link.path
-                    ? 'text-primary'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-primary'
+                  className={`text-sm font-bold uppercase transition-colors ${location.pathname === link.path
+                    ? 'text-[#004e9a]'
+                    : 'text-slate-600 hover:text-[#004e9a]'
                     }`}
                 >
                   {link.name}
                 </Link>
               ))}
             </nav>
-            <div className="flex items-center gap-4">
-              <button
-                onClick={toggleDarkMode}
-                aria-label="Alternar tema"
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
-              >
-                <span className="material-symbols-outlined">
-                  {isDarkMode ? 'light_mode' : 'dark_mode'}
-                </span>
-              </button>
-              <Link
-                to="/cart"
-                className="relative p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                aria-label="Carrinho de Orçamento"
-              >
-                <span className="material-symbols-outlined">shopping_cart</span>
-                {cartTotal > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full animate-in zoom-in">
-                    {cartTotal}
-                  </span>
-                )}
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
-              >
-                Solicitar Orçamento
-              </Link>
+
+            {/* Search Bar - Visual only for now */}
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="O que você procura?"
+                className="pl-3 pr-8 py-2 border border-slate-300 rounded text-sm w-64 focus:outline-none focus:border-[#004e9a]"
+              />
+              <span className="material-symbols-outlined absolute right-2 top-2 text-slate-400 text-lg">search</span>
             </div>
+
+            <Link
+              to="/contact"
+              className="bg-[#004e9a] hover:bg-[#003b7a] text-white px-6 py-3 rounded font-bold text-sm transition-all shadow-md uppercase"
+            >
+              Peça um orçamento
+            </Link>
+
+            <Link
+              to="/cart"
+              className="relative text-[#004e9a] hover:text-amber-500 transition-colors"
+            >
+              <span className="material-symbols-outlined text-3xl">shopping_cart</span>
+              {cartTotal > 0 && (
+                <span className="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartTotal}
+                </span>
+              )}
+            </Link>
           </div>
 
-          {/* Mobile Actions */}
-          <div className="lg:hidden flex items-center gap-2">
-            <button onClick={toggleDarkMode} className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
-              <span className="material-symbols-outlined">{isDarkMode ? 'light_mode' : 'dark_mode'}</span>
-            </button>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-lg text-slate-900 dark:text-white">
-              <span className="material-symbols-outlined text-2xl">{isMenuOpen ? 'close' : 'menu'}</span>
+          {/* Mobile Toggle */}
+          <div className="lg:hidden flex items-center gap-4">
+            <Link to="/cart" className="relative text-[#004e9a]">
+              <span className="material-symbols-outlined text-2xl">shopping_cart</span>
+              {cartTotal > 0 && (
+                <span className="absolute -top-1 -right-1 bg-amber-500 text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {cartTotal}
+                </span>
+              )}
+            </Link>
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#004e9a]">
+              <span className="material-symbols-outlined text-3xl">{isMenuOpen ? 'close' : 'menu'}</span>
             </button>
           </div>
         </div>
 
         {/* Mobile Menu Drawer */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white dark:bg-background-dark border-b border-slate-200 dark:border-white/10 animate-in slide-in-from-top-2 duration-300">
-            <nav className="flex flex-col p-4 gap-4">
+          <div className="lg:hidden bg-white border-b border-slate-200 animate-in slide-in-from-top-2 duration-300 absolute w-full shadow-xl">
+            <nav className="flex flex-col p-4 gap-2">
+              <div className="flex flex-col gap-2 mb-4 border-b pb-4">
+                <Link to="/about" className="text-xs text-slate-500 uppercase font-bold">A Empresa</Link>
+                <Link to="/contact" className="text-xs text-slate-500 uppercase font-bold">Fale Conosco</Link>
+              </div>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`text-base font-bold px-4 py-2 rounded-lg ${location.pathname === link.path ? 'bg-primary/10 text-primary' : 'text-slate-600 dark:text-slate-300'
+                  className={`text-sm font-bold px-4 py-3 rounded-lg uppercase ${location.pathname === link.path ? 'bg-[#004e9a]/10 text-[#004e9a]' : 'text-slate-600'
                     }`}
                 >
                   {link.name}
@@ -124,9 +138,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               ))}
               <Link
                 to="/contact"
-                className="bg-primary text-white text-center px-4 py-3 rounded-lg font-bold"
+                className="bg-[#004e9a] text-white text-center px-4 py-3 rounded-lg font-bold mt-2 uppercase"
               >
-                Solicitar Orçamento
+                Peça um orçamento
               </Link>
             </nav>
           </div>
@@ -134,75 +148,78 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="flex-1 bg-white">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="bg-background-dark text-white pt-20 pb-10">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <footer className="bg-white border-t border-slate-200 text-slate-600 pt-16 pb-8">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+            {/* Logo & About */}
             <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-3">
-                <div className="text-primary size-8">
-                  <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" />
-                  </svg>
-                </div>
-                <h2 className="text-white text-xl font-bold tracking-tight">Clarity Engenharia</h2>
+              <div className="flex flex-col leading-none mb-2">
+                <span className="text-[#004e9a] font-black text-2xl tracking-tighter italic">NOBREAK</span>
+                <span className="text-amber-400 font-bold text-sm tracking-widest text-right">BRASIL</span>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Liderando o caminho em soluções de engenharia elétrica sustentáveis e eficientes para um futuro brilhante.
+              <p className="text-sm leading-relaxed text-slate-500">
+                Líderes em soluções de energia ininterrupta. Protegendo seu patrimônio e garantindo a produtividade da sua empresa com tecnologia de ponta.
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="material-symbols-outlined text-xl">share</span>
-                </a>
-                <a href="#" className="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors">
-                  <span className="material-symbols-outlined text-xl">public</span>
-                </a>
+              <div className="flex gap-3 mt-2">
+                <a href="#" className="w-8 h-8 rounded bg-[#004e9a] text-white flex items-center justify-center hover:bg-amber-400 transition-colors"><span className="text-xs font-bold">FB</span></a>
+                <a href="#" className="w-8 h-8 rounded bg-[#004e9a] text-white flex items-center justify-center hover:bg-amber-400 transition-colors"><span className="text-xs font-bold">IG</span></a>
               </div>
             </div>
+
+            {/* Institucional */}
             <div>
-              <h5 className="font-bold mb-6 text-lg">Links Rápidos</h5>
-              <ul className="flex flex-col gap-4 text-slate-400 text-sm">
-                <li><Link to="/services" className="hover:text-primary transition-colors">Nossos Serviços</Link></li>
-                <li><Link to="/products" className="hover:text-primary transition-colors">Catálogo de Produtos</Link></li>
-                <li><Link to="/contact" className="hover:text-primary transition-colors">Suporte Técnico</Link></li>
+              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Institucional</h5>
+              <ul className="flex flex-col gap-3 text-sm font-medium">
+                <li><Link to="/" className="hover:text-amber-400 transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-amber-400 transition-colors">Quem Somos</Link></li>
+                <li><Link to="/products" className="hover:text-amber-400 transition-colors">Produtos</Link></li>
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Serviços</Link></li>
+                <li><Link to="/cases" className="hover:text-amber-400 transition-colors">Cases de Sucesso</Link></li>
+                <li><Link to="/contact" className="hover:text-amber-400 transition-colors">Política de Privacidade</Link></li>
               </ul>
             </div>
+
+            {/* Serviços */}
             <div>
-              <h5 className="font-bold mb-6 text-lg">Serviços</h5>
-              <ul className="flex flex-col gap-4 text-slate-400 text-sm">
-                <li><Link to="/services" className="hover:text-primary transition-colors">Manutenção</Link></li>
-                <li><Link to="/services" className="hover:text-primary transition-colors">Instalação</Link></li>
-                <li><Link to="/services" className="hover:text-primary transition-colors">Consultoria</Link></li>
+              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Nossos Serviços</h5>
+              <ul className="flex flex-col gap-3 text-sm font-medium">
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Manutenção de Nobreaks</Link></li>
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Locação de Equipamentos</Link></li>
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Instalação e Start-up</Link></li>
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Consultoria Técnica</Link></li>
+                <li><Link to="/services" className="hover:text-amber-400 transition-colors">Contratos de Manutenção</Link></li>
               </ul>
             </div>
+
+            {/* Contato */}
             <div>
-              <h5 className="font-bold mb-6 text-lg">Contato</h5>
-              <ul className="flex flex-col gap-4 text-slate-400 text-sm">
+              <h5 className="font-bold text-[#004e9a] uppercase tracking-wide mb-6">Fale Conosco</h5>
+              <ul className="flex flex-col gap-4 text-sm">
                 <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary">location_on</span>
-                  R. Aparecida de São Manuel, 338 - Vila Nova York, São Paulo - SP, 03480-010
+                  <span className="material-symbols-outlined text-amber-500 mt-0.5">location_on</span>
+                  <span className="flex-1">R. Aparecida de São Manuel, 338 - Vila Nova York, São Paulo - SP, 03480-010</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary">call</span>
-                  (11) 2781-5588
+                  <span className="material-symbols-outlined text-amber-500">call</span>
+                  <span className="font-bold text-lg">(11) 2781-5588</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary">mail</span>
-                  contato@clarity.eng.br
+                  <span className="material-symbols-outlined text-amber-500">mail</span>
+                  <a href="mailto:contato@clarity.eng.br" className="hover:text-[#004e9a]">contato@clarity.eng.br</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs text-center md:text-left">
-            <p>© 2024 Clarity Engenharia. Todos os direitos reservados.</p>
-            <div className="flex gap-8">
-              <a href="#" className="hover:text-white">Política de Privacidade</a>
-              <a href="#" className="hover:text-white">Termos de Uso</a>
-            </div>
+
+          <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400">
+            <p>© 2024 Nobreak Brasil. Todos os direitos reservados.</p>
+            <p>Desenvolvido com excelência.</p>
           </div>
         </div>
       </footer>
@@ -212,7 +229,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         href="https://wa.me/5511947483910"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 animate-in slide-in-from-bottom-5"
+        className="fixed bottom-6 right-6 z-50 bg-[#25d366] hover:bg-[#128c7e] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 animate-in slide-in-from-bottom-5"
         aria-label="Fale conosco no WhatsApp"
       >
         <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
