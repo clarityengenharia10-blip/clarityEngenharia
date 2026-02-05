@@ -6,8 +6,10 @@ import { PRODUCTS } from '../constants';
 const Products: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const categoryParam = searchParams.get('category');
+  const brandParam = searchParams.get('brand');
 
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [activeBrand, setActiveBrand] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   // Sync state with URL param
@@ -17,7 +19,13 @@ const Products: React.FC = () => {
     } else {
       setActiveCategory('all');
     }
-  }, [categoryParam]);
+
+    if (brandParam) {
+      setActiveBrand(brandParam);
+    } else {
+      setActiveBrand('all');
+    }
+  }, [categoryParam, brandParam]);
 
   const handleCategoryChange = (catId: string) => {
     setActiveCategory(catId);
@@ -32,11 +40,12 @@ const Products: React.FC = () => {
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(p => {
       const matchesCategory = activeCategory === 'all' || p.category === activeCategory;
+      const matchesBrand = activeBrand === 'all' || (p.brand && p.brand.toLowerCase().includes(activeBrand.toLowerCase()));
       const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.series.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
+      return matchesCategory && matchesBrand && matchesSearch;
     });
-  }, [activeCategory, searchQuery]);
+  }, [activeCategory, activeBrand, searchQuery]);
 
   const categories = [
     { id: 'all', label: 'Todos', icon: 'grid_view' },

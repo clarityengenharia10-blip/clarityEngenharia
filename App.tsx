@@ -7,6 +7,8 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Cart from './pages/Cart';
 import { CartProvider } from './contexts/CartContext';
 
@@ -35,6 +37,8 @@ const App: React.FC = () => {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/cart" element={<Cart />} />
             {/* Fallback to home */}
             <Route path="*" element={<Home />} />

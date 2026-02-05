@@ -2,13 +2,14 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'ups' | 'stabilizers' | 'batteries' | 'monitoring' | 'accessories' | 'generators' | 'solar_ups' | 'rectifiers' | 'battery_modules';
+  category: string;
   series: string;
   description: string;
   image: string;
   badge?: string;
   specs: string[];
   powerRange?: string;
+  brand?: string;
 }
 
 export interface Service {
@@ -19,7 +20,31 @@ export interface Service {
   details?: string[];
 }
 
+export interface Brand {
+  name: string;
+  logo: string;
+}
+
 export interface Client {
   name: string;
   logo: string;
+}
+
+export interface Testimonial {
+  name: string;
+  text: string;
+  rating: number;
+  avatar: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  image: string;
+  category: string;
+  readTime: string;
 }

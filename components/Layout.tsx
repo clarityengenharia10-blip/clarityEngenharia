@@ -50,43 +50,115 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col leading-none">
-              <span className="text-[#004e9a] font-black text-3xl tracking-tighter italic">NOBREAK</span>
-              <span className="text-amber-400 font-bold text-sm tracking-widest text-right">BRASIL</span>
+              <span className="text-[#004e9a] font-black text-3xl tracking-tighter italic">CLARITY</span>
+              <span className="text-amber-400 font-bold text-sm tracking-widest text-right">ENGENHARIA</span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             <nav className="flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-sm font-bold uppercase transition-colors ${location.pathname === link.path
-                    ? 'text-[#004e9a]'
-                    : 'text-slate-600 hover:text-[#004e9a]'
-                    }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              <Link to="/" className="text-sm font-bold uppercase text-[#004e9a] hover:text-amber-500 transition-colors">Home</Link>
+
+              {/* Produtos Dropdown */}
+              <div className="group relative">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                  Produtos <span className="material-symbols-outlined text-lg">expand_more</span>
+                </button>
+                <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <ul className="flex flex-col py-2">
+                    {[
+                      { name: 'Nobreak', link: '/products?category=ups' },
+                      { name: 'Bateria', link: '/products?category=batteries' },
+                      { name: 'Módulo/banco de baterias', link: '/products?category=battery_modules' },
+                      { name: 'PDU', link: '/products?category=accessories' },
+                      { name: 'ATS/STS', link: '/products?category=accessories' },
+                      { name: 'Transformador', link: '/products?category=stabilizers' },
+                      { name: 'Placa de Gerenciamento', link: '/products?category=accessories' },
+                      { name: 'Cabo de Energia', link: '/products?category=accessories' },
+                      { name: 'Gabinete', link: '/products?category=accessories' },
+                    ].map((item) => (
+                      <li key={item.name}>
+                        <Link to={item.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                    <li className="border-t border-slate-100 mt-2 pt-2">
+                      <Link to="/products" className="block px-4 py-2 text-sm font-bold text-[#004e9a] hover:underline">
+                        Ver todos os produtos
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Marcas Dropdown */}
+              <div className="group relative">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                  Marcas <span className="material-symbols-outlined text-lg">expand_more</span>
+                </button>
+                <div className="absolute top-full left-0 w-48 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <ul className="flex flex-col py-2">
+                    {[
+                      'Sirius', 'APC Schneider', 'Eaton', 'Vertiv', 'SMS Legrand', 'Delta', 'Intelbras', 'NHS'
+                    ].map((brand) => (
+                      <li key={brand}>
+                        <Link to={`/products?brand=${brand}`} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                          {brand}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Serviços Dropdown */}
+              <div className="group relative">
+                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors py-4">
+                  Serviços <span className="material-symbols-outlined text-lg">expand_more</span>
+                </button>
+                <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-lg border-t-4 border-[#004e9a] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <ul className="flex flex-col py-2">
+                    {[
+                      'Manutenção Preventiva de Nobreaks',
+                      'Manutenção Corretiva de Nobreaks',
+                      'Locação de Nobreak',
+                      'Contrato de Manutenção de Nobreak',
+                      'Ativação (Startup) de Nobreaks',
+                      'Calibração e Parametrização de Nobreaks',
+                      'Troca de Baterias de Nobreak',
+                      'Consultoria Técnica Especializada em Nobreak'
+                    ].map((service) => (
+                      <li key={service}>
+                        <Link to="/services" className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#004e9a] transition-colors border-l-4 border-transparent hover:border-amber-400">
+                          {service}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <Link to="/blog" className="text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors">Blog</Link>
+              <Link to="/contact" className="text-sm font-bold uppercase text-slate-600 hover:text-[#004e9a] transition-colors">Contato</Link>
             </nav>
 
             {/* Search Bar - Visual only for now */}
-            <div className="relative">
+            <div className="relative hidden xl:block">
               <input
                 type="text"
                 placeholder="O que você procura?"
-                className="pl-3 pr-8 py-2 border border-slate-300 rounded text-sm w-64 focus:outline-none focus:border-[#004e9a]"
+                className="pl-3 pr-8 py-2 border border-slate-300 rounded text-sm w-48 focus:outline-none focus:border-[#004e9a]"
               />
               <span className="material-symbols-outlined absolute right-2 top-2 text-slate-400 text-lg">search</span>
             </div>
 
             <Link
               to="/contact"
-              className="bg-[#004e9a] hover:bg-[#003b7a] text-white px-6 py-3 rounded font-bold text-sm transition-all shadow-md uppercase"
+              className="bg-[#004e9a] hover:bg-[#003b7a] text-white px-5 py-2.5 rounded font-bold text-xs transition-all shadow-md uppercase whitespace-nowrap"
             >
-              Peça um orçamento
+              Orçamento
             </Link>
 
             <Link
@@ -120,25 +192,40 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu Drawer */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white border-b border-slate-200 animate-in slide-in-from-top-2 duration-300 absolute w-full shadow-xl">
+          <div className="lg:hidden bg-white border-b border-slate-200 animate-in slide-in-from-top-2 duration-300 absolute w-full shadow-xl h-[calc(100vh-6rem)] overflow-y-auto">
             <nav className="flex flex-col p-4 gap-2">
               <div className="flex flex-col gap-2 mb-4 border-b pb-4">
                 <Link to="/about" className="text-xs text-slate-500 uppercase font-bold">A Empresa</Link>
                 <Link to="/contact" className="text-xs text-slate-500 uppercase font-bold">Fale Conosco</Link>
               </div>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-sm font-bold px-4 py-3 rounded-lg uppercase ${location.pathname === link.path ? 'bg-[#004e9a]/10 text-[#004e9a]' : 'text-slate-600'
-                    }`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+
+              <Link to="/" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-[#004e9a] bg-blue-50">Home</Link>
+
+              <div className="px-4 py-2">
+                <p className="text-xs font-bold text-slate-400 uppercase mb-2">Produtos</p>
+                <div className="flex flex-col gap-2 pl-2 border-l-2 border-slate-100">
+                  <Link to="/products?category=ups" className="text-sm text-slate-600">Nobreaks</Link>
+                  <Link to="/products?category=batteries" className="text-sm text-slate-600">Baterias</Link>
+                  <Link to="/products" className="text-sm text-[#004e9a] font-bold">Ver todos</Link>
+                </div>
+              </div>
+
+              <div className="px-4 py-2">
+                <p className="text-xs font-bold text-slate-400 uppercase mb-2">Marcas</p>
+                <div className="flex flex-col gap-2 pl-2 border-l-2 border-slate-100">
+                  <Link to="/products?brand=APC" className="text-sm text-slate-600">APC</Link>
+                  <Link to="/products?brand=SMS" className="text-sm text-slate-600">SMS</Link>
+                  <Link to="/products?brand=Moura" className="text-sm text-slate-600">Moura</Link>
+                </div>
+              </div>
+
+              <Link to="/services" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Serviços</Link>
+              <Link to="/blog" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Blog</Link>
+              <Link to="/contact" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Contato</Link>
+
               <Link
                 to="/contact"
-                className="bg-[#004e9a] text-white text-center px-4 py-3 rounded-lg font-bold mt-2 uppercase"
+                className="bg-[#004e9a] text-white text-center px-4 py-3 rounded-lg font-bold mt-4 uppercase"
               >
                 Peça um orçamento
               </Link>

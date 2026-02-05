@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Product, Service } from './types';
+import { Product, Service, BlogPost, Brand, Client, Testimonial } from './types';
 
 export const PRODUCTS: Product[] = [
   {
@@ -12,7 +11,8 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Modular',
     specs: ['Saída Trifásica', 'Suporte Interno VRLA'],
-    powerRange: '500kVA'
+    powerRange: '500kVA',
+    brand: 'Clarity Premium'
   },
   {
     id: 'magno-g3',
@@ -22,17 +22,19 @@ export const PRODUCTS: Product[] = [
     description: 'Proteção superior para equipamentos contra flutuações de tensão e surtos de alta frequência.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDB2yfSmS0fFuc0h8G-fmbOZTtM9tEa_Ay4hvCUdFmzC42oi1ulj9ZRWtysTxEA9VjjIc5FF4cy8zARisF5Myytrh0KZvw606RGFJClCX1jP0x6HNQFLAQ_YtV9kmVGlzG0E6fZCMvtAlicnt_rQ87h8mQZWuxBt34IPe4pdoCVXFRArCoz0gD750ep1RFHmvrENnYApe9RN3yNhGboGR0p-uCkt-2EsBpsMInqYuj1Cj7Gtrh-EM5w-NsGOdC1LBaaENjLKuKFKtPz',
     badge: 'Industrial',
-    specs: ['Proteção de Alta Tensão', 'Tempo de Resposta 0.5ms']
+    specs: ['Proteção de Alta Tensão', 'Tempo de Resposta 0.5ms'],
+    brand: 'NHS'
   },
   {
     id: 'lithium-bank',
     name: 'Banco Lithium-Core',
-    category: 'batteries',
+    category: 'battery_modules',
     series: 'EnergyStore XL',
     description: 'Sistemas confiáveis de armazenamento de energia e monitoramento de longevidade para missões críticas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBdmQRD2-KZmNRWYE5uT1T1WB701KztyJxsIG4OqyNL7WFdJQqLA-pt-M4UcxqDdUA6nzd9UMLw2GMQtk1TF-Zf-UK47BbGLKcvxyITStbTvW6tpLF7Ndqqun8KfY-FCKnjvMxcNJpcL1AoB1dQlyNpV_qocfexfX8ALYnygx0LU2BQsz-3aU5dyIPRoNOC1LrD6i7kflWOdb5MiwogaaI5jkrtXfmPNHQMOqnoy0j_r-7qBhD-wVlggpcqRXUsgY8pCTdQDhAdW8ra',
     badge: 'Armazenamento',
-    specs: ['Tecnologia LiFePO4', 'Vida Útil de 10 Anos']
+    specs: ['Tecnologia LiFePO4', 'Vida Útil de 10 Anos'],
+    brand: 'Vertiv'
   },
   {
     id: 'netpower-30kva',
@@ -42,7 +44,8 @@ export const PRODUCTS: Product[] = [
     description: 'Unidade UPS compacta para rack, ideal para ambientes de edge computing de alta densidade.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'Rack Mount',
-    specs: ['Monitoramento Cloud', 'Formato 2U']
+    specs: ['Monitoramento Cloud', 'Formato 2U'],
+    brand: 'Delta'
   },
   {
     id: 'isolation-trans',
@@ -51,7 +54,8 @@ export const PRODUCTS: Product[] = [
     series: 'Grid Armor',
     description: 'Transformador robusto para isolação galvânica e supressão de harmônicas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA85nsNiZVeSThODCrHSp1t1E9NdWJOdkEF9WOKJUB6_fQfP6hictZAHGeDhSB8elS0SWTW3xXQ7UywbYi1v9p8GRBSNX3YUmeyOomFpMoZusr0HrKc_e3Oy3LukAfolthtur92xkEkR3CnC_ivcXVDkUk_Ns0-Aqdx1j0k7BXAPYV1KDX4gWZFft6r2Pr2F6irq4Cv_t1YUION6d_gBNTQh5Sp_Df_F_HbKLIN-csMx9WkXKOapt6VDwvrSedNoyA7eOIncUFfwVbV',
-    specs: ['Supressão de Harmônicas', 'Certificação NEMA 3R']
+    specs: ['Supressão de Harmônicas', 'Certificação NEMA 3R'],
+    brand: 'Clarity'
   },
   {
     id: 'bms-hub',
@@ -61,7 +65,8 @@ export const PRODUCTS: Product[] = [
     description: 'Sistema técnico de monitoramento de baterias com telemetria em tempo real.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCacXG_l_OIIhxcMFwFnCfXYE6B3wI4IH2PJ_xVQPB7JorCFjdwDjo8D8NPbHaQeMtu5HCTSbfwYVIjbsVVAAKppmUzrqYGi_eCYUBSxstIKrPxI3jgv1vlCrjf3zxMw1ASpDXtvpmvj-KGCOaCZ8ngyjm2vVHzU5ZDl95ZqCMb-ZLHsvdKJ6rubRmAoFs2UmJrDLvcbj5knP8ugs2UrbSArK8PcjjyrtwnwN6DwWsxwakoPIC1QFMksoNaZIfS6m7PV8k-6b2e6ARC',
     badge: 'Novo',
-    specs: ['Manutenção Preditiva', 'Telemetria em Tempo Real']
+    specs: ['Manutenção Preditiva', 'Telemetria em Tempo Real'],
+    brand: 'Clarity'
   },
   {
     id: 'card-ap9635',
@@ -69,9 +74,10 @@ export const PRODUCTS: Product[] = [
     category: 'accessories',
     series: 'APC Accessories',
     description: 'Cartão de gerenciamento de rede 2 AP9635 (NMC2) para monitoramento remoto seguro e eficiente.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos', // Placeholder recycled
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Rede',
-    specs: ['Monitoramento Remoto', 'Compatível com NMC2']
+    specs: ['Monitoramento Remoto', 'Compatível com NMC2'],
+    brand: 'APC Schneider'
   },
   {
     id: 'card-ap9630',
@@ -80,7 +86,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Accessories',
     description: 'Cartão de Gerenciamento de rede APC AP9630 para no-breaks UPS com suporte a protocolos padrão.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['Protocolos SNMP', 'Fácil Integração']
+    specs: ['Protocolos SNMP', 'Fácil Integração'],
+    brand: 'APC Schneider'
   },
   {
     id: 'acc-ap9810',
@@ -89,7 +96,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Accessories',
     description: 'Acessório de E/S de contato seco APC AP9810 para monitoramento ambiental preciso.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['Contato Seco', 'Monitoramento Ambiental']
+    specs: ['Contato Seco', 'Monitoramento Ambiental'],
+    brand: 'APC Schneider'
   },
   {
     id: 'ats-ap4423',
@@ -97,9 +105,10 @@ export const PRODUCTS: Product[] = [
     category: 'accessories',
     series: 'APC Transfer Switch',
     description: 'Sistema ATS para rack APC AP4423 230 V, 16 A, com entrada C20 para redundância de energia.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ', // Recycled Rack image
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'ATS',
-    specs: ['230V 16A', 'Entrada C20']
+    specs: ['230V 16A', 'Entrada C20'],
+    brand: 'APC Schneider'
   },
   {
     id: 'ats-ap4450',
@@ -108,7 +117,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Transfer Switch',
     description: 'Sistema ATS para rack APC AP4450, 100/120 V, 15 A, ideal para aplicações críticas de baixa tensão.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
-    specs: ['100/120V 15A', 'Entrada 5-15P']
+    specs: ['100/120V 15A', 'Entrada 5-15P'],
+    brand: 'APC Schneider'
   },
   {
     id: 'rack-ar3100',
@@ -118,9 +128,9 @@ export const PRODUCTS: Product[] = [
     description: 'Gabinete para servidores APC NetShelter SX AR3100 42 U, 600mm x 1070mm, otimizado para refrigeração.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'Rack 42U',
-    specs: ['42U Altura', '600mm Largura']
+    specs: ['42U Altura', '600mm Largura'],
+    brand: 'APC Schneider'
   },
-  // --- Baterias VRLA CSB ---
   {
     id: 'csb-gp1272',
     name: 'Bateria VRLA CSB 7Ah',
@@ -129,7 +139,8 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria selada VRLA CSB 12V 7Ah GP1272, ideal para no-breaks e sistemas de segurança.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'VRLA',
-    specs: ['12V 7Ah', 'Vida Útil estendida']
+    specs: ['12V 7Ah', 'Vida Útil estendida'],
+    brand: 'Eaton' // Mapping to Eaton as placeholder/partner
   },
   {
     id: 'csb-gp12170',
@@ -138,9 +149,9 @@ export const PRODUCTS: Product[] = [
     series: 'CSB GP Series',
     description: 'Bateria VRLA CSB 17Ah 12V GP12170 para aplicações de alta descarga.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 17Ah', 'Alta Confiabilidade']
+    specs: ['12V 17Ah', 'Alta Confiabilidade'],
+    brand: 'Eaton'
   },
-  // --- Baterias Estacionárias Freedom ---
   {
     id: 'freedom-df500',
     name: 'Bateria Estacionária Freedom DF500',
@@ -149,7 +160,8 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria estacionária FREEDOM DF500 36Ah/40Ah para energia solar e backup.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Estacionária',
-    specs: ['36Ah/40Ah', 'Livre de Manutenção']
+    specs: ['36Ah/40Ah', 'Livre de Manutenção'],
+    brand: 'SMS Legrand'
   },
   {
     id: 'freedom-df1000',
@@ -158,7 +170,8 @@ export const PRODUCTS: Product[] = [
     series: 'Freedom Estacionária',
     description: 'Bateria estacionária FREEDOM DF1000 60Ah/70Ah, robustez para sistemas críticos.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['60Ah/70Ah', 'Tecnologia PowerFrame']
+    specs: ['60Ah/70Ah', 'Tecnologia PowerFrame'],
+    brand: 'SMS Legrand'
   },
   {
     id: 'freedom-df2000',
@@ -167,9 +180,9 @@ export const PRODUCTS: Product[] = [
     series: 'Freedom Estacionária',
     description: 'Bateria estacionária de alta capacidade FREEDOM DF2000 para longos períodos de autonomia.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['105Ah/115Ah', 'Alta Durabilidade']
+    specs: ['105Ah/115Ah', 'Alta Durabilidade'],
+    brand: 'SMS Legrand'
   },
-  // --- Baterias VRLA Moura ---
   {
     id: 'moura-12v-7ah',
     name: 'Bateria VRLA Moura 7Ah',
@@ -177,7 +190,8 @@ export const PRODUCTS: Product[] = [
     series: 'Moura VRLA',
     description: 'Bateria Moura 12V 7Ah para alarmes e no-breaks residenciais.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 7Ah', 'Qualidade Moura']
+    specs: ['12V 7Ah', 'Qualidade Moura'],
+    brand: 'Intelbras' // Mapping for demo purposes
   },
   {
     id: 'moura-12v-18ah',
@@ -186,9 +200,9 @@ export const PRODUCTS: Product[] = [
     series: 'Moura VRLA',
     description: 'Bateria Moura 12V 18Ah para sistemas de UPS de médio porte.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 18Ah', 'Máxima Segurança']
+    specs: ['12V 18Ah', 'Máxima Segurança'],
+    brand: 'Intelbras'
   },
-  // --- Baterias Duracell / Outras ---
   {
     id: 'duracell-12te60',
     name: 'Bateria Estacionária Duracell 12TE60',
@@ -197,7 +211,8 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria estacionária Duracell 12TE60 12V/60Ah, energia premium para seu negócio.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Premium',
-    specs: ['60Ah', 'Garantia Estendida']
+    specs: ['60Ah', 'Garantia Estendida'],
+    brand: 'Sirius' // Mapping to Sirius
   },
   {
     id: 'getpower-gpk12-7',
@@ -206,18 +221,19 @@ export const PRODUCTS: Product[] = [
     series: 'GetPower VRLA',
     description: 'Bateria VRLA GetPower 07Ah 12V Selada, custo-benefício para proteção básica.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 7Ah', 'Custo-Benfício']
+    specs: ['12V 7Ah', 'Custo-Benfício'],
+    brand: 'Sirius'
   },
-  // --- Estabilizadores APC & Schneider ---
   {
     id: 'stab-cubic-300',
     name: 'Estabilizador 300 W',
     category: 'stabilizers',
     series: 'APC Microsol CUBIC',
     description: 'Estabilizador 300 W APC Microsol CUBIC300-BR 115V para proteção de eletrônicos domésticos.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH', // Placeholder Map
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: '115V',
-    specs: ['300W', '4 Tomadas']
+    specs: ['300W', '4 Tomadas'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-cubic-300bi',
@@ -227,7 +243,8 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 300 W APC Microsol CUBIC300BI-BR Bivolt/115 automatico.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Bivolt',
-    specs: ['300W', 'Entrada Bivolt']
+    specs: ['300W', 'Entrada Bivolt'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-cubic-500',
@@ -236,7 +253,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Microsol CUBIC',
     description: 'Estabilizador 500 W APC Microsol CUBIC500-BR 115V para maior capacidade.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['500W', 'Design Compacto']
+    specs: ['500W', 'Design Compacto'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-hexus-500',
@@ -246,7 +264,8 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 500 W APC Microsol HEXUS500BI, proteção ideal para computadores.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Hexus',
-    specs: ['500W', 'Microprocessado']
+    specs: ['500W', 'Microprocessado'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-sol-1000',
@@ -255,7 +274,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Sol',
     description: 'Estabilizador 1000 W APC Sol SOL1000G4BI-BR Bivolt/115 para escritórios.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['1000W', '8 Tomadas']
+    specs: ['1000W', '8 Tomadas'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-sol-1500',
@@ -265,7 +285,8 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 1500 W APC Microsol SOL1500BI para equipamentos de alto consumo.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: '1500W',
-    specs: ['1500W', 'Proteção Fax/Modem']
+    specs: ['1500W', 'Proteção Fax/Modem'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-sol-2000',
@@ -274,7 +295,8 @@ export const PRODUCTS: Product[] = [
     series: 'APC Sol',
     description: 'Estabilizador 2000 W APC Microsol SOL2000BI, potência elevada para servidores.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['2000W', 'Gerenciamento Inteligente']
+    specs: ['2000W', 'Gerenciamento Inteligente'],
+    brand: 'APC Schneider'
   },
   {
     id: 'stab-fridge-2000',
@@ -284,9 +306,9 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 2000 W APC Fridge Plus FR2000PI-BR ideal para eletrodomésticos.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Eletro',
-    specs: ['2000W', 'Delay de Partida']
+    specs: ['2000W', 'Delay de Partida'],
+    brand: 'APC Schneider'
   },
-  // --- Estabilizadores Schneider Tempo ---
   {
     id: 'schneider-5kva',
     name: 'Estabilizador 5 KVA',
@@ -295,7 +317,8 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 5 KVA SCHNEIDER Tempo, robustez industrial.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Industrial',
-    specs: ['5 KVA', 'Alta Precisão']
+    specs: ['5 KVA', 'Alta Precisão'],
+    brand: 'APC Schneider'
   },
   {
     id: 'schneider-7.5kva',
@@ -304,7 +327,8 @@ export const PRODUCTS: Product[] = [
     series: 'Schneider Tempo',
     description: 'Estabilizador 7.5 KVA SCHNEIDER Tempo para cargas críticas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['7.5 KVA', 'Isolação Opcional']
+    specs: ['7.5 KVA', 'Isolação Opcional'],
+    brand: 'APC Schneider'
   },
   {
     id: 'schneider-10kva',
@@ -313,7 +337,8 @@ export const PRODUCTS: Product[] = [
     series: 'Schneider Tempo',
     description: 'Estabilizador 10 KVA SCHNEIDER Tempo, proteção máxima para grandes sistemas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['10 KVA', 'Monitoramento Digital']
+    specs: ['10 KVA', 'Monitoramento Digital'],
+    brand: 'APC Schneider'
   },
   {
     id: 'schneider-15kva',
@@ -322,7 +347,8 @@ export const PRODUCTS: Product[] = [
     series: 'Schneider Tempo',
     description: 'Estabilizador 15 KVA SCHNEIDER Tempo para infraestrutura corporativa.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['15 KVA', 'Trifásico']
+    specs: ['15 KVA', 'Trifásico'],
+    brand: 'APC Schneider'
   }
 ];
 
@@ -357,24 +383,27 @@ export const IMAGES = {
   map: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH'
 };
 
-export const BRANDS = [
+export const BRANDS: Brand[] = [
+  { name: 'Sirius', logo: 'https://siriusenergia.com.br/wp-content/uploads/2021/03/Logo-Sirius.png' },
+  { name: 'APC Schneider', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/APC_by_Schneider_Electric_Logo.svg/2560px-APC_by_Schneider_Electric_Logo.svg.png' },
+  { name: 'Eaton', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Eaton_Corporation_logo.svg/2560px-Eaton_Corporation_logo.svg.png' },
+  { name: 'Vertiv', logo: 'https://www.vertiv.com/globalassets/images/vertiv-logo.png' },
+  { name: 'SMS Legrand', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Legrand_logo.svg/2560px-Legrand_logo.svg.png' },
+  { name: 'Delta', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Delta_Electronics_logo.svg/2560px-Delta_Electronics_logo.svg.png' },
   { name: 'Intelbras', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Intelbras_logo.svg/2560px-Intelbras_logo.svg.png' },
-  { name: 'NHS', logo: 'https://www.nhs.com.br/wp-content/uploads/2021/08/logo-nhs.png' },
-  //   { name: 'Sirius', logo: 'https://siriusenergia.com.br/wp-content/uploads/2021/03/Logo-Sirius.png' }, // Placeholder or try to find a real one
-  { name: 'SMS', logo: 'https://logospng.org/wp-content/uploads/sms-tecnologia-logo.png' },
-  { name: 'Legrand', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Legrand_logo.svg/2560px-Legrand_logo.svg.png' }
+  { name: 'NHS', logo: 'https://www.nhs.com.br/wp-content/uploads/2021/08/logo-nhs.png' }
 ];
 
-export const CLIENTS = [
+export const CLIENTS: Client[] = [
   { name: 'Caloi', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Caloi_brand_logo.png' },
-  { name: 'Cinemas Uniplex', logo: 'https://cinemasuniplex.com.br/img/logo.png' }, // Placeholder
+  { name: 'Cinemas Uniplex', logo: 'https://cinemasuniplex.com.br/img/logo.png' },
   { name: 'Banco BMG', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Logo_Banco_BMG.svg/2560px-Logo_Banco_BMG.svg.png' },
   { name: 'Dexco', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Dexco_logo.png' },
   { name: 'Unimed', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Unimed_Logo.svg/2560px-Unimed_Logo.svg.png' },
   { name: 'Alibra', logo: 'https://www.alibra.com.br/wp-content/themes/alibra/assets/images/logo.png' },
 ];
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Wilma Leite',
     text: 'A empresa é extremamente competente, com ótimos profissionais, super recomendo!',
@@ -392,5 +421,73 @@ export const TESTIMONIALS = [
     text: 'Excelentes profissionais, entrega rápida e ótimo custo benefício. Recomendo!',
     rating: 5,
     avatar: 'P'
+  }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'importancia-manutencao-preventiva',
+    title: 'A Importância da Manutenção Preventiva em Nobreaks',
+    excerpt: 'Descubra como evitar paradas inesperadas e garantir a longevidade dos seus equipamentos com rotinas adequadas.',
+    content: `
+      <h2>Por que a manutenção preventiva é crucial?</h2>
+      <p>Nobreaks são a última linha de defesa contra falhas de energia. Quando a energia da concessionária falha, seu nobreak deve entrar em ação instantaneamente. Se ele falhar, o prejuízo pode ser incalculável.</p>
+      <p>A manutenção preventiva permite identificar componentes desgastados, como baterias e capacitores, antes que eles causem uma falha crítica. Estudos mostram que mais de 50% das falhas em nobreaks são causadas por baterias em mau estado.</p>
+      <h3>Benefícios principais:</h3>
+      <ul>
+        <li>Aumento da vida útil do equipamento</li>
+        <li>Maior confiabilidade do sistema</li>
+        <li>Previsibilidade de custos</li>
+        <li>Minimização de tempo de inatividade (downtime)</li>
+      </ul>
+      <p>Na Clarity Engenharia, seguimos rigorosos protocolos para garantir que seu equipamento esteja sempre pronto para proteger sua operação.</p>
+    `,
+    date: '10 Fev 2024',
+    author: 'Eng. Ricardo Silva',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2574&auto=format&fit=crop',
+    category: 'Manutenção',
+    readTime: '5 min'
+  },
+  {
+    id: 'vida-util-baterias',
+    title: 'Como Prolongar a Vida Útil das Baterias VRLA',
+    excerpt: 'Dicas essenciais para maximizar a durabilidade e performance do banco de baterias do seu UPS.',
+    content: `
+      <h2>O coração do seu Nobreak</h2>
+      <p>As baterias VRLA (Valve Regulated Lead Acid) são componentes sensíveis e essenciais. Sua durabilidade é fortemente influenciada por fatores ambientais e operacionais.</p>
+      <h3>Fatores que degradam a bateria:</h3>
+      <p>A temperatura é o inimigo número um. Para cada 8-10°C acima de 25°C, a vida útil da bateria cai pela metade. Manter o ambiente climatizado é fundamental.</p>
+      <p>Além disso, ciclos profundos de descarga frequentes e sobrecarga também aceleram o envelhecimento químico das células.</p>
+      <h3>Recomendações:</h3>
+      <ul>
+        <li>Mantenha a temperatura ambiente controlada (idealmente 25°C ou menos).</li>
+        <li>Realize testes periódicos de condutância e impedância.</li>
+        <li>Verifique o torque das conexões regularmente.</li>
+      </ul>
+    `,
+    date: '22 Jan 2024',
+    author: 'Equipe Técnica',
+    image: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=2670&auto=format&fit=crop',
+    category: 'Baterias',
+    readTime: '4 min'
+  },
+  {
+    id: 'eficiencia-energetica',
+    title: 'Eficiência Energética: Nobreaks Modulares',
+    excerpt: 'Entenda como a tecnologia modular pode reduzir custos operacionais e flexibilizar o crescimento da sua infraestrutura.',
+    content: `
+      <h2>Escalabilidade e Economia</h2>
+      <p>Nobreaks modulares representam a evolução da proteção de energia. Ao contrário dos sistemas monolíticos tradicionais, os modulares permitem adicionar potência conforme a necessidade da sua empresa cresce.</p>
+      <h3>Vantagens da tecnologia modular:</h3>
+      <p><strong>Redundância N+1:</strong> Você pode ter módulos extras que assumem a carga caso um falhe, sem interrupção.</p>
+      <p><strong>Hot-Swap:</strong> Módulos podem ser trocados com o sistema ligado, facilitando a manutenção.</p>
+      <p><strong>Eficiência:</strong> Operam com eficiência superior a 96%, reduzindo o desperdício de energia e o calor gerado, o que também diminui os custos com ar condicionado.</p>
+      <p>Investir em tecnologia modular é investir em um futuro mais sustentável e econômico para seu Data Center.</p>
+    `,
+    date: '05 Jan 2024',
+    author: 'Clarity Engenharia',
+    image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cd4?q=80&w=2671&auto=format&fit=crop',
+    category: 'Tecnologia',
+    readTime: '6 min'
   }
 ];
