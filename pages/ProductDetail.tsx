@@ -81,11 +81,14 @@ const ProductDetail: React.FC = () => {
 
             {/* Grid de Botões Secundários */}
             <div className="grid grid-cols-2 gap-4">
-              <button className="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-white/10 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
+              <a href="#tech-specs" className="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-white/10 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
                 <span className="material-symbols-outlined text-primary text-xl">bolt</span>
                 Dados Técnicos
-              </button>
-              <button className="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-white/10 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
+              </a>
+              <button
+                onClick={() => window.print()}
+                className="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-white/10 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm"
+              >
                 <span className="material-symbols-outlined text-slate-400 text-xl">print</span>
                 Impressão
               </button>
@@ -115,16 +118,30 @@ const ProductDetail: React.FC = () => {
             </button>
 
             {/* Links de Documentação */}
-            <div className="flex flex-col gap-4 mt-2">
-              <div className="flex items-center justify-between border-b border-slate-100 dark:border-white/5 pb-2">
-                <span className="text-sm text-slate-600 dark:text-slate-400">Especificações...</span>
-                <span className="material-symbols-outlined text-slate-400">picture_as_pdf</span>
+            {/* Links de Documentação */}
+            {product.docs && product.docs.length > 0 ? (
+              <div className="flex flex-col gap-4 mt-2">
+                {product.docs.map((doc, idx) => (
+                  <a
+                    key={idx}
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between border-b border-slate-100 dark:border-white/5 pb-2 hover:bg-slate-50 dark:hover:bg-white/5 p-2 rounded transition-colors group"
+                  >
+                    <span className="text-sm text-slate-600 dark:text-slate-400 font-medium group-hover:text-primary transition-colors">{doc.name}</span>
+                    <span className="material-symbols-outlined text-slate-400 group-hover:text-primary">picture_as_pdf</span>
+                  </a>
+                ))}
               </div>
-              <div className="flex items-center justify-between border-b border-slate-100 dark:border-white/5 pb-2">
-                <span className="text-sm text-slate-600 dark:text-slate-400">Manual do...</span>
-                <span className="material-symbols-outlined text-slate-400">picture_as_pdf</span>
+            ) : (
+              <div className="flex flex-col gap-4 mt-2">
+                <div className="flex items-center justify-between border-b border-slate-100 dark:border-white/5 pb-2">
+                  <span className="text-sm text-slate-600 dark:text-slate-400">Especificações...</span>
+                  <span className="material-symbols-outlined text-slate-400">picture_as_pdf</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
@@ -156,6 +173,28 @@ const ProductDetail: React.FC = () => {
                 </div>
               ))}
             </div>
+
+            {/* Detailed Technical Specs Table */}
+            {product.detailedSpecs && (
+              <div id="tech-specs" className="mt-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-6 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary">handyman</span>
+                  Especificações Técnicas
+                </h3>
+                <div className="border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden">
+                  <table className="w-full text-sm text-left">
+                    <tbody className="divide-y divide-slate-200 dark:divide-white/10">
+                      {Object.entries(product.detailedSpecs).map(([key, value], idx) => (
+                        <tr key={key} className={idx % 2 === 0 ? 'bg-slate-50 dark:bg-white/5' : 'bg-white dark:bg-transparent'}>
+                          <th className="px-6 py-4 font-medium text-slate-900 dark:text-white w-1/3">{key}</th>
+                          <td className="px-6 py-4 text-slate-600 dark:text-slate-300">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

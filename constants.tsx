@@ -12,7 +12,22 @@ export const PRODUCTS: Product[] = [
     badge: 'Modular',
     specs: ['Saída Trifásica', 'Suporte Interno VRLA'],
     powerRange: '500kVA',
-    brand: 'Clarity Premium'
+    brand: 'Clarity Premium',
+    detailedSpecs: {
+      'Topologia': 'Online Dupla Conversão',
+      'Potência': '500 kVA / 450 kW',
+      'Tensão de Entrada': '380V Trifásico',
+      'Tensão de Saída': '380V Trifásico',
+      'Fator de Potência': '0.9',
+      'Frequência': '50/60 Hz (Auto-sensing)',
+      'Eficiência': '> 95% em modo online',
+      'Dimensões (AxLxP)': '2000 x 800 x 800 mm',
+      'Peso': '450 kg'
+    },
+    docs: [
+      { name: 'Ficha Técnica', url: '#', type: 'datasheet' },
+      { name: 'Manual do Usuário', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'magno-g3',
@@ -23,7 +38,20 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDB2yfSmS0fFuc0h8G-fmbOZTtM9tEa_Ay4hvCUdFmzC42oi1ulj9ZRWtysTxEA9VjjIc5FF4cy8zARisF5Myytrh0KZvw606RGFJClCX1jP0x6HNQFLAQ_YtV9kmVGlzG0E6fZCMvtAlicnt_rQ87h8mQZWuxBt34IPe4pdoCVXFRArCoz0gD750ep1RFHmvrENnYApe9RN3yNhGboGR0p-uCkt-2EsBpsMInqYuj1Cj7Gtrh-EM5w-NsGOdC1LBaaENjLKuKFKtPz',
     badge: 'Industrial',
     specs: ['Proteção de Alta Tensão', 'Tempo de Resposta 0.5ms'],
-    brand: 'NHS'
+    brand: 'NHS',
+    detailedSpecs: {
+      'Potência': '3000 VA',
+      'Tensão Nominal': '220V',
+      'Faixa de Regulação': '± 15%',
+      'Tempo de Resposta': '< 4ms',
+      'Tomadas': '4 padrão NBR 14136',
+      'Proteção': 'Sub/Sobretensão e surtos',
+      'Peso': '15 kg',
+      'Dimensões': '250 x 150 x 300 mm'
+    },
+    docs: [
+      { name: 'Datasheet Magno G3', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'lithium-bank',
@@ -34,7 +62,20 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBdmQRD2-KZmNRWYE5uT1T1WB701KztyJxsIG4OqyNL7WFdJQqLA-pt-M4UcxqDdUA6nzd9UMLw2GMQtk1TF-Zf-UK47BbGLKcvxyITStbTvW6tpLF7Ndqqun8KfY-FCKnjvMxcNJpcL1AoB1dQlyNpV_qocfexfX8ALYnygx0LU2BQsz-3aU5dyIPRoNOC1LrD6i7kflWOdb5MiwogaaI5jkrtXfmPNHQMOqnoy0j_r-7qBhD-wVlggpcqRXUsgY8pCTdQDhAdW8ra',
     badge: 'Armazenamento',
     specs: ['Tecnologia LiFePO4', 'Vida Útil de 10 Anos'],
-    brand: 'Vertiv'
+    brand: 'Vertiv',
+    detailedSpecs: {
+      'Tecnologia': 'Lítio Ferro Fosfato (LiFePO4)',
+      'Capacidade Nominal': '100Ah',
+      'Tensão Nominal': '48V',
+      'Ciclos de Vida': '> 4000 a 80% DoD',
+      'Comunicação': 'RS485 / CAN',
+      'Peso': '42 kg',
+      'Dimensões': '442 x 130 x 400 mm (Rack 3U)'
+    },
+    docs: [
+      { name: 'Especificações Técnicas', url: '#', type: 'datasheet' },
+      { name: 'Guia de Instalação', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'netpower-30kva',
@@ -45,7 +86,19 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'Rack Mount',
     specs: ['Monitoramento Cloud', 'Formato 2U'],
-    brand: 'Delta'
+    brand: 'Delta',
+    detailedSpecs: {
+      'Potência': '30 kVA',
+      'Formato': 'Rack Mount 19"',
+      'Topologia': 'Online Dupla Conversão',
+      'Eficiência': 'Até 96%',
+      'Tensão de Bateria': '240V DC',
+      'Interface': 'LCD Touchscreen',
+      'Peso': '35 kg'
+    },
+    docs: [
+      { name: 'Brochura NetPower', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'isolation-trans',
@@ -55,7 +108,18 @@ export const PRODUCTS: Product[] = [
     description: 'Transformador robusto para isolação galvânica e supressão de harmônicas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA85nsNiZVeSThODCrHSp1t1E9NdWJOdkEF9WOKJUB6_fQfP6hictZAHGeDhSB8elS0SWTW3xXQ7UywbYi1v9p8GRBSNX3YUmeyOomFpMoZusr0HrKc_e3Oy3LukAfolthtur92xkEkR3CnC_ivcXVDkUk_Ns0-Aqdx1j0k7BXAPYV1KDX4gWZFft6r2Pr2F6irq4Cv_t1YUION6d_gBNTQh5Sp_Df_F_HbKLIN-csMx9WkXKOapt6VDwvrSedNoyA7eOIncUFfwVbV',
     specs: ['Supressão de Harmônicas', 'Certificação NEMA 3R'],
-    brand: 'Clarity'
+    brand: 'Clarity',
+    detailedSpecs: {
+      'Potência': '10 kVA a 300 kVA',
+      'Classe de Isolação': '1.2 kV / 60 Hz',
+      'Grau de Proteção': 'IP21 ou IP54',
+      'Refrigeração': 'Ar natural ou forçada',
+      'Material do Enrolamento': 'Cobre ou Alumínio',
+      'Fator K': 'K1, K4, K13, K20'
+    },
+    docs: [
+      { name: 'Catálogo de Transformadores', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'bms-hub',
@@ -66,7 +130,19 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCacXG_l_OIIhxcMFwFnCfXYE6B3wI4IH2PJ_xVQPB7JorCFjdwDjo8D8NPbHaQeMtu5HCTSbfwYVIjbsVVAAKppmUzrqYGi_eCYUBSxstIKrPxI3jgv1vlCrjf3zxMw1ASpDXtvpmvj-KGCOaCZ8ngyjm2vVHzU5ZDl95ZqCMb-ZLHsvdKJ6rubRmAoFs2UmJrDLvcbj5knP8ugs2UrbSArK8PcjjyrtwnwN6DwWsxwakoPIC1QFMksoNaZIfS6m7PV8k-6b2e6ARC',
     badge: 'Novo',
     specs: ['Manutenção Preditiva', 'Telemetria em Tempo Real'],
-    brand: 'Clarity'
+    brand: 'Clarity',
+    detailedSpecs: {
+      'Monitoramento': 'Tensão, Corrente, Temperatura e Impedância',
+      'Comunicação': 'Ethernet TCP/IP, Modbus',
+      'Sensores': 'Até 256 células por string',
+      'Armazenamento': 'Logs locais e nuvem',
+      'Alimentação': '12V DC ou PoE',
+      'Compatibilidade': 'VRLA, Ventilada, NiCd, Lítio'
+    },
+    docs: [
+      { name: 'Manual de Operação', url: '#', type: 'manual' },
+      { name: 'Overview do Sistema', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'card-ap9635',
@@ -77,7 +153,19 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Rede',
     specs: ['Monitoramento Remoto', 'Compatível com NMC2'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Protocolos': 'HTTP, HTTPS, SNMP, SMTP, Telnet, SSH',
+      'Portas': '1x RJ45 10/100',
+      'Sensores Suportados': 'Temperatura, Umidade (AP9335T)',
+      'Compatibilidade': 'Smart-UPS, Symmetra',
+      'Dimensões': '38 x 121 x 114 mm',
+      'Peso': '0.08 kg'
+    },
+    docs: [
+      { name: 'Manual de Instalação (EN)', url: '#', type: 'manual' },
+      { name: 'Compatibilidade de Firmware', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'card-ap9630',
@@ -87,7 +175,17 @@ export const PRODUCTS: Product[] = [
     description: 'Cartão de Gerenciamento de rede APC AP9630 para no-breaks UPS com suporte a protocolos padrão.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['Protocolos SNMP', 'Fácil Integração'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Protocolos': 'SNMP v1/v3, HTTP',
+      'Conector': 'SmartSlot',
+      'Segurança': 'Criptografia MD5/SHA',
+      'Acesso Remoto': 'Sim, via Web UI',
+      'Peso': '0.09 kg'
+    },
+    docs: [
+      { name: 'Guia Rápido', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'acc-ap9810',
@@ -97,7 +195,17 @@ export const PRODUCTS: Product[] = [
     description: 'Acessório de E/S de contato seco APC AP9810 para monitoramento ambiental preciso.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['Contato Seco', 'Monitoramento Ambiental'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Entradas': '2x Contato Seco',
+      'Saídas': '1x Relé de Saída (12V/24V)',
+      'Compatibilidade': 'Cartões AP9631, AP9635',
+      'Aplicação': 'Monitoramento de temperatura, porta, fumaça',
+      'Peso': '0.15 kg'
+    },
+    docs: [
+      { name: 'Manual de Instalação e Configuração', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'ats-ap4423',
@@ -108,7 +216,20 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'ATS',
     specs: ['230V 16A', 'Entrada C20'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Tensão Nominal': '230V',
+      'Corrente Máxima': '16A',
+      'Conexões de Entrada': '2x IEC-320 C20',
+      'Conexões de Saída': '8x IEC-320 C13, 1x IEC-320 C19',
+      'Tempo de Transferência': '< 10ms',
+      'Formato': 'Rack 1U',
+      'Peso': '3.9 kg'
+    },
+    docs: [
+      { name: 'Manual do Usuário ATS', url: '#', type: 'manual' },
+      { name: 'Desenho Técnico (CAD)', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'ats-ap4450',
@@ -118,7 +239,19 @@ export const PRODUCTS: Product[] = [
     description: 'Sistema ATS para rack APC AP4450, 100/120 V, 15 A, ideal para aplicações críticas de baixa tensão.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     specs: ['100/120V 15A', 'Entrada 5-15P'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Tensão Nominal': '100V / 120V',
+      'Corrente Máxima': '15A',
+      'Conexões de Entrada': '2x NEMA 5-15P',
+      'Conexões de Saída': '10x NEMA 5-15R',
+      'Tempo de Transferência': '< 10ms',
+      'Formato': 'Rack 1U',
+      'Peso': '4.2 kg'
+    },
+    docs: [
+      { name: 'Manual ATS AP4450', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'rack-ar3100',
@@ -129,7 +262,21 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
     badge: 'Rack 42U',
     specs: ['42U Altura', '600mm Largura'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Altura': '42U (1991mm)',
+      'Largura': '600 mm',
+      'Profundidade': '1070 mm',
+      'Carga Estática': '1360 kg',
+      'Carga Dinâmica': '1022 kg',
+      'Peso': '125 kg',
+      'Cor': 'Preto',
+      'Padrão': 'EIA-310-D'
+    },
+    docs: [
+      { name: 'Guia de Montagem', url: '#', type: 'manual' },
+      { name: 'Especificações NetShelter', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'csb-gp1272',
@@ -140,7 +287,20 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'VRLA',
     specs: ['12V 7Ah', 'Vida Útil estendida'],
-    brand: 'Eaton' // Mapping to Eaton as placeholder/partner
+    brand: 'Eaton',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade (20h)': '7.2 Ah',
+      'Tecnologia': 'VRLA AGM',
+      'Terminal': 'F1 / F2 (Faston)',
+      'Vida Útil (Float)': '3 a 5 anos',
+      'Dimensões (AxLxP)': '94 x 151 x 65 mm',
+      'Peso Aproximado': '2.4 kg'
+    },
+    docs: [
+      { name: 'Datasheet CSB GP1272', url: '#', type: 'datasheet' },
+      { name: 'Manual de Segurança', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'csb-gp12170',
@@ -150,7 +310,19 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria VRLA CSB 17Ah 12V GP12170 para aplicações de alta descarga.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 17Ah', 'Alta Confiabilidade'],
-    brand: 'Eaton'
+    brand: 'Eaton',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade (20h)': '17 Ah',
+      'Tecnologia': 'VRLA AGM',
+      'Corrente Máx. Descarga': '230A (5seg)',
+      'Terminal': 'Parafuso M5',
+      'Dimensões (AxLxP)': '167 x 181 x 77 mm',
+      'Peso Aproximado': '5.5 kg'
+    },
+    docs: [
+      { name: 'Datasheet CSB GP12170', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'freedom-df500',
@@ -161,7 +333,19 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Estacionária',
     specs: ['36Ah/40Ah', 'Livre de Manutenção'],
-    brand: 'SMS Legrand'
+    brand: 'SMS Legrand',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade C10': '36 Ah',
+      'Capacidade C20': '40 Ah',
+      'Capacidade C100': '45 Ah',
+      'Dimensões': '175 x 175 x 210 mm',
+      'Peso': '9.8 kg',
+      'Aplicações': 'Nobreak, PABX, Alarmes, Solar'
+    },
+    docs: [
+      { name: 'Ficha Técnica Freedom', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'freedom-df1000',
@@ -171,7 +355,19 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria estacionária FREEDOM DF1000 60Ah/70Ah, robustez para sistemas críticos.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['60Ah/70Ah', 'Tecnologia PowerFrame'],
-    brand: 'SMS Legrand'
+    brand: 'SMS Legrand',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade C10': '60 Ah',
+      'Capacidade C20': '70 Ah',
+      'Capacidade C100': '76 Ah',
+      'Dimensões': '175 x 175 x 244 mm',
+      'Peso': '17.5 kg',
+      'Tecnologia': 'Grade PowerFrame'
+    },
+    docs: [
+      { name: 'Ficha Técnica DF1000', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'freedom-df2000',
@@ -181,7 +377,19 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria estacionária de alta capacidade FREEDOM DF2000 para longos períodos de autonomia.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['105Ah/115Ah', 'Alta Durabilidade'],
-    brand: 'SMS Legrand'
+    brand: 'SMS Legrand',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade C10': '105 Ah',
+      'Capacidade C20': '115 Ah',
+      'Capacidade C100': '124 Ah',
+      'Dimensões': '240 x 175 x 330 mm',
+      'Peso': '28.5 kg',
+      'Vida Útil Projetada': '4 anos'
+    },
+    docs: [
+      { name: 'Datasheet Global Freedom', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'moura-12v-7ah',
@@ -191,7 +399,18 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria Moura 12V 7Ah para alarmes e no-breaks residenciais.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 7Ah', 'Qualidade Moura'],
-    brand: 'Intelbras' // Mapping for demo purposes
+    brand: 'Intelbras',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade': '7 Ah',
+      'Carga em Flutuação': '13.5V ~ 13.8V',
+      'Carga Cíclica': '14.4V ~ 14.8V',
+      'Peso': '2.3 kg',
+      'Dimensões': '94 x 151 x 65 mm'
+    },
+    docs: [
+      { name: 'Folder Moura VRLA', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'moura-12v-18ah',
@@ -201,7 +420,18 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria Moura 12V 18Ah para sistemas de UPS de médio porte.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 18Ah', 'Máxima Segurança'],
-    brand: 'Intelbras'
+    brand: 'Intelbras',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade': '18 Ah',
+      'Tecnologia': 'VRLA AGM',
+      'Conexão': 'Terminal Parafuso',
+      'Peso': '5.5 kg',
+      'Dimensões': '167 x 181 x 77 mm'
+    },
+    docs: [
+      { name: 'Datasheet Moura 18Ah', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'duracell-12te60',
@@ -212,7 +442,18 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     badge: 'Premium',
     specs: ['60Ah', 'Garantia Estendida'],
-    brand: 'Sirius' // Mapping to Sirius
+    brand: 'Sirius',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade Nominal': '60 Ah',
+      'CCA': '480 A',
+      'Reserva de Capacidade': '100 min',
+      'Peso': '14.8 kg',
+      'Dimensões': '244 x 175 x 175 mm'
+    },
+    docs: [
+      { name: 'Especificações Técnicas', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'getpower-gpk12-7',
@@ -222,7 +463,17 @@ export const PRODUCTS: Product[] = [
     description: 'Bateria VRLA GetPower 07Ah 12V Selada, custo-benefício para proteção básica.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
     specs: ['12V 7Ah', 'Custo-Benfício'],
-    brand: 'Sirius'
+    brand: 'Sirius',
+    detailedSpecs: {
+      'Tensão Nominal': '12V',
+      'Capacidade': '7 Ah',
+      'Tipo': 'Selada VRLA',
+      'Peso': '2.1 kg',
+      'Dimensões': '151 x 65 x 95 mm'
+    },
+    docs: [
+      { name: 'Ficha Técnica GetPower', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'stab-cubic-300',
@@ -233,7 +484,18 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: '115V',
     specs: ['300W', '4 Tomadas'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência Nominal': '300W',
+      'Tensão Entrada': '115V',
+      'Tensão Saída': '115V',
+      'Tomadas': '4 Tomadas NBR 14136',
+      'Proteção': 'Fusível',
+      'Peso': '1.8 kg'
+    },
+    docs: [
+      { name: 'Manual Microsol CUBIC', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'stab-cubic-300bi',
@@ -244,7 +506,17 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Bivolt',
     specs: ['300W', 'Entrada Bivolt'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência Nominal': '300W',
+      'Tensão Entrada': '115V / 220V',
+      'Tensão Saída': '115V',
+      'Tomadas': '4 Tomadas',
+      'Peso': '2.1 kg'
+    },
+    docs: [
+      { name: 'Manual CUBIC Bivolt', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'stab-cubic-500',
@@ -254,7 +526,18 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 500 W APC Microsol CUBIC500-BR 115V para maior capacidade.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['500W', 'Design Compacto'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência Nominal': '500W',
+      'Tensão Entrada': '115V',
+      'Tensão Saída': '115V',
+      'Tomadas': '4 Tomadas',
+      'Proteção': 'Disjuntor rearmável',
+      'Peso': '2.4 kg'
+    },
+    docs: [
+      { name: 'Manual CUBIC 500', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'stab-hexus-500',
@@ -265,7 +548,19 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Hexus',
     specs: ['500W', 'Microprocessado'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '500W / 500VA',
+      'Tecnologia': 'Microprocessado RISC',
+      'Tensão Entrada': 'Bivolt Automático',
+      'Tensão Saída': '115V',
+      'Tomadas': '6 Tomadas',
+      'Proteção': 'Linha telefônica / Internet',
+      'Peso': '3.2 kg'
+    },
+    docs: [
+      { name: 'Ficha Técnica HEXUS', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'stab-sol-1000',
@@ -275,7 +570,18 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 1000 W APC Sol SOL1000G4BI-BR Bivolt/115 para escritórios.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['1000W', '8 Tomadas'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '1000W',
+      'Entrada': 'Bivolt',
+      'Saída': '115V',
+      'Tomadas': '8 Tomadas NBR 14136',
+      'Proteção': 'Filtro de Linha integrado',
+      'Peso': '5.6 kg'
+    },
+    docs: [
+      { name: 'Manual do Usuário SOL', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'stab-sol-1500',
@@ -286,7 +592,18 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: '1500W',
     specs: ['1500W', 'Proteção Fax/Modem'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '1500W',
+      'Tensão Entrada': 'Bivolt',
+      'Tensão Saída': '115V',
+      'Sinalização': 'LEDs indicativos',
+      'Peso': '6.8 kg',
+      'Dimensões': '180 x 140 x 300 mm'
+    },
+    docs: [
+      { name: 'Especificações SOL 1500', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'stab-sol-2000',
@@ -296,7 +613,18 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 2000 W APC Microsol SOL2000BI, potência elevada para servidores.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['2000W', 'Gerenciamento Inteligente'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '2000W',
+      'Entrada': 'Bivolt Automático',
+      'Saída': '115V',
+      'Cabo': '2.5mm² com plugue 20A',
+      'Tomadas': '8 Tomadas',
+      'Peso': '7.5 kg'
+    },
+    docs: [
+      { name: 'Manual SOL 2000', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'stab-fridge-2000',
@@ -307,7 +635,18 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Eletro',
     specs: ['2000W', 'Delay de Partida'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Aplicação': 'Geladeiras, Freezers, Lavadoras',
+      'Potência': '2000W (pico motor)',
+      'Recurso': 'Timer de Segurança (Delay)',
+      'Tensão Entrada': 'Bivolt',
+      'Tensão Saída': '115V',
+      'Peso': '4.5 kg'
+    },
+    docs: [
+      { name: 'Guia Fridge Plus', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'schneider-5kva',
@@ -318,7 +657,18 @@ export const PRODUCTS: Product[] = [
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     badge: 'Industrial',
     specs: ['5 KVA', 'Alta Precisão'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '5 kVA',
+      'Fases': 'Monofásico',
+      'Regulação Estática': '± 1%',
+      'Frequência': '60 Hz',
+      'Display': 'Digital Microprocessado',
+      'Peso': '35 kg'
+    },
+    docs: [
+      { name: 'Catálogo Industrial', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'schneider-7.5kva',
@@ -328,7 +678,18 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 7.5 KVA SCHNEIDER Tempo para cargas críticas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['7.5 KVA', 'Isolação Opcional'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '7.5 kVA',
+      'Entrada': '220V',
+      'Saída': '220V / 110V',
+      'Transformador': 'Isolador (Opcional)',
+      'Peso': '45 kg',
+      'Dimensões': '400 x 300 x 500 mm'
+    },
+    docs: [
+      { name: 'Manual Técnico 7.5kVA', url: '#', type: 'manual' }
+    ]
   },
   {
     id: 'schneider-10kva',
@@ -338,7 +699,17 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 10 KVA SCHNEIDER Tempo, proteção máxima para grandes sistemas.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['10 KVA', 'Monitoramento Digital'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '10 kVA',
+      'Tecnologia': 'Tap-Switching (Tiristorizado)',
+      'Distorção Harmônica': '< 3%',
+      'Eficiência': '> 97%',
+      'Peso': '65 kg'
+    },
+    docs: [
+      { name: 'Datasheet Estabilizador 10kVA', url: '#', type: 'datasheet' }
+    ]
   },
   {
     id: 'schneider-15kva',
@@ -348,7 +719,18 @@ export const PRODUCTS: Product[] = [
     description: 'Estabilizador 15 KVA SCHNEIDER Tempo para infraestrutura corporativa.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
     specs: ['15 KVA', 'Trifásico'],
-    brand: 'APC Schneider'
+    brand: 'APC Schneider',
+    detailedSpecs: {
+      'Potência': '15 kVA',
+      'Entrada': '380V / 220V (Trifásico)',
+      'Regulação': 'Independente por fase',
+      'Proteção': 'Disjuntor Geral Tripolar e Bypass',
+      'Peso': '90 kg',
+      'Dimensões': '800 x 600 x 600 mm'
+    },
+    docs: [
+      { name: 'Manual de Serviço 15kVA', url: '#', type: 'manual' }
+    ]
   }
 ];
 

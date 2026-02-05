@@ -10,6 +10,8 @@ export interface Product {
   specs: string[];
   powerRange?: string;
   brand?: string;
+  detailedSpecs?: { [key: string]: string };
+  docs?: { name: string; url: string; type: 'datasheet' | 'manual' }[];
 }
 
 export interface Service {
