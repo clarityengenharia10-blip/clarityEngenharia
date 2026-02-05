@@ -384,14 +384,14 @@ export const IMAGES = {
 };
 
 export const BRANDS: Brand[] = [
-  { name: 'Sirius', logo: 'https://siriusenergia.com.br/wp-content/uploads/2021/03/Logo-Sirius.png' },
-  { name: 'APC Schneider', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/APC_by_Schneider_Electric_Logo.svg/2560px-APC_by_Schneider_Electric_Logo.svg.png' },
-  { name: 'Eaton', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Eaton_Corporation_logo.svg/2560px-Eaton_Corporation_logo.svg.png' },
-  { name: 'Vertiv', logo: 'https://www.vertiv.com/globalassets/images/vertiv-logo.png' },
-  { name: 'SMS Legrand', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Legrand_logo.svg/2560px-Legrand_logo.svg.png' },
-  { name: 'Delta', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Delta_Electronics_logo.svg/2560px-Delta_Electronics_logo.svg.png' },
-  { name: 'Intelbras', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Intelbras_logo.svg/2560px-Intelbras_logo.svg.png' },
-  { name: 'NHS', logo: 'https://www.nhs.com.br/wp-content/uploads/2021/08/logo-nhs.png' }
+  { name: 'Sirius', logo: '/brands/sirius.png' },
+  { name: 'APC Schneider', logo: '/brands/apc.png' },
+  { name: 'Eaton', logo: '/brands/eaton.png' },
+  { name: 'Vertiv', logo: '/brands/vertiv.png' },
+  { name: 'SMS Legrand', logo: '/brands/sms.png' },
+  { name: 'Delta', logo: '/brands/delta.png' },
+  { name: 'Intelbras', logo: '/brands/intelbras.png' },
+  { name: 'NHS', logo: '/brands/nhs.png' }
 ];
 
 export const CLIENTS: Client[] = [
