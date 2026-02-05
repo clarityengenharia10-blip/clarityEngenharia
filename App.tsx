@@ -10,6 +10,9 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import ServiceDetail from './pages/ServiceDetail';
+import About from './pages/About';
+import Partner from './pages/Partner';
+import Careers from './pages/Careers';
 import Cart from './pages/Cart';
 import { CartProvider } from './contexts/CartContext';
 
@@ -42,6 +45,9 @@ const App: React.FC = () => {
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/services" element={<ServiceDetail />} /> {/* Fallback or main list if needed, or redirect */}
             <Route path="/services/:slug" element={<ServiceDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/partners" element={<Partner />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/cart" element={<Cart />} />
             {/* Fallback to home */}
             <Route path="*" element={<Home />} />

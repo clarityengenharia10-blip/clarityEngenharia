@@ -68,8 +68,8 @@ const Contact: React.FC = () => {
         {/* Contact Form */}
         <div className="flex flex-col gap-8 md:gap-10">
           <div>
-            <h2 className="text-slate-900 dark:text-white text-3xl font-black leading-tight mb-3">Envie uma Mensagem</h2>
-            <p className="text-slate-500 dark:text-slate-400">Preencha o formulário abaixo e nossa equipe retornará em até 24 horas úteis.</p>
+            <h2 className="text-[#002b5c] text-3xl font-black leading-tight mb-3">Envie uma Mensagem</h2>
+            <p className="text-slate-500">Preencha o formulário abaixo e nossa equipe retornará em até 24 horas úteis.</p>
           </div>
 
           {formSent ? (
@@ -90,11 +90,11 @@ const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder="Ex: João Silva"
-                    className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                    className="p-4 bg-white border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-sky-500 transition-all text-sm"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="text-slate-700 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">E-mail Corporativo</label>
+                  <label className="text-slate-700 text-xs font-bold uppercase tracking-wider">E-mail Corporativo</label>
                   <input
                     required
                     type="email"
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="joao@empresa.com.br"
-                    className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                    className="p-4 bg-white border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-sky-500 transition-all text-sm"
                   />
                 </div>
               </div>
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all text-sm"
+                  className="p-4 bg-white border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-sky-500 transition-all text-sm"
                 >
                   <option>Manutenção Preventiva</option>
                   <option>Manutenção Corretiva</option>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
                   className="p-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 rounded-xl outline-none focus:ring-2 focus:ring-primary transition-all resize-none text-sm"
                 ></textarea>
               </div>
-              <button type="submit" className="bg-primary hover:bg-primary/90 text-white py-5 rounded-xl font-black text-lg shadow-xl shadow-primary/20 transition-all active:scale-95">
+              <button type="submit" className="bg-[#002b5c] hover:bg-[#001f42] text-white py-5 rounded-xl font-black text-lg shadow-xl shadow-sky-900/20 transition-all active:scale-95">
                 Enviar Orçamento via WhatsApp
               </button>
             </form>
@@ -140,9 +140,9 @@ const Contact: React.FC = () => {
 
           {/* AI Tech Support Assistant */}
           <div className="mt-6 bg-slate-900 rounded-2xl p-6 md:p-8 text-white shadow-2xl relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-1000"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-1000"></div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="material-symbols-outlined text-primary text-2xl md:text-3xl animate-pulse">smart_toy</span>
+              <span className="material-symbols-outlined text-sky-500 text-2xl md:text-3xl animate-pulse">smart_toy</span>
               <h3 className="text-lg md:text-xl font-bold">Assistente de IA Técnico</h3>
             </div>
             <p className="text-slate-400 text-xs md:text-sm mb-6 leading-relaxed">
@@ -152,17 +152,17 @@ const Contact: React.FC = () => {
               <input
                 type="text"
                 placeholder="Ex: Qual a importância da NR-10?"
-                className="flex-1 p-3 bg-white/5 border border-white/10 rounded-xl text-sm focus:outline-none focus:border-primary transition-all"
+                className="flex-1 p-3 bg-white/5 border border-white/10 rounded-xl text-sm focus:outline-none focus:border-sky-500 transition-all text-white"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
               />
-              <button disabled={loading} className="bg-primary p-3 rounded-xl hover:bg-primary/90 disabled:opacity-50">
-                <span className="material-symbols-outlined">{loading ? 'sync' : 'send'}</span>
+              <button disabled={loading} className="bg-[#002b5c] p-3 rounded-xl hover:bg-[#001f42] disabled:opacity-50">
+                <span className="material-symbols-outlined text-white">{loading ? 'sync' : 'send'}</span>
               </button>
             </form>
             {aiResponse && (
               <div className="mt-6 p-4 bg-white/5 border border-white/5 rounded-xl text-xs leading-relaxed text-slate-300 animate-in fade-in slide-in-from-top-2 duration-300">
-                <p className="font-bold text-primary mb-2 uppercase tracking-widest text-[10px]">Análise Técnica:</p>
+                <p className="font-bold text-sky-500 mb-2 uppercase tracking-widest text-[10px]">Análise Técnica:</p>
                 {aiResponse}
               </div>
             )}
@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
 
         {/* Info & Map Column */}
         <div className="flex flex-col gap-10">
-          <div className="bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10">
+          <div className="bg-[#002b5c]/5 rounded-2xl p-6 md:p-8 border border-[#002b5c]/10">
             <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-8">Informações de Contato</h3>
             <div className="flex flex-col gap-8">
               {[
@@ -180,12 +180,12 @@ const Contact: React.FC = () => {
                 { icon: 'mail', title: 'Nossos E-mails', content: 'contato@clarity.eng.br\nsuporte@clarity.eng.br' }
               ].map(item => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="bg-primary rounded-xl p-3 text-white flex items-center justify-center shadow-lg shadow-primary/20 flex-shrink-0">
+                  <div className="bg-[#002b5c] rounded-xl p-3 text-white flex items-center justify-center shadow-lg shadow-sky-900/20 flex-shrink-0">
                     <span className="material-symbols-outlined">{item.icon}</span>
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900 dark:text-white mb-1">{item.title}</p>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm whitespace-pre-line leading-relaxed">{item.content}</p>
+                    <p className="font-bold text-[#002b5c] mb-1">{item.title}</p>
+                    <p className="text-slate-500 text-sm whitespace-pre-line leading-relaxed">{item.content}</p>
                   </div>
                 </div>
               ))}
