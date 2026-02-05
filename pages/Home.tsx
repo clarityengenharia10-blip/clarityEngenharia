@@ -278,7 +278,7 @@ const Home: React.FC = () => {
           </div>
           <div className="flex-1 order-1 md:order-2 text-right">
             <h2 className="text-3xl md:text-4xl font-black text-[#004e9a] mb-6 leading-tight">
-              Nobreak Brasil Energia que protege. Confiança que transforma.
+              Clarity Engenharia Energia que protege. Confiança que transforma.
             </h2>
             <p className="text-slate-500 text-lg leading-relaxed mb-8">
               Com ampla experiência e estoque diversificado, oferecemos as melhores soluções do mercado para garantir que sua empresa nunca pare.
