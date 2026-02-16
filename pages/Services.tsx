@@ -43,7 +43,7 @@ const Services: React.FC = () => {
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                 <span className="material-symbols-outlined text-4xl">{s.icon}</span>
               </div>
-              <div>
+              <div className="flex-1 flex flex-col">
                 <h3 className="text-slate-900 dark:text-white text-xl font-bold mb-4">{s.title}</h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
                   {s.description}
@@ -56,7 +56,7 @@ const Services: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-slate-100 dark:border-white/5">
+                <div className="mt-auto pt-6 border-t border-slate-100 dark:border-white/5">
                   <a
                     href={`https://wa.me/5511947483910?text=${encodeURIComponent(`Olá, gostaria de saber mais sobre ${s.title}`)}`}
                     target="_blank"
