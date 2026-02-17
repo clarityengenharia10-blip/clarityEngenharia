@@ -509,5 +509,170 @@ export const BLOG_POSTS: BlogPost[] = [
     image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cd4?q=80&w=2671&auto=format&fit=crop',
     category: 'Tecnologia',
     readTime: '6 min'
+  },
+  {
+    id: 'monitoramento-remoto-dcim',
+    title: 'Monitoramento Remoto: O Poder do DCIM',
+    excerpt: 'Como sistemas de gestão de infraestrutura de data center (DCIM) transformam a operação e previnem falhas.',
+    content: `
+      <h2>Visibilidade Total</h2>
+      <p>Você não pode gerenciar o que não pode medir. Sistemas DCIM (Data Center Infrastructure Management) fornecem uma visão holística de todo o ecossistema do seu data center.</p>
+      <h3>Funcionalidades Essenciais:</h3>
+      <ul>
+          <li>Monitoramento em tempo real de temperatura e umidade.</li>
+          <li>Gestão de capacidade de energia e refrigeração.</li>
+          <li>Alertas instantâneos via SMS ou E-mail.</li>
+      </ul>
+      <p>Com o DCIM, a equipe de TI pode tomar decisões baseadas em dados, otimizando o consumo e prevenindo pontos de calor (hotspots) antes que afetem os servidores.</p>
+    `,
+    date: '28 Dez 2023',
+    author: 'Equipe de TI',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop',
+    category: 'Gestão',
+    readTime: '5 min'
+  },
+  {
+    id: 'tendencias-data-center-2024',
+    title: 'Tendências para Data Centers em 2024',
+    excerpt: 'Edge Computing, Sustentabilidade e Inteligência Artificial ditam o futuro das infraestruturas críticas.',
+    content: `
+      <h2>O Futuro é Agora</h2>
+      <p>O setor de Data Centers está em rápida transformação. A demanda por processamento de IA e a necessidade de baixa latência estão impulsionando novas arquiteturas.</p>
+      <h3>Principais Tendências:</h3>
+      <p><strong>Edge Computing:</strong> Processamento de dados mais próximo do usuário final para reduzir latência.</p>
+      <p><strong>Sustentabilidade:</strong> Foco em redução do PUE (Power Usage Effectiveness) e uso de energias renováveis.</p>
+      <p><strong>Refrigeração Líquida:</strong> Necessária para suportar os chips de alta densidade usados em IA.</p>
+    `,
+    date: '15 Dez 2023',
+    author: 'Clarity Engenharia',
+    image: 'https://images.unsplash.com/photo-1563968743333-044cef80053b?q=80&w=1965&auto=format&fit=crop',
+    category: 'Tendências',
+    readTime: '4 min'
+  },
+  {
+    id: 'seguranca-eletrica-hospitais',
+    title: 'Segurança Elétrica em Ambientes Hospitalares',
+    excerpt: 'A criticalidade da energia ininterrupta para salvar vidas e manter equipamentos vitais operando.',
+    content: `
+      <h2>Energia que Salva Vidas</h2>
+      <p>Em um hospital, uma falha de energia de segundos pode ser fatal. Equipamentos de suporte à vida, centros cirúrgicos e UTIs dependem de energia 100% limpa e ininterrupta.</p>
+      <p>A norma NBR 13534 estabelece requisitos rigorosos para instalações elétricas em estabelecimentos assistenciais de saúde. O uso de sistemas IT-Médico e Nobreaks de dupla conversão é obrigatório para garantir a segurança dos pacientes e a integridade dos equipamentos sensíveis.</p>
+    `,
+    date: '02 Dez 2023',
+    author: 'Eng. Segurança',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop',
+    category: 'Saúde',
+    readTime: '5 min'
+  },
+  {
+    id: 'climatizacao-precisao',
+    title: 'Ar Condicionado de Precisão vs Conforto',
+    excerpt: 'Por que usar ar condicionado comum no Data Center é um erro que pode custar caro.',
+    content: `
+      <h2>Precisão é tudo</h2>
+      <p>Muitas empresas cometem o erro de instalar ar condicionado "split" (conforto) em salas de servidores. No entanto, esses equipamentos não foram projetados para operar 24/7 nem para lidar com a carga térmica sensível gerada por eletrônicos.</p>
+      <h3>Diferenças Chave:</h3>
+      <p><strong>Controle de Umidade:</strong> Splits retiram muita umidade, gerando eletricidade estática. Equipamentos de precisão controlam a umidade exatamente onde deve estar.</p>
+      <p><strong>Vazão de Ar:</strong> Equipamentos de precisão movimentam muito mais ar (CFM) para dissipar o calor denso dos racks.</p>
+    `,
+    date: '20 Nov 2023',
+    author: 'Especialista HVAC',
+    image: 'https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=2574&auto=format&fit=crop',
+    category: 'Climatização',
+    readTime: '6 min'
+  },
+  {
+    id: 'industria-4-0-energia',
+    title: 'A Qualidade de Energia na Indústria 4.0',
+    excerpt: 'Como a automação industrial moderna exige uma rede elétrica livre de ruídos e harmônicas.',
+    content: `
+      <h2>Automação Sensível</h2>
+      <p>A Indústria 4.0 traz robôs colaborativos, sensores IoT e PLCs avançados. Esses dispositivos são extremamente sensíveis a distúrbios na rede elétrica.</p>
+      <p>Afundamentos de tensão (sags) de milissegundos podem reiniciar um processo produtivo inteiro, gerando perdas de material e horas paradas. A instalação de condicionadores de energia e UPS industriais é vital para garantir a produtividade e proteger o investimento em automação.</p>
+    `,
+    date: '10 Nov 2023',
+    author: 'Clarity Engenharia',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop',
+    category: 'Indústria',
+    readTime: '5 min'
+  },
+  {
+    id: 'escolhendo-nobreak-ideal',
+    title: 'Guia: Como Escolher o Nobreak Ideal',
+    excerpt: 'Offline, Line-Interactive ou Online Dupla Conversão? Entenda as diferenças e escolha o melhor para seu negócio.',
+    content: `
+      <h2>Topologias de UPS</h2>
+      <p>Não todos os nobreaks são iguais. A topologia define como ele protege sua carga...</p>
+      <ul>
+        <li><strong>Offline (Standby):</strong> Básico, aciona a bateria apenas quando a energia cai. Bom para desktops simples.</li>
+        <li><strong>Line-Interactive:</strong> Possui regulador de tensão (AVR). Bom para servidores pequenos e redes.</li>
+        <li><strong>Online Dupla Conversão:</strong> A energia passa sempre pelas baterias/inversor. A saída é pura e perfeita. Obrigatório para servidores críticos e equipamentos médicos.</li>
+      </ul>
+    `,
+    date: '05 Out 2023',
+    author: 'Consultoria Técnica',
+    image: 'https://images.unsplash.com/photo-1622675235450-48f8c37d7c69?q=80&w=2670&auto=format&fit=crop',
+    category: 'Guia',
+    readTime: '7 min'
+  },
+  {
+    id: 'nobreak-vs-gerador',
+    title: 'Nobreak ou Gerador: Qual eu preciso?',
+    excerpt: 'Entenda a função de cada um e por que, na maioria dos casos críticos, você precisa dos dois trabalhando juntos.',
+    content: `
+      <h2>A Dupla Dinâmica</h2>
+      <p>Muitos clientes perguntam: "Se eu tenho gerador, preciso de nobreak?". A resposta é sim.</p>
+      <p>O <strong>Gerador</strong> fornece energia por longo prazo (horas ou dias), mas leva cerca de 10-15 segundos para partir e assumir a carga.</p>
+      <p>O <strong>Nobreak</strong> cobre esses 15 segundos vitais, impedindo que os computadores desliguem, e também filtra a energia enquanto o gerador estabiliza.</p>
+      <p>Juntos, eles oferecem proteção total: autonomia infinita (enquanto houver combustível) e qualidade de energia constante.</p>
+    `,
+    date: '28 Set 2023',
+    author: 'Eng. Eletricista',
+    image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?q=80&w=2555&auto=format&fit=crop',
+    category: 'Infraestrutura',
+    readTime: '4 min'
+  }
+];
+
+export const CASES = [
+  {
+    id: 'hospital-regional',
+    client: 'Hospital Regional de Grande Porte',
+    title: 'Proteção Crítica para UTIs e Centro Cirúrgico',
+    challenge: 'O hospital sofria com oscilações frequentes de energia que queimavam placas de equipamentos de tomografia e colocavam em risco procedimentos cirúrgicos.',
+    solution: 'Implementação de 2 UPS Modulares de 200kVA em paralelo redundante, com bancos de baterias para 30 minutos de autonomia e sistema de monitoramento 24/7.',
+    result: 'Zero paradas nos últimos 24 meses. A qualidade da energia estabilizada aumentou a vida útil dos equipamentos de imagem em 40%.',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop',
+    tags: ['Hospitalar', 'Crítico', 'UPS Modular']
+  },
+  {
+    id: 'industria-automotiva',
+    client: 'Indústria Automotiva Multinacional',
+    title: 'Estabilidade para Linha de Montagem Robotizada',
+    challenge: 'Micro-cortes de energia desprogramavam os robôs da linha de montagem, causando perdas de produção de até R$ 50.000 por hora parada.',
+    solution: 'Instalação de condicionadores de tensão industriais e um sistema UPS de 500kVA dedicado à linha de automação, com filtragem ativa de harmônicas.',
+    result: 'Eliminação total das paradas por distúrbios elétricos. O ROI (Retorno sobre Investimento) do projeto foi alcançado em apenas 4 meses de operação.',
+    image: 'https://images.unsplash.com/photo-1563968743333-044cef80053b?q=80&w=1965&auto=format&fit=crop', // Reusing industrial looking image
+    tags: ['Indústria', 'Automação', 'Qualidade de Energia']
+  },
+  {
+    id: 'data-center-financeiro',
+    client: 'Instituição Financeira Digital',
+    title: 'Retrofit de Data Center em Operação',
+    challenge: 'Necessidade de duplicar a capacidade de processamento sem desligar o Data Center atual (Zero Downtime) e melhorar a eficiência energética (PUE).',
+    solution: 'Substituição dos aparelhos de ar condicionado CRAC antigos por novas unidades In-row de alta eficiência e confinamento de corredor quente.',
+    result: 'Redução do PUE de 2.2 para 1.5, gerando uma economia de energia de 30%. O upgrade foi realizado sem nenhuma interrupção nos serviços bancários.',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2574&auto=format&fit=crop', // Server room
+    tags: ['Data Center', 'Eficiência', 'Retrofit']
+  },
+  {
+    id: 'call-center',
+    client: 'Call Center 24h',
+    title: 'Continuidade Operacional para 500 PAs',
+    challenge: 'Garantir que 500 posições de atendimento continuassem operando mesmo durante apagões prolongados na região.',
+    solution: 'Projeto Turn-key envolvendo Grupo Gerador de 550kVA e UPS central, incluindo toda a infraestrutura elétrica e quadros de transferência automática (QTA).',
+    result: 'Operação ininterrupta garantida. Durante o último grande apagão da cidade, o Call Center continuou operando normalmente por 6 horas seguidas via gerador.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop', // Office building
+    tags: ['Serviços', 'Gerador', 'Turn-key']
   }
 ];

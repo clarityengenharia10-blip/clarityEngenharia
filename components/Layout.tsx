@@ -140,6 +140,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </div>
               </div>
 
+              <Link to="/cases" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Cases</Link>
               <Link to="/blog" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Blog</Link>
               <Link to="/contact" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Contato</Link>
             </nav>
@@ -220,6 +221,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
 
               <Link to="/services" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Serviços</Link>
+              <Link to="/cases" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Cases</Link>
               <Link to="/blog" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Blog</Link>
               <Link to="/contact" className="text-sm font-bold px-4 py-3 rounded-lg uppercase text-slate-600">Contato</Link>
 
@@ -268,7 +270,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li><Link to="/products" className="hover:text-sky-400 transition-colors">Produtos</Link></li>
                 <li><Link to="/services" className="hover:text-sky-400 transition-colors">Serviços</Link></li>
                 <li><Link to="/cases" className="hover:text-sky-400 transition-colors">Cases de Sucesso</Link></li>
-                <li><Link to="/contact" className="hover:text-sky-400 transition-colors">Política de Privacidade</Link></li>
+                <li><Link to="/privacy" className="hover:text-sky-400 transition-colors">Política de Privacidade</Link></li>
+                <li><Link to="/terms" className="hover:text-sky-400 transition-colors">Termos de Uso</Link></li>
               </ul>
             </div>
 

@@ -14,6 +14,9 @@ import About from './pages/About';
 import Partner from './pages/Partner';
 import Careers from './pages/Careers';
 import Cart from './pages/Cart';
+import Cases from './pages/Cases';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 import { CartProvider } from './contexts/CartContext';
 
 // ScrollToTop helper component
@@ -49,6 +52,9 @@ const App: React.FC = () => {
             <Route path="/partners" element={<Partner />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/cases" element={<Cases />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             {/* Fallback to home */}
             <Route path="*" element={<Home />} />
           </Routes>
