@@ -2,734 +2,289 @@ import React from 'react';
 import { Product, Service, BlogPost, Brand, Client, Testimonial } from './types';
 
 export const PRODUCTS: Product[] = [
+  // 1. Prefabricated Modular DC
   {
-    id: 'titan-500kva',
-    name: 'No-break Titan 500kVA',
-    category: 'ups',
-    series: 'Série Clarity Pro',
-    description: 'Garantindo continuidade para sistemas críticos com arquiteturas de UPS redundantes e de alta performance.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    badge: 'Modular',
-    specs: ['Saída Trifásica', 'Suporte Interno VRLA'],
-    powerRange: '500kVA',
-    brand: 'Clarity Premium',
+    id: 'fusiondc1000a',
+    name: 'FusionDC1000A - All-in-one Prefabricated DC',
+    category: 'prefabricated_modular_dc',
+    series: 'Série FusionDC',
+    description: 'Solução de data center pré-fabricado "tudo-em-um" para implementação rápida e eficiente em ambientes externos.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusiondc1000a.jpg?la=en',
+    badge: 'Outdoor',
+    specs: ['Implementação Rápida', 'IP55/IP65 Proteção'],
+    powerRange: 'Up to 54kW',
+    brand: 'Huawei',
     detailedSpecs: {
-      'Topologia': 'Online Dupla Conversão',
-      'Potência': '500 kVA / 450 kW',
-      'Tensão de Entrada': '380V Trifásico',
-      'Tensão de Saída': '380V Trifásico',
-      'Fator de Potência': '0.9',
-      'Frequência': '50/60 Hz (Auto-sensing)',
-      'Eficiência': '> 95% em modo online',
-      'Dimensões (AxLxP)': '2000 x 800 x 800 mm',
-      'Peso': '450 kg'
+      'Tipo de Construção': 'Conteinerizado (ISO ou Não-ISO)',
+      'Nível de Proteção': 'IP55 ou IP65',
+      'Resfriamento': 'In-row ou In-room',
+      'Energia': 'UPS Modular Integrado',
+      'Aplicação': 'Edge Computing, Smart Cities',
+      'Tempo de Entrega': 'Reduzido em 50%'
     },
     docs: [
-      { name: 'Ficha Técnica', url: '#', type: 'datasheet' },
-      { name: 'Manual do Usuário', url: '#', type: 'manual' }
+      { name: 'Brochura FusionDC1000A', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'magno-g3',
-    name: 'Estabilizador Magno G3',
-    category: 'stabilizers',
-    series: 'Linha SteadyPower',
-    description: 'Proteção superior para equipamentos contra flutuações de tensão e surtos de alta frequência.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDB2yfSmS0fFuc0h8G-fmbOZTtM9tEa_Ay4hvCUdFmzC42oi1ulj9ZRWtysTxEA9VjjIc5FF4cy8zARisF5Myytrh0KZvw606RGFJClCX1jP0x6HNQFLAQ_YtV9kmVGlzG0E6fZCMvtAlicnt_rQ87h8mQZWuxBt34IPe4pdoCVXFRArCoz0gD750ep1RFHmvrENnYApe9RN3yNhGboGR0p-uCkt-2EsBpsMInqYuj1Cj7Gtrh-EM5w-NsGOdC1LBaaENjLKuKFKtPz',
-    badge: 'Industrial',
-    specs: ['Proteção de Alta Tensão', 'Tempo de Resposta 0.5ms'],
-    brand: 'NHS',
+    id: 'fusiondc1000b',
+    name: 'FusionDC1000B - Data Center Modular Médio',
+    category: 'prefabricated_modular_dc',
+    series: 'Série FusionDC',
+    description: 'Data center modular pré-fabricado de médio porte, ideal para expansão flexível e alta eficiência energética.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusiondc1000b.jpg?la=en',
+    badge: 'Expansível',
+    specs: ['Design Modular', 'Alta Eficiência PUE < 1.15'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Potência': '3000 VA',
-      'Tensão Nominal': '220V',
-      'Faixa de Regulação': '± 15%',
-      'Tempo de Resposta': '< 4ms',
-      'Tomadas': '4 padrão NBR 14136',
-      'Proteção': 'Sub/Sobretensão e surtos',
-      'Peso': '15 kg',
-      'Dimensões': '250 x 150 x 300 mm'
+      'Capacidade': 'Escalável conforme demanda',
+      'Arquitetura': 'Modular Pré-fabricada',
+      'Refrigeração': 'In-row com contenção de corredor',
+      'Gerenciamento': 'DCIM Integrado (NetEco)',
+      'Resistência Sísmica': 'Zona 3/4',
+      'Vida Útil': 'Projetado para 50 anos'
     },
     docs: [
-      { name: 'Datasheet Magno G3', url: '#', type: 'datasheet' }
+      { name: 'Especificações FusionDC1000B', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'lithium-bank',
-    name: 'Banco Lithium-Core',
-    category: 'battery_modules',
-    series: 'EnergyStore XL',
-    description: 'Sistemas confiáveis de armazenamento de energia e monitoramento de longevidade para missões críticas.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBdmQRD2-KZmNRWYE5uT1T1WB701KztyJxsIG4OqyNL7WFdJQqLA-pt-M4UcxqDdUA6nzd9UMLw2GMQtk1TF-Zf-UK47BbGLKcvxyITStbTvW6tpLF7Ndqqun8KfY-FCKnjvMxcNJpcL1AoB1dQlyNpV_qocfexfX8ALYnygx0LU2BQsz-3aU5dyIPRoNOC1LrD6i7kflWOdb5MiwogaaI5jkrtXfmPNHQMOqnoy0j_r-7qBhD-wVlggpcqRXUsgY8pCTdQDhAdW8ra',
-    badge: 'Armazenamento',
-    specs: ['Tecnologia LiFePO4', 'Vida Útil de 10 Anos'],
-    brand: 'Vertiv',
+    id: 'fusiondc1000c',
+    name: 'FusionDC1000C - Data Center de Larga Escala',
+    category: 'prefabricated_modular_dc',
+    series: 'Série FusionDC',
+    description: 'A solução definitiva para grandes data centers, combinando construção civil simplificada com módulos pré-fabricados.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusiondc1000c.jpg?la=en',
+    badge: 'Hyperscale',
+    specs: ['Construção Híbrida', 'Máxima Densidade'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Tecnologia': 'Lítio Ferro Fosfato (LiFePO4)',
-      'Capacidade Nominal': '100Ah',
-      'Tensão Nominal': '48V',
-      'Ciclos de Vida': '> 4000 a 80% DoD',
-      'Comunicação': 'RS485 / CAN',
-      'Peso': '42 kg',
-      'Dimensões': '442 x 130 x 400 mm (Rack 3U)'
+      'Aplicação': 'Cloud Computing, Colocation',
+      'Estrutura': 'Módulos pré-fabricados empilháveis',
+      'TIER': 'Suporta TIER III / TIER IV',
+      'Eficiência Energética': 'Líder de mercado',
+      'Tempo de Construção': '50% mais rápido que alvenaria tradicional'
     },
     docs: [
-      { name: 'Especificações Técnicas', url: '#', type: 'datasheet' },
-      { name: 'Guia de Instalação', url: '#', type: 'manual' }
+      { name: 'Technical Whitepaper', url: '#', type: 'datasheet' }
+    ]
+  },
+
+  // 2. Smart Modular DC
+  {
+    id: 'fusionmodule500',
+    name: 'FusionModule500 - Micro Modular DC',
+    category: 'smart_modular_dc',
+    series: 'Série Smart Module',
+    description: 'Solução compacta para borda de rede (Edge), integrando UPS, refrigeração, monitoramento e distribuição em um único gabinete.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusionmodule500.jpg?la=en',
+    badge: 'Edge',
+    specs: ['Tudo-em-um', 'Plug & Play'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '3kW a 10kW por rack',
+      'Dimensões': 'Gabinete Padrão 19"',
+      'Componentes': 'UPS, Baterias, Ar Condicionado, PDU',
+      'Monitoramento': 'Remoto via Web/App',
+      'Instalação': '2 horas (típico)'
+    },
+    docs: [
+      { name: 'Guia Rápido FusionModule500', url: '#', type: 'manual' }
     ]
   },
   {
-    id: 'netpower-30kva',
-    name: 'NetPower 30kVA',
-    category: 'ups',
-    series: 'DataCenter Core',
-    description: 'Unidade UPS compacta para rack, ideal para ambientes de edge computing de alta densidade.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
-    badge: 'Rack Mount',
-    specs: ['Monitoramento Cloud', 'Formato 2U'],
-    brand: 'Delta',
+    id: 'fusionmodule800',
+    name: 'FusionModule800 - Pequeno Data Center',
+    category: 'smart_modular_dc',
+    series: 'Série Smart Module',
+    description: 'Data center ideal para filiais e pequenas empresas, com contenção de ar integrada e alta eficiência.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusionmodule800.jpg?la=en',
+    badge: 'Small Business',
+    specs: ['Até 8 Racks', 'PUE Otimizado'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Potência': '30 kVA',
-      'Formato': 'Rack Mount 19"',
-      'Topologia': 'Online Dupla Conversão',
-      'Eficiência': 'Até 96%',
-      'Tensão de Bateria': '240V DC',
-      'Interface': 'LCD Touchscreen',
-      'Peso': '35 kg'
+      'Configuração': 'Fila única com corredor frio/quente',
+      'Capacidade de TI': 'Até 25kW (varia com refrigeração)',
+      'Refrigeração': 'In-row DX (Expansão Direta)',
+      'UPS': 'Modular Hot-swappable',
+      'Segurança': 'Controle de acesso e vídeo integrados'
     },
     docs: [
-      { name: 'Brochura NetPower', url: '#', type: 'datasheet' }
+      { name: 'Datasheet FusionModule800', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'isolation-trans',
-    name: 'Transformador Isolador',
-    category: 'stabilizers',
-    series: 'Grid Armor',
-    description: 'Transformador robusto para isolação galvânica e supressão de harmônicas.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA85nsNiZVeSThODCrHSp1t1E9NdWJOdkEF9WOKJUB6_fQfP6hictZAHGeDhSB8elS0SWTW3xXQ7UywbYi1v9p8GRBSNX3YUmeyOomFpMoZusr0HrKc_e3Oy3LukAfolthtur92xkEkR3CnC_ivcXVDkUk_Ns0-Aqdx1j0k7BXAPYV1KDX4gWZFft6r2Pr2F6irq4Cv_t1YUION6d_gBNTQh5Sp_Df_F_HbKLIN-csMx9WkXKOapt6VDwvrSedNoyA7eOIncUFfwVbV',
-    specs: ['Supressão de Harmônicas', 'Certificação NEMA 3R'],
-    brand: 'Clarity',
+    id: 'fusionmodule2000',
+    name: 'FusionModule2000 - Smart Modular DC',
+    category: 'smart_modular_dc',
+    series: 'Série Smart Module',
+    description: 'Solução premiada e certificada pelo Uptime Institute, projetada para data centers de médio e grande porte com inteligência AI.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusionmodule2000.jpg?la=en',
+    badge: 'Premiado',
+    specs: ['AI Cooling', 'Certificação TIER-Ready'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Potência': '10 kVA a 300 kVA',
-      'Classe de Isolação': '1.2 kV / 60 Hz',
-      'Grau de Proteção': 'IP21 ou IP54',
-      'Refrigeração': 'Ar natural ou forçada',
-      'Material do Enrolamento': 'Cobre ou Alumínio',
-      'Fator K': 'K1, K4, K13, K20'
+      'Arquitetura': 'Totalmente Modular',
+      'Inteligência': 'iCooling (Otimização via IA)',
+      'Flexibilidade': 'Suporta fileira simples ou dupla',
+      'Densidade': 'Alta densidade de potência suportada',
+      'Visualização': 'Gestão 3D visual'
     },
     docs: [
-      { name: 'Catálogo de Transformadores', url: '#', type: 'datasheet' }
+      { name: 'Certificação TIER-Ready', url: '#', type: 'datasheet' }
+    ]
+  },
+
+  // 3. Smart Power Supply
+  {
+    id: 'ups5000-h',
+    name: 'UPS5000-H - UPS Modular de Alta Densidade',
+    category: 'smart_power_supply',
+    series: 'Série UPS5000',
+    description: 'UPS modular de ultra-alta densidade e eficiência, alcançando 97% de eficiência em modo online.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/ups5000-h.jpg?la=en',
+    badge: '97% Eficiência',
+    specs: ['Módulo de 100kVA/3U', 'Hot-swap total'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '400kVA a 1600kVA por sistema',
+      'Eficiência': '97% (Online), 99% (S-ECO)',
+      'Densidade de Módulo': '100kVA em 3U de altura',
+      'Tecnologia': 'Semicondutores Wide Bandgap',
+      'Manuteção': 'Troca a quente em 5 minutos'
+    },
+    docs: [
+      { name: 'Ficha Técnica UPS5000-H', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'bms-hub',
-    name: 'Hub de Gestão BMS',
-    category: 'monitoring',
-    series: 'SmartMonitor',
-    description: 'Sistema técnico de monitoramento de baterias com telemetria em tempo real.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCacXG_l_OIIhxcMFwFnCfXYE6B3wI4IH2PJ_xVQPB7JorCFjdwDjo8D8NPbHaQeMtu5HCTSbfwYVIjbsVVAAKppmUzrqYGi_eCYUBSxstIKrPxI3jgv1vlCrjf3zxMw1ASpDXtvpmvj-KGCOaCZ8ngyjm2vVHzU5ZDl95ZqCMb-ZLHsvdKJ6rubRmAoFs2UmJrDLvcbj5knP8ugs2UrbSArK8PcjjyrtwnwN6DwWsxwakoPIC1QFMksoNaZIfS6m7PV8k-6b2e6ARC',
-    badge: 'Novo',
-    specs: ['Manutenção Preditiva', 'Telemetria em Tempo Real'],
-    brand: 'Clarity',
+    id: 'smartli',
+    name: 'SmartLi - Solução de Baterias de Lítio',
+    category: 'smart_power_supply',
+    series: 'Série SmartLi',
+    description: 'Sistema de armazenamento de energia com baterias de íon-lítio (LiFePO4) inteligente, seguro e compacto.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/smartli.jpg?la=en',
+    badge: 'Li-ion',
+    specs: ['Vida Útil 10+ Anos', '70% Menos Espaço'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Monitoramento': 'Tensão, Corrente, Temperatura e Impedância',
-      'Comunicação': 'Ethernet TCP/IP, Modbus',
-      'Sensores': 'Até 256 células por string',
-      'Armazenamento': 'Logs locais e nuvem',
-      'Alimentação': '12V DC ou PoE',
-      'Compatibilidade': 'VRLA, Ventilada, NiCd, Lítio'
+      'Química': 'Lítio Ferro Fosfato (LiFePO4)',
+      'Segurança': 'BMS em 3 níveis (Célula, Módulo, Gabinete)',
+      'Balanceamento': 'Controle ativo de corrente',
+      'Vida Útil': '5000 ciclos @ 50% DOD',
+      'Compatibilidade': 'UPS Huawei e terceiros'
     },
     docs: [
-      { name: 'Manual de Operação', url: '#', type: 'manual' },
-      { name: 'Overview do Sistema', url: '#', type: 'datasheet' }
+      { name: 'SmartLi Whitepaper', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'card-ap9635',
-    name: 'Cartão AP9635 de Gerenciamento',
-    category: 'accessories',
-    series: 'APC Accessories',
-    description: 'Cartão de gerenciamento de rede 2 AP9635 (NMC2) para monitoramento remoto seguro e eficiente.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    badge: 'Rede',
-    specs: ['Monitoramento Remoto', 'Compatível com NMC2'],
-    brand: 'APC Schneider',
+    id: 'fusionpower6000',
+    name: 'FusionPower6000 - Distribuição Integrada',
+    category: 'smart_power_supply',
+    series: 'Série FusionPower',
+    description: 'Integração completa de média e baixa tensão, transformadores e UPS em um único sistema PowerPOD.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusionpower6000.jpg?la=en',
+    badge: 'PowerPOD',
+    specs: ['Full Integration', 'Footprint Otimizado'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Protocolos': 'HTTP, HTTPS, SNMP, SMTP, Telnet, SSH',
-      'Portas': '1x RJ45 10/100',
-      'Sensores Suportados': 'Temperatura, Umidade (AP9335T)',
-      'Compatibilidade': 'Smart-UPS, Symmetra',
-      'Dimensões': '38 x 121 x 114 mm',
-      'Peso': '0.08 kg'
+      'Conceito': 'Power Supply & Distribution System (PowerPOD)',
+      'Componentes': 'Link de cobre pré-fabricado (busbar)',
+      'Eficiência': 'Redução de perdas em até 50%',
+      'Monitoramento': 'iPower (Previsão de temperatura e vida útil)',
+      'Instalação': 'Semanas em vez de meses'
     },
     docs: [
-      { name: 'Manual de Instalação (EN)', url: '#', type: 'manual' },
-      { name: 'Compatibilidade de Firmware', url: '#', type: 'datasheet' }
+      { name: 'Solução FusionPower', url: '#', type: 'datasheet' }
+    ]
+  },
+
+  // 4. Smart Cooling
+  {
+    id: 'netcol5000',
+    name: 'NetCol5000 - In-row Smart Cooling',
+    category: 'smart_cooling',
+    series: 'Série NetCol',
+    description: 'Ar condicionado de precisão para instalação entre racks, aproximando a fonte de frio da fonte de calor.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/netcol5000.jpg?la=en',
+    badge: 'Precisão',
+    specs: ['Controle Inverter', 'Alta Eficiência'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Tipo': 'Expansão Direta (DX) ou Água Gelada (CW)',
+      'Capacidade': 'Várias opções (ex: 35kW, 60kW)',
+      'Compressor': 'DC Inverter (velocidade variável)',
+      'Ventiladores': 'EC Fans trocáveis a quente',
+      'Controle': 'Umidade e Temperatura precisos'
+    },
+    docs: [
+      { name: 'Catálogo NetCol In-row', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'card-ap9630',
-    name: 'Cartão AP9630 de Gerenciamento',
-    category: 'accessories',
-    series: 'APC Accessories',
-    description: 'Cartão de Gerenciamento de rede APC AP9630 para no-breaks UPS com suporte a protocolos padrão.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['Protocolos SNMP', 'Fácil Integração'],
-    brand: 'APC Schneider',
+    id: 'netcol8000',
+    name: 'NetCol8000 - In-room Smart Cooling',
+    category: 'smart_cooling',
+    series: 'Série NetCol',
+    description: 'Solução de resfriamento perimetral para salas de data center, oferecendo confiabilidade e fácil manutenção.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/netcol8000.jpg?la=en',
+    badge: 'Perimetral',
+    specs: ['Downflow/Upflow', 'Modular Design'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Protocolos': 'SNMP v1/v3, HTTP',
-      'Conector': 'SmartSlot',
-      'Segurança': 'Criptografia MD5/SHA',
-      'Acesso Remoto': 'Sim, via Web UI',
-      'Peso': '0.09 kg'
+      'Aplicação': 'Salas de Data Center médias e grandes',
+      'Eficiência': 'Economia de energia com algoritmos inteligentes',
+      'Manutenção': 'Acesso frontal total',
+      'Confiabilidade': 'Bomba d\'água dupla (opcional)',
+      'Monitoramento': 'Tela touch 7 polegadas'
     },
     docs: [
-      { name: 'Guia Rápido', url: '#', type: 'manual' }
+      { name: 'Especificações NetCol In-room', url: '#', type: 'datasheet' }
     ]
   },
   {
-    id: 'acc-ap9810',
-    name: 'Acessório de E/S AP9810',
-    category: 'accessories',
-    series: 'APC Accessories',
-    description: 'Acessório de E/S de contato seco APC AP9810 para monitoramento ambiental preciso.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['Contato Seco', 'Monitoramento Ambiental'],
-    brand: 'APC Schneider',
+    id: 'fusioncol8000',
+    name: 'FusionCol8000 - Resfriamento Evaporativo Indireto',
+    category: 'smart_cooling',
+    series: 'Série FusionCol',
+    description: 'Sistema de resfriamento indireto evaporativo altamente eficiente, utilizando ar externo para maximizar o free cooling.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/fusioncol8000.jpg?la=en',
+    badge: 'Free Cooling',
+    specs: ['Economia Extrema', 'Sem Contaminação'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Entradas': '2x Contato Seco',
-      'Saídas': '1x Relé de Saída (12V/24V)',
-      'Compatibilidade': 'Cartões AP9631, AP9635',
-      'Aplicação': 'Monitoramento de temperatura, porta, fumaça',
-      'Peso': '0.15 kg'
+      'Princípio': 'Evaporação indireta ar-ar',
+      'PUE': 'Pode atingir PUE parcial de 1.10',
+      'Uso de Água': 'Sistema inteligente de gestão de água',
+      'Instalação': 'Externa / Telhado',
+      'Aplicação': 'Hyperscale Data Centers'
     },
     docs: [
-      { name: 'Manual de Instalação e Configuração', url: '#', type: 'manual' }
+      { name: 'Whitepaper Soluções Evaporativas', url: '#', type: 'datasheet' }
     ]
   },
+
+  // 5. Smart DC Management System
   {
-    id: 'ats-ap4423',
-    name: 'Sistema ATS para Rack AP4423',
-    category: 'accessories',
-    series: 'APC Transfer Switch',
-    description: 'Sistema ATS para rack APC AP4423 230 V, 16 A, com entrada C20 para redundância de energia.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
-    badge: 'ATS',
-    specs: ['230V 16A', 'Entrada C20'],
-    brand: 'APC Schneider',
+    id: 'neteco6000',
+    name: 'NetEco6000 - Sistema de Gestão Inteligente',
+    category: 'smart_dc_management',
+    series: 'Série NetEco',
+    description: 'Plataforma de gerenciamento de infraestrutura de data center (DCIM) com visualização em 3D e inteligência artificial.',
+    image: 'https://www-file.huawei.com/-/media/corporate/images/products/digital-power/data-center-facility/neteco6000.jpg?la=en',
+    badge: 'DCIM',
+    specs: ['Visualização 3D', 'AI Optimization'],
+    brand: 'Huawei',
     detailedSpecs: {
-      'Tensão Nominal': '230V',
-      'Corrente Máxima': '16A',
-      'Conexões de Entrada': '2x IEC-320 C20',
-      'Conexões de Saída': '8x IEC-320 C13, 1x IEC-320 C19',
-      'Tempo de Transferência': '< 10ms',
-      'Formato': 'Rack 1U',
-      'Peso': '3.9 kg'
+      'Funcionalidades': 'Gestão de ativos, energia, capacidade e ambiente',
+      'Visualização': 'Digital Twin com visualização 3D imersiva',
+      'Otimização': 'AI PUE Optimization (redução de consumo)',
+      'Relatórios': 'Dashboards customizáveis e relatórios automáticos',
+      'Mobile': 'App para operação remota'
     },
     docs: [
-      { name: 'Manual do Usuário ATS', url: '#', type: 'manual' },
-      { name: 'Desenho Técnico (CAD)', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'ats-ap4450',
-    name: 'Sistema ATS para Rack AP4450',
-    category: 'accessories',
-    series: 'APC Transfer Switch',
-    description: 'Sistema ATS para rack APC AP4450, 100/120 V, 15 A, ideal para aplicações críticas de baixa tensão.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
-    specs: ['100/120V 15A', 'Entrada 5-15P'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Tensão Nominal': '100V / 120V',
-      'Corrente Máxima': '15A',
-      'Conexões de Entrada': '2x NEMA 5-15P',
-      'Conexões de Saída': '10x NEMA 5-15R',
-      'Tempo de Transferência': '< 10ms',
-      'Formato': 'Rack 1U',
-      'Peso': '4.2 kg'
-    },
-    docs: [
-      { name: 'Manual ATS AP4450', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'rack-ar3100',
-    name: 'Rack NetShelter SX AR3100',
-    category: 'accessories',
-    series: 'NetShelter SX',
-    description: 'Gabinete para servidores APC NetShelter SX AR3100 42 U, 600mm x 1070mm, otimizado para refrigeração.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVrvPAYFGHNuHcTmXhGp0iSTHa4B6j7dWrv1lIXi37e3y1KeLRQx4JEymqYc0x80zQsBsYqTv8z7FXVU-k_mzIMuaYd-502qW9Rkuxs3Rn-h8JBCsYAaXVjtZfg-qt3wQfX9ItYfWG4bfL-O0639uLArk2NnkFAExz2bOouNCfvtZ_T-n3NdBsXtYENzkjl38hDf8u1GRNnBGfev2Qev8uZXlscoiFam9uDqOKKDh-SdXjI7rPQPvqtxaoOMxo1-TcyJ6BxI6bfRPJ',
-    badge: 'Rack 42U',
-    specs: ['42U Altura', '600mm Largura'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Altura': '42U (1991mm)',
-      'Largura': '600 mm',
-      'Profundidade': '1070 mm',
-      'Carga Estática': '1360 kg',
-      'Carga Dinâmica': '1022 kg',
-      'Peso': '125 kg',
-      'Cor': 'Preto',
-      'Padrão': 'EIA-310-D'
-    },
-    docs: [
-      { name: 'Guia de Montagem', url: '#', type: 'manual' },
-      { name: 'Especificações NetShelter', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'csb-gp1272',
-    name: 'Bateria VRLA CSB 7Ah',
-    category: 'batteries',
-    series: 'CSB GP Series',
-    description: 'Bateria selada VRLA CSB 12V 7Ah GP1272, ideal para no-breaks e sistemas de segurança.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    badge: 'VRLA',
-    specs: ['12V 7Ah', 'Vida Útil estendida'],
-    brand: 'Eaton',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade (20h)': '7.2 Ah',
-      'Tecnologia': 'VRLA AGM',
-      'Terminal': 'F1 / F2 (Faston)',
-      'Vida Útil (Float)': '3 a 5 anos',
-      'Dimensões (AxLxP)': '94 x 151 x 65 mm',
-      'Peso Aproximado': '2.4 kg'
-    },
-    docs: [
-      { name: 'Datasheet CSB GP1272', url: '#', type: 'datasheet' },
-      { name: 'Manual de Segurança', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'csb-gp12170',
-    name: 'Bateria VRLA CSB 17Ah',
-    category: 'batteries',
-    series: 'CSB GP Series',
-    description: 'Bateria VRLA CSB 17Ah 12V GP12170 para aplicações de alta descarga.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 17Ah', 'Alta Confiabilidade'],
-    brand: 'Eaton',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade (20h)': '17 Ah',
-      'Tecnologia': 'VRLA AGM',
-      'Corrente Máx. Descarga': '230A (5seg)',
-      'Terminal': 'Parafuso M5',
-      'Dimensões (AxLxP)': '167 x 181 x 77 mm',
-      'Peso Aproximado': '5.5 kg'
-    },
-    docs: [
-      { name: 'Datasheet CSB GP12170', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'freedom-df500',
-    name: 'Bateria Estacionária Freedom DF500',
-    category: 'batteries',
-    series: 'Freedom Estacionária',
-    description: 'Bateria estacionária FREEDOM DF500 36Ah/40Ah para energia solar e backup.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    badge: 'Estacionária',
-    specs: ['36Ah/40Ah', 'Livre de Manutenção'],
-    brand: 'SMS Legrand',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade C10': '36 Ah',
-      'Capacidade C20': '40 Ah',
-      'Capacidade C100': '45 Ah',
-      'Dimensões': '175 x 175 x 210 mm',
-      'Peso': '9.8 kg',
-      'Aplicações': 'Nobreak, PABX, Alarmes, Solar'
-    },
-    docs: [
-      { name: 'Ficha Técnica Freedom', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'freedom-df1000',
-    name: 'Bateria Estacionária Freedom DF1000',
-    category: 'batteries',
-    series: 'Freedom Estacionária',
-    description: 'Bateria estacionária FREEDOM DF1000 60Ah/70Ah, robustez para sistemas críticos.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['60Ah/70Ah', 'Tecnologia PowerFrame'],
-    brand: 'SMS Legrand',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade C10': '60 Ah',
-      'Capacidade C20': '70 Ah',
-      'Capacidade C100': '76 Ah',
-      'Dimensões': '175 x 175 x 244 mm',
-      'Peso': '17.5 kg',
-      'Tecnologia': 'Grade PowerFrame'
-    },
-    docs: [
-      { name: 'Ficha Técnica DF1000', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'freedom-df2000',
-    name: 'Bateria Estacionária Freedom DF2000',
-    category: 'batteries',
-    series: 'Freedom Estacionária',
-    description: 'Bateria estacionária de alta capacidade FREEDOM DF2000 para longos períodos de autonomia.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['105Ah/115Ah', 'Alta Durabilidade'],
-    brand: 'SMS Legrand',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade C10': '105 Ah',
-      'Capacidade C20': '115 Ah',
-      'Capacidade C100': '124 Ah',
-      'Dimensões': '240 x 175 x 330 mm',
-      'Peso': '28.5 kg',
-      'Vida Útil Projetada': '4 anos'
-    },
-    docs: [
-      { name: 'Datasheet Global Freedom', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'moura-12v-7ah',
-    name: 'Bateria VRLA Moura 7Ah',
-    category: 'batteries',
-    series: 'Moura VRLA',
-    description: 'Bateria Moura 12V 7Ah para alarmes e no-breaks residenciais.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 7Ah', 'Qualidade Moura'],
-    brand: 'Intelbras',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade': '7 Ah',
-      'Carga em Flutuação': '13.5V ~ 13.8V',
-      'Carga Cíclica': '14.4V ~ 14.8V',
-      'Peso': '2.3 kg',
-      'Dimensões': '94 x 151 x 65 mm'
-    },
-    docs: [
-      { name: 'Folder Moura VRLA', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'moura-12v-18ah',
-    name: 'Bateria VRLA Moura 18Ah',
-    category: 'batteries',
-    series: 'Moura VRLA',
-    description: 'Bateria Moura 12V 18Ah para sistemas de UPS de médio porte.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 18Ah', 'Máxima Segurança'],
-    brand: 'Intelbras',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade': '18 Ah',
-      'Tecnologia': 'VRLA AGM',
-      'Conexão': 'Terminal Parafuso',
-      'Peso': '5.5 kg',
-      'Dimensões': '167 x 181 x 77 mm'
-    },
-    docs: [
-      { name: 'Datasheet Moura 18Ah', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'duracell-12te60',
-    name: 'Bateria Estacionária Duracell 12TE60',
-    category: 'batteries',
-    series: 'Duracell Estacionária',
-    description: 'Bateria estacionária Duracell 12TE60 12V/60Ah, energia premium para seu negócio.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    badge: 'Premium',
-    specs: ['60Ah', 'Garantia Estendida'],
-    brand: 'Sirius',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade Nominal': '60 Ah',
-      'CCA': '480 A',
-      'Reserva de Capacidade': '100 min',
-      'Peso': '14.8 kg',
-      'Dimensões': '244 x 175 x 175 mm'
-    },
-    docs: [
-      { name: 'Especificações Técnicas', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'getpower-gpk12-7',
-    name: 'Bateria VRLA GetPower 7Ah',
-    category: 'batteries',
-    series: 'GetPower VRLA',
-    description: 'Bateria VRLA GetPower 07Ah 12V Selada, custo-benefício para proteção básica.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz2_tTZszIAOeMvzUSegxsihIFpVGpDk5H4FdOcI8mWlyagTgNT4tVENZPXclscv4X386b6V08kS1goicfTn4wi_HFVkG2z-lSpRgDRkUh3OzLXP8iuiB96f5nIRyNFiz2RIm1VIUfk3JyZ3WKLwOiA9Xbi40Q_ed8sR4cWideu3s1S0CaXSjPiJ8C0KJ3XJRQK15yiCVjql6I9jYbD1jLWBDwkGYepDgdW_sAOZAeiGtBu0S4roOyZTHkZNTymI9Jit-bD0wP8zos',
-    specs: ['12V 7Ah', 'Custo-Benfício'],
-    brand: 'Sirius',
-    detailedSpecs: {
-      'Tensão Nominal': '12V',
-      'Capacidade': '7 Ah',
-      'Tipo': 'Selada VRLA',
-      'Peso': '2.1 kg',
-      'Dimensões': '151 x 65 x 95 mm'
-    },
-    docs: [
-      { name: 'Ficha Técnica GetPower', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'stab-cubic-300',
-    name: 'Estabilizador 300 W',
-    category: 'stabilizers',
-    series: 'APC Microsol CUBIC',
-    description: 'Estabilizador 300 W APC Microsol CUBIC300-BR 115V para proteção de eletrônicos domésticos.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: '115V',
-    specs: ['300W', '4 Tomadas'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência Nominal': '300W',
-      'Tensão Entrada': '115V',
-      'Tensão Saída': '115V',
-      'Tomadas': '4 Tomadas NBR 14136',
-      'Proteção': 'Fusível',
-      'Peso': '1.8 kg'
-    },
-    docs: [
-      { name: 'Manual Microsol CUBIC', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'stab-cubic-300bi',
-    name: 'Estabilizador 300 W Bivolt',
-    category: 'stabilizers',
-    series: 'APC Microsol CUBIC',
-    description: 'Estabilizador 300 W APC Microsol CUBIC300BI-BR Bivolt/115 automatico.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: 'Bivolt',
-    specs: ['300W', 'Entrada Bivolt'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência Nominal': '300W',
-      'Tensão Entrada': '115V / 220V',
-      'Tensão Saída': '115V',
-      'Tomadas': '4 Tomadas',
-      'Peso': '2.1 kg'
-    },
-    docs: [
-      { name: 'Manual CUBIC Bivolt', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'stab-cubic-500',
-    name: 'Estabilizador 500 W',
-    category: 'stabilizers',
-    series: 'APC Microsol CUBIC',
-    description: 'Estabilizador 500 W APC Microsol CUBIC500-BR 115V para maior capacidade.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['500W', 'Design Compacto'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência Nominal': '500W',
-      'Tensão Entrada': '115V',
-      'Tensão Saída': '115V',
-      'Tomadas': '4 Tomadas',
-      'Proteção': 'Disjuntor rearmável',
-      'Peso': '2.4 kg'
-    },
-    docs: [
-      { name: 'Manual CUBIC 500', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'stab-hexus-500',
-    name: 'Estabilizador 500 W Hexus',
-    category: 'stabilizers',
-    series: 'APC Microsol HEXUS',
-    description: 'Estabilizador 500 W APC Microsol HEXUS500BI, proteção ideal para computadores.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: 'Hexus',
-    specs: ['500W', 'Microprocessado'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '500W / 500VA',
-      'Tecnologia': 'Microprocessado RISC',
-      'Tensão Entrada': 'Bivolt Automático',
-      'Tensão Saída': '115V',
-      'Tomadas': '6 Tomadas',
-      'Proteção': 'Linha telefônica / Internet',
-      'Peso': '3.2 kg'
-    },
-    docs: [
-      { name: 'Ficha Técnica HEXUS', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'stab-sol-1000',
-    name: 'Estabilizador 1000 W',
-    category: 'stabilizers',
-    series: 'APC Sol',
-    description: 'Estabilizador 1000 W APC Sol SOL1000G4BI-BR Bivolt/115 para escritórios.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['1000W', '8 Tomadas'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '1000W',
-      'Entrada': 'Bivolt',
-      'Saída': '115V',
-      'Tomadas': '8 Tomadas NBR 14136',
-      'Proteção': 'Filtro de Linha integrado',
-      'Peso': '5.6 kg'
-    },
-    docs: [
-      { name: 'Manual do Usuário SOL', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'stab-sol-1500',
-    name: 'Estabilizador 1500 W',
-    category: 'stabilizers',
-    series: 'APC Sol',
-    description: 'Estabilizador 1500 W APC Microsol SOL1500BI para equipamentos de alto consumo.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: '1500W',
-    specs: ['1500W', 'Proteção Fax/Modem'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '1500W',
-      'Tensão Entrada': 'Bivolt',
-      'Tensão Saída': '115V',
-      'Sinalização': 'LEDs indicativos',
-      'Peso': '6.8 kg',
-      'Dimensões': '180 x 140 x 300 mm'
-    },
-    docs: [
-      { name: 'Especificações SOL 1500', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'stab-sol-2000',
-    name: 'Estabilizador 2000 W',
-    category: 'stabilizers',
-    series: 'APC Sol',
-    description: 'Estabilizador 2000 W APC Microsol SOL2000BI, potência elevada para servidores.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['2000W', 'Gerenciamento Inteligente'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '2000W',
-      'Entrada': 'Bivolt Automático',
-      'Saída': '115V',
-      'Cabo': '2.5mm² com plugue 20A',
-      'Tomadas': '8 Tomadas',
-      'Peso': '7.5 kg'
-    },
-    docs: [
-      { name: 'Manual SOL 2000', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'stab-fridge-2000',
-    name: 'Estabilizador 2000 W Geladeira',
-    category: 'stabilizers',
-    series: 'APC Fridge Plus',
-    description: 'Estabilizador 2000 W APC Fridge Plus FR2000PI-BR ideal para eletrodomésticos.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: 'Eletro',
-    specs: ['2000W', 'Delay de Partida'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Aplicação': 'Geladeiras, Freezers, Lavadoras',
-      'Potência': '2000W (pico motor)',
-      'Recurso': 'Timer de Segurança (Delay)',
-      'Tensão Entrada': 'Bivolt',
-      'Tensão Saída': '115V',
-      'Peso': '4.5 kg'
-    },
-    docs: [
-      { name: 'Guia Fridge Plus', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'schneider-5kva',
-    name: 'Estabilizador 5 KVA',
-    category: 'stabilizers',
-    series: 'Schneider Tempo',
-    description: 'Estabilizador 5 KVA SCHNEIDER Tempo, robustez industrial.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    badge: 'Industrial',
-    specs: ['5 KVA', 'Alta Precisão'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '5 kVA',
-      'Fases': 'Monofásico',
-      'Regulação Estática': '± 1%',
-      'Frequência': '60 Hz',
-      'Display': 'Digital Microprocessado',
-      'Peso': '35 kg'
-    },
-    docs: [
-      { name: 'Catálogo Industrial', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'schneider-7.5kva',
-    name: 'Estabilizador 7.5 KVA',
-    category: 'stabilizers',
-    series: 'Schneider Tempo',
-    description: 'Estabilizador 7.5 KVA SCHNEIDER Tempo para cargas críticas.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['7.5 KVA', 'Isolação Opcional'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '7.5 kVA',
-      'Entrada': '220V',
-      'Saída': '220V / 110V',
-      'Transformador': 'Isolador (Opcional)',
-      'Peso': '45 kg',
-      'Dimensões': '400 x 300 x 500 mm'
-    },
-    docs: [
-      { name: 'Manual Técnico 7.5kVA', url: '#', type: 'manual' }
-    ]
-  },
-  {
-    id: 'schneider-10kva',
-    name: 'Estabilizador 10 KVA',
-    category: 'stabilizers',
-    series: 'Schneider Tempo',
-    description: 'Estabilizador 10 KVA SCHNEIDER Tempo, proteção máxima para grandes sistemas.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['10 KVA', 'Monitoramento Digital'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '10 kVA',
-      'Tecnologia': 'Tap-Switching (Tiristorizado)',
-      'Distorção Harmônica': '< 3%',
-      'Eficiência': '> 97%',
-      'Peso': '65 kg'
-    },
-    docs: [
-      { name: 'Datasheet Estabilizador 10kVA', url: '#', type: 'datasheet' }
-    ]
-  },
-  {
-    id: 'schneider-15kva',
-    name: 'Estabilizador 15 KVA',
-    category: 'stabilizers',
-    series: 'Schneider Tempo',
-    description: 'Estabilizador 15 KVA SCHNEIDER Tempo para infraestrutura corporativa.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKoAOLTpLyOzAgEPcZqAlZ9kPfUwyjdTYWeCA-0bgqnpsLOC3jJ6p8wjNabjr7aAvxKERRq1ykVhuQiEpoCqlJVsUJ5WiGmEFuqp-bCEtbrt6gtGttcD7DnyFX1_gqMXZqAIcMYCMfe0_h0l982V381sYx5smkg2tP-Hn0o94SDEPPpgqUPsvv5AEskr3Na1DHPvD3We6J18IRMWINQ1k4i6NmtoLfLiA4mK9Z1sUuvm0Iosa9vs-MDYW5HCjmyweDp_X-MNsJzurH',
-    specs: ['15 KVA', 'Trifásico'],
-    brand: 'APC Schneider',
-    detailedSpecs: {
-      'Potência': '15 kVA',
-      'Entrada': '380V / 220V (Trifásico)',
-      'Regulação': 'Independente por fase',
-      'Proteção': 'Disjuntor Geral Tripolar e Bypass',
-      'Peso': '90 kg',
-      'Dimensões': '800 x 600 x 600 mm'
-    },
-    docs: [
-      { name: 'Manual de Serviço 15kVA', url: '#', type: 'manual' }
+      { name: 'Overview NetEco6000', url: '#', type: 'datasheet' }
     ]
   }
 ];

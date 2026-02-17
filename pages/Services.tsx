@@ -24,14 +24,144 @@ const Services: React.FC = () => {
         </div>
       </section>
 
+      {/* Áreas de Atuação */}
+      <section className="py-16 bg-white">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-1 w-12 bg-primary rounded-full"></div>
+            <span className="text-primary font-bold uppercase tracking-widest text-xs">Nosso Escopo</span>
+            <div className="h-1 w-12 bg-primary rounded-full"></div>
+          </div>
+          <h2 className="text-4xl font-black text-[#002b5c] mb-8">Áreas de Atuação</h2>
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12 font-medium">
+            No-breaks, Retificadores, Grupos Geradores, Painéis Elétricos, Estabilizadores de Tensão, Manutenções Prediais
+          </p>
+          <p className="text-slate-500 leading-relaxed max-w-4xl mx-auto mb-12">
+            Clarity Engenharia, empresa multimarcas que atua na área de assistência técnica, manutenção preventiva e corretiva, locação e comercialização de No-breaks, Grupos Geradores, Estabilizadores de Tensão, Retificadores e manutenção predial, oferecendo uma linha completa de produtos e serviços para atender as necessidades dos seus clientes.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { icon: 'bolt', label: 'No-breaks' },
+              { icon: 'electrical_services', label: 'Retificadores' },
+              { icon: 'electric_bolt', label: 'Grupos Geradores' },
+              { icon: 'settings_power', label: 'Painéis Elétricos' },
+              { icon: 'energy_savings_leaf', label: 'Estabilizadores' },
+              { icon: 'domain', label: 'Manutenção Predial' }
+            ].map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center gap-2 p-6 bg-slate-50 rounded-xl min-w-[160px] hover:bg-white hover:shadow-lg transition-all border border-slate-100">
+                <span className="material-symbols-outlined text-4xl text-sky-500">{item.icon}</span>
+                <span className="font-bold text-[#002b5c]">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology & App Section */}
+      <section className="py-20 bg-slate-50 overflow-hidden">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
+          <div className="flex flex-col md:flex-row items-center gap-16">
+            <div className="flex-1">
+              <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Tecnologia Exclusiva</h2>
+              <h3 className="text-4xl font-black text-[#002b5c] mb-6 leading-tight">Gestão Inteligente na Palma da Mão</h3>
+              <p className="text-lg text-slate-600 mb-8">
+                Através do Sistema implantado pela Clarity Engenharia, torna-se possível programar rotinas de visitas, ciclos de visitas semanais, quinzenais e mensais.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#002b5c] flex-shrink-0">
+                    <span className="material-symbols-outlined">calendar_month</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#002b5c] text-lg">Planejador de Tarefas</h4>
+                    <p className="text-slate-600 text-sm">Roteiriza visitas agendadas e relaciona locais de atendimento e agentes através da distância entre eles.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#002b5c] flex-shrink-0">
+                    <span className="material-symbols-outlined">checklist</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#002b5c] text-lg">Checklist Digital</h4>
+                    <p className="text-slate-600 text-sm">Padronização de atendimentos com checklists digitais para geradores, nobreaks e infraestrutura.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-[#002b5c] flex-shrink-0">
+                    <span className="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#002b5c] text-lg">Relatórios em Tempo Real</h4>
+                    <p className="text-slate-600 text-sm">Relatórios técnicos gerados via APP, com fotos, pendências e assinaturas digitais.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Phone Mockup Representation */}
+            <div className="flex-1 relative flex justify-center">
+              <div className="relative z-10 bg-white p-4 rounded-[3rem] shadow-2xl border-8 border-slate-800 max-w-[300px]">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-xl z-20"></div>
+                <div className="bg-slate-100 rounded-[2rem] overflow-hidden h-[550px] flex flex-col relative">
+                  {/* Screen Content Mockup */}
+                  <div className="bg-[#002b5c] p-6 pt-12 text-white">
+                    <div className="flex justify-between items-center mb-6">
+                      <span className="material-symbols-outlined">menu</span>
+                      <span className="font-bold">CLARITY APP</span>
+                      <span className="material-symbols-outlined">notifications</span>
+                    </div>
+                    <div className="bg-white/10 p-4 rounded-xl mb-4">
+                      <p className="text-xs opacity-70">Próxima Visita</p>
+                      <p className="font-bold">Banco BMG - Data Center</p>
+                      <p className="text-xs mt-1 flex items-center gap-1"><span className="material-symbols-outlined text-[10px]">schedule</span> 14:00 - Hoje</p>
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-3">
+                    <div className="bg-white p-3 rounded-xl shadow-sm flex items-center gap-3">
+                      <div className="bg-green-100 p-2 rounded-lg text-green-600"><span className="material-symbols-outlined">check_circle</span></div>
+                      <div>
+                        <p className="font-bold text-sm text-slate-800">Checklist Preventiva</p>
+                        <p className="text-xs text-slate-500">Concluído em 10:30</p>
+                      </div>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl shadow-sm flex items-center gap-3">
+                      <div className="bg-orange-100 p-2 rounded-lg text-orange-600"><span className="material-symbols-outlined">warning</span></div>
+                      <div>
+                        <p className="font-bold text-sm text-slate-800">Alerta de Temperatura</p>
+                        <p className="text-xs text-slate-500">Sala UPS 02 - 28°C</p>
+                      </div>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl shadow-sm flex items-center gap-3">
+                      <div className="bg-blue-100 p-2 rounded-lg text-blue-600"><span className="material-symbols-outlined">description</span></div>
+                      <div>
+                        <p className="font-bold text-sm text-slate-800">Relatório Mensal</p>
+                        <p className="text-xs text-slate-500">Disponível para download</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-auto p-4">
+                    <button className="w-full bg-[#002b5c] text-white py-3 rounded-xl font-bold text-sm shadow-lg">Iniciar Nova Tarefa</button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative elements behind phone */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-sky-200/30 rounded-full blur-3xl -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Services Grid */}
       <section className="max-w-[1280px] mx-auto px-4 md:px-10 py-16 md:py-20">
         <div className="flex flex-col gap-4 mb-12 md:mb-16 max-w-2xl">
           <div className="flex items-center gap-4">
             <div className="h-1 w-12 bg-primary rounded-full"></div>
-            <span className="text-primary font-bold uppercase tracking-widest text-[10px] md:text-xs">Excelência Operacional</span>
+            <span className="text-primary font-bold uppercase tracking-widest text-[10px] md:text-xs">Serviços Especializados</span>
           </div>
-          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight">Nossas Áreas de Atuação</h2>
+          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight">Soluções Completas</h2>
           <p className="text-slate-500 dark:text-slate-400 text-base md:text-lg leading-relaxed">
             Fornecemos serviços de engenharia elétrica de ponta a ponta, projetados para manter sua infraestrutura crítica sempre funcional.
           </p>
@@ -70,6 +200,57 @@ const Services: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Importance of Maintenance */}
+      <section className="py-20 bg-[#002b5c] text-white">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black mb-6">A Importância da Manutenção</h2>
+            <p className="text-blue-100 text-lg max-w-4xl mx-auto leading-relaxed">
+              Através das manutenções preventivas, a vida útil do equipamento é estendida. É muito importante entender como as manutenções se dividem para aplicar a melhor estratégia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
+            <div className="space-y-8">
+              <div className="bg-[#003875] p-6 rounded-xl border-l-4 border-green-500 hover:bg-[#004085] transition-colors">
+                <h3 className="text-xl font-bold text-green-400 mb-3">Manutenção Preventiva</h3>
+                <p className="text-sm opacity-90 leading-relaxed text-blue-50">
+                  Através da manutenção preventiva, a vida útil do equipamento é estendida em aproximadamente 70% uma vez que é possível identificar e corrigir qualquer tipo de anomalia futura que possa causar paradas repentinas no sistema, garantindo a continuidade e perfeito funcionamento do equipamento, realizando checagem, limpeza interna e externa, ajustes gerais elétricos e mecânicos, verificação de baterias e análise das tensões.
+                </p>
+              </div>
+              <div className="bg-[#003875] p-6 rounded-xl border-l-4 border-yellow-500 hover:bg-[#004085] transition-colors">
+                <h3 className="text-xl font-bold text-yellow-400 mb-3">Manutenção Preditiva</h3>
+                <p className="text-sm opacity-90 leading-relaxed text-blue-50">
+                  A manutenção preditiva é o acompanhamento periódico de equipamentos ou máquinas, através de dados coletados por meio de inspeções. As técnicas mais comuns utilizadas para manutenção preditiva podem ser: análise de vibração, ultrassom, inspeção visual e outras técnicas de análise não destrutivas. Trata-se de um processo que diz o tempo de vida útil dos componentes das máquinas e equipamentos e as condições para que esse tempo de vida seja bem aproveitado.
+                </p>
+              </div>
+              <div className="bg-[#003875] p-6 rounded-xl border-l-4 border-red-500 hover:bg-[#004085] transition-colors">
+                <h3 className="text-xl font-bold text-red-400 mb-3">Manutenção Corretiva</h3>
+                <p className="text-sm opacity-90 leading-relaxed text-blue-50">
+                  A manutenção corretiva acontece quando o equipamento já está com alguma peça irregular, apresentando mal funcionamento, e ela precisa ser substituída. Essa manutenção pode ser necessária em duas situações: quando surge uma falha inesperada, ou então quando é detectada alguma falha que possa levar a algum problema maior futuramente.
+                </p>
+              </div>
+            </div>
+
+            {/* Corrective x Preventive Comparison */}
+            <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10 h-full flex flex-col">
+              <h3 className="text-2xl font-bold mb-6 text-center border-b border-white/10 pb-4">Manutenção Corretiva x Preventiva</h3>
+              <div className="space-y-6 flex-1 flex flex-col justify-center">
+                <p className="text-blue-100 leading-relaxed">
+                  A manutenção corretiva possui maior impacto financeiro do que a manutenção preventiva. Uma vez que pode implicar a suspensão prolongada da atividade das máquinas e equipamentos, podendo mesmo levar à indisponibilidade de uma linha de produção, ou outro serviço.
+                </p>
+                <div className="bg-green-500/20 p-6 rounded-xl border border-green-500/30">
+                  <p className="font-bold text-green-300 mb-2">A Vantagem da Prevenção</p>
+                  <p className="text-sm text-green-100">
+                    A principal vantagem de ter um plano de manutenção preventiva é poder prevenir todas essas situações, substituindo os componentes usados no prazo certo, preservando e restaurando todas as peças necessárias.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

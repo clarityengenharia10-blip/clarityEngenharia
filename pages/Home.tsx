@@ -127,46 +127,46 @@ const Home: React.FC = () => {
                     <h2 className="text-center text-3xl font-black text-[#002b5c] mb-12 uppercase tracking-tight">Portfólio</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {/* UPS Card */}
-                        <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+                        {/* Smart UPS Card */}
+                        <Link to="/products?category=smart_power_supply" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.category === 'ups')?.image || IMAGES.hero} alt="Nobreaks" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'ups5000-h')?.image || IMAGES.hero} alt="UPS Inteligente" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
-                                <span className="font-bold text-lg">Nobreaks</span>
+                                <span className="font-bold text-lg">UPS Inteligente</span>
                                 <span className="material-symbols-outlined bg-sky-500 text-white rounded-full p-1 text-sm transform group-hover:rotate-45 transition-transform">arrow_forward</span>
                             </div>
-                        </div>
-                        {/* Racks Card */}
-                        <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+                        </Link>
+                        {/* Modular DC Card */}
+                        <Link to="/products?category=smart_modular_dc" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.id === 'rack-ar3100')?.image || IMAGES.hero} alt="Racks" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'fusionmodule2000')?.image || IMAGES.hero} alt="Data Center Modular" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
-                                <span className="font-bold text-lg">Armários e Racks</span>
+                                <span className="font-bold text-lg">Data Center Modular</span>
                                 <span className="material-symbols-outlined bg-sky-500 text-white rounded-full p-1 text-sm transform group-hover:rotate-45 transition-transform">arrow_forward</span>
                             </div>
-                        </div>
-                        {/* Batteries Card */}
-                        <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+                        </Link>
+                        {/* SmartLi Card */}
+                        <Link to="/products?category=smart_power_supply" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.category === 'batteries')?.image || IMAGES.hero} alt="Baterias" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'smartli')?.image || IMAGES.hero} alt="Baterias Lítio" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
-                                <span className="font-bold text-lg">Baterias</span>
+                                <span className="font-bold text-lg">Baterias Lítio</span>
                                 <span className="material-symbols-outlined bg-sky-500 text-white rounded-full p-1 text-sm transform group-hover:rotate-45 transition-transform">arrow_forward</span>
                             </div>
-                        </div>
-                        {/* Solar/Other Card */}
-                        <div className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
+                        </Link>
+                        {/* Cooling Card */}
+                        <Link to="/products?category=smart_cooling" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.id === 'bms-hub')?.image || IMAGES.hero} alt="Outros" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'netcol5000')?.image || IMAGES.hero} alt="Climatização" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
-                                <span className="font-bold text-lg">Acessórios</span>
+                                <span className="font-bold text-lg">Climatização</span>
                                 <span className="material-symbols-outlined bg-sky-500 text-white rounded-full p-1 text-sm transform group-hover:rotate-45 transition-transform">arrow_forward</span>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>

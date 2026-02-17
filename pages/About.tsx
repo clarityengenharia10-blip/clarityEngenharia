@@ -31,19 +31,33 @@ const About: React.FC = () => {
             <section className="py-20 bg-slate-50 relative">
                 <div className="max-w-[1280px] mx-auto px-4 md:px-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-32 relative z-20">
-                        {[
-                            { title: 'Missão', icon: 'flag', desc: 'Prover soluções de energia segura e confiável, superando as expectativas dos clientes com tecnologia de ponta e excelência técnica.' },
-                            { title: 'Visão', icon: 'visibility', desc: 'Ser reconhecida nacionalmente como a parceira estratégica número um em infraestrutura de missão crítica e eficiência energética.' },
-                            { title: 'Valores', icon: 'diamond', desc: 'Integridade, Comprometimento, Inovação, Segurança e Sustentabilidade em cada projeto que executamos.' }
-                        ].map((item, idx) => (
-                            <div key={idx} className="bg-white p-8 rounded-xl shadow-xl border-t-4 border-sky-500 hover:-translate-y-2 transition-transform duration-300">
-                                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#002b5c] mb-6">
-                                    <span className="material-symbols-outlined text-4xl">{item.icon}</span>
-                                </div>
-                                <h3 className="text-2xl font-bold text-[#002b5c] mb-4">{item.title}</h3>
-                                <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                        <div className="bg-white p-8 rounded-xl shadow-xl border-t-4 border-sky-500 hover:-translate-y-2 transition-transform duration-300">
+                            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#002b5c] mb-6">
+                                <span className="material-symbols-outlined text-4xl">flag</span>
                             </div>
-                        ))}
+                            <h3 className="text-2xl font-bold text-[#002b5c] mb-4">Missão</h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                Ser excelência em assistência técnica com atendimento personalizado e compromisso ambiental.
+                            </p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-xl border-t-4 border-sky-500 hover:-translate-y-2 transition-transform duration-300">
+                            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#002b5c] mb-6">
+                                <span className="material-symbols-outlined text-4xl">visibility</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-[#002b5c] mb-4">Visão</h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                Ser conhecida como empresa que supera as expectativas de seus clientes.
+                            </p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-xl border-t-4 border-sky-500 hover:-translate-y-2 transition-transform duration-300">
+                            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-[#002b5c] mb-6">
+                                <span className="material-symbols-outlined text-4xl">diamond</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-[#002b5c] mb-4">Valores</h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                Ética, Excelência, Confiabilidade e Capacitação são os pilares pautados e definidos como fundamentais em nossa organização.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -52,68 +66,75 @@ const About: React.FC = () => {
             <section className="py-20">
                 <div className="max-w-[1280px] mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center gap-16">
                     <div className="flex-1">
-                        <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Quem Somos</h2>
-                        <h3 className="text-4xl font-black text-[#002b5c] mb-6 leading-tight">Expertise Técnica e<br />Compromisso Real</h3>
-                        <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">A Empresa</h2>
+                        <h3 className="text-4xl font-black text-[#002b5c] mb-6 leading-tight">Líder em Soluções de Qualidade e Segurança Energética</h3>
+                        <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-justify">
                             <p>
-                                A <strong>Clarity Engenharia</strong> nasceu da necessidade do mercado por um atendimento técnico verdadeiramente especializado em sistemas de energia ininterrupta (UPS/Nobreaks).
+                                <strong>Clarity Engenharia</strong>, empresa multimarcas, líder em soluções de qualidade e de segurança energética, especializada em sistemas ininterruptos e condicionamento de energia, atuando em diversos segmentos como: Hospitais, Laboratórios, Instituições Financeiras, Órgãos Governamentais, Indústrias e Comércio em Geral.
                             </p>
                             <p>
-                                Contamos com um corpo técnico altamente qualificado, com engenheiros e técnicos certificados pelos principais fabricantes mundiais. Nosso laboratório próprio em São Paulo possui infraestrutura de ponta para reparos complexos, testes de carga e homologação de equipamentos.
+                                Com corpo técnico especializado conquistou o respeito e a confiança de centenas de clientes, fornecendo produtos e serviços com elevada qualidade e avançada tecnologia.
                             </p>
-                            <p>
-                                Atuamos em todo o território nacional, atendendo desde pequenos escritórios até grandes data centers, hospitais e indústrias que não podem se dar ao luxo de parar.
-                            </p>
-                        </div>
-
-                        <div className="mt-10 flex gap-8">
-                            <div className="flex flex-col">
-                                <span className="text-4xl font-black text-[#002b5c]">+15</span>
-                                <span className="text-sm text-slate-500 font-bold uppercase">Anos de Mercado</span>
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-4xl font-black text-[#002b5c]">+5k</span>
-                                <span className="text-sm text-slate-500 font-bold uppercase">Atendimentos</span>
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-4xl font-black text-[#002b5c]">100%</span>
-                                <span className="text-sm text-slate-500 font-bold uppercase">Satisfação</span>
-                            </div>
                         </div>
                     </div>
                     <div className="flex-1 relative">
                         <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-sky-100 rounded-full -z-10 blur-3xl opacity-50"></div>
                         <img
-                            src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2670&auto=format&fit=crop"
-                            alt="Engenheiro trabalhando"
+                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2669&auto=format&fit=crop"
+                            alt="Escritório Corporativo"
                             className="rounded-2xl shadow-2xl relative z-10 border-8 border-white"
                         />
-                        <div className="absolute -bottom-10 -left-10 bg-[#002b5c] p-8 rounded-lg text-white shadow-xl z-20 max-w-xs hidden md:block">
-                            <span className="material-symbols-outlined text-4xl text-sky-500 mb-4">verified_user</span>
-                            <p className="font-bold text-lg">Certificação Técnica e Segurança em Primeiro Lugar</p>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Why Choose Us */}
-            <section className="py-20 bg-[#002b5c] text-white">
-                <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
-                    <h2 className="text-3xl md:text-4xl font-black mb-16 uppercase tracking-tight">O Diferencial Clarity</h2>
+            {/* Structure Section */}
+            <section className="py-20 bg-slate-50">
+                <div className="max-w-[1280px] mx-auto px-4 md:px-10 flex flex-col md:flex-row-reverse items-center gap-16">
+                    <div className="flex-1">
+                        <h2 className="text-sky-500 font-bold uppercase tracking-widest text-sm mb-2">Nossa Estrutura</h2>
+                        <h3 className="text-4xl font-black text-[#002b5c] mb-6 leading-tight">Infraestrutura Completa para Atender Você</h3>
+                        <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-justify">
+                            <p>
+                                Clarity Engenharia, instalada em uma área de <strong>2600 m²</strong>, distribuídos em escritório administrativo, laboratório técnico, almoxarifado de placas e componentes.
+                            </p>
+                            <p>
+                                Possui também um vasto estoque de equipamentos para backup e locação, garantindo agilidade e disponibilidade imediata para nossos clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex-1">
+                        <img
+                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop"
+                            alt="Laboratório Técnico"
+                            className="rounded-2xl shadow-2xl border-8 border-white"
+                        />
+                    </div>
+                </div>
+            </section>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        {[
-                            { title: 'Atendimento 24/7', icon: 'schedule', desc: 'Suporte emergencial a qualquer hora do dia ou da noite.' },
-                            { title: 'Estoque Próprio', icon: 'inventory_2', desc: 'Peças de reposição e equipamentos para backup imediato.' },
-                            { title: 'Equipe Certificada', icon: 'engineering', desc: 'Profissionais treinados diretamente pelos fabricantes.' },
-                            { title: 'Frota Própria', icon: 'local_shipping', desc: 'Agilidade e segurança no transporte de equipamentos.' }
-                        ].map((item, id) => (
-                            <div key={id} className="bg-[#003875] p-8 rounded-xl border border-[#004e9a] hover:bg-[#004e9a] transition-colors group">
-                                <span className="material-symbols-outlined text-5xl text-sky-500 mb-6 group-hover:scale-110 transition-transform">{item.icon}</span>
-                                <h4 className="text-xl font-bold mb-3">{item.title}</h4>
-                                <p className="text-blue-100 text-sm leading-relaxed">{item.desc}</p>
+            {/* Quality & Safety */}
+            <section className="py-20 bg-[#002b5c] text-white">
+                <div className="max-w-[1280px] mx-auto px-4 md:px-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="material-symbols-outlined text-5xl text-sky-500">verified</span>
+                                <h3 className="text-3xl font-black uppercase">Política de Qualidade</h3>
                             </div>
-                        ))}
+                            <p className="text-lg text-blue-100 leading-relaxed text-justify">
+                                Assegurar e aprimorar continuamente a qualidade de nossos produtos, serviços e processos, de maneira a satisfazer nossos clientes através da excelência em atendimento e soluções técnicas.
+                            </p>
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-4 mb-6">
+                                <span className="material-symbols-outlined text-5xl text-sky-500">health_and_safety</span>
+                                <h3 className="text-3xl font-black uppercase">Higiene e Segurança</h3>
+                            </div>
+                            <p className="text-lg text-blue-100 leading-relaxed text-justify">
+                                Zelar pela proteção dos funcionários é inegociável para a Clarity Engenharia. Garantimos condições seguras de trabalho instruindo e treinando nossa equipe técnica quanto a utilização dos EPI e EPC, além do compromisso pela organização do ambiente onde se encontra o cliente.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
