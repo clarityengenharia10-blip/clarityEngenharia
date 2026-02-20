@@ -506,7 +506,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     date: '05 Jan 2024',
     author: 'Clarity Engenharia',
-    image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cd4?q=80&w=2671&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=2670&auto=format&fit=crop',
     category: 'Tecnologia',
     readTime: '6 min'
   },
@@ -545,7 +545,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     date: '15 Dez 2023',
     author: 'Clarity Engenharia',
-    image: 'https://images.unsplash.com/photo-1563968743333-044cef80053b?q=80&w=1965&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop',
     category: 'Tendências',
     readTime: '4 min'
   },
@@ -611,7 +611,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
     date: '05 Out 2023',
     author: 'Consultoria Técnica',
-    image: 'https://images.unsplash.com/photo-1622675235450-48f8c37d7c69?q=80&w=2670&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2670&auto=format&fit=crop',
     category: 'Guia',
     readTime: '7 min'
   },

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
-import { IMAGES, SERVICES, BRANDS, CLIENTS, TESTIMONIALS, PRODUCTS } from '../constants';
+import { IMAGES, SERVICES, BRANDS, CLIENTS, TESTIMONIALS, PRODUCTS, BLOG_POSTS } from '../constants';
 
 const Home: React.FC = () => {
     const { cartItems } = useCart();
@@ -311,27 +311,31 @@ const Home: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {/* Fake Blog Posts */}
-                        {[1, 2, 3].map((post) => (
-                            <article key={post} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-slate-100 group">
-                                <div className="h-48 overflow-hidden">
+                        {BLOG_POSTS.slice(0, 3).map((post) => (
+                            <div key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-slate-100 group flex flex-col h-full">
+                                <Link to={`/blog/${post.id}`} className="block h-48 overflow-hidden">
                                     <img
-                                        src={`https://source.unsplash.com/random/800x600?industry,${post}`}
-                                        alt="Blog Post"
+                                        src={post.image}
+                                        alt={post.title}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
-                                </div>
-                                <div className="p-6">
-                                    <span className="text-xs font-bold text-sky-500 uppercase mb-2 block">Novidade</span>
-                                    <h3 className="font-bold text-lg text-slate-800 mb-3 group-hover:text-[#002b5c] transition-colors">
-                                        A importância da manutenção preventiva em nobreaks
-                                    </h3>
-                                    <p className="text-slate-500 text-sm mb-4 line-clamp-2">
-                                        Descubra como evitar paradas inesperadas e garantir a longevidade dos seus equipamentos com rotinas adequadas.
+                                </Link>
+                                <div className="p-6 flex flex-col flex-1">
+                                    <span className="text-xs font-bold text-sky-500 uppercase mb-2 block">{post.category}</span>
+                                    <Link to={`/blog/${post.id}`} className="block mb-3">
+                                        <h3 className="font-bold text-lg text-slate-800 group-hover:text-[#002b5c] transition-colors line-clamp-2">
+                                            {post.title}
+                                        </h3>
+                                    </Link>
+                                    <p className="text-slate-500 text-sm mb-4 line-clamp-3">
+                                        {post.excerpt}
                                     </p>
-                                    <a href="#" className="text-[#002b5c] font-bold text-sm hover:underline">Ler mais</a>
+                                    <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+                                        <span className="text-xs text-slate-400">{post.date}</span>
+                                        <Link to={`/blog/${post.id}`} className="text-[#002b5c] font-bold text-sm hover:underline">Ler mais</Link>
+                                    </div>
                                 </div>
-                            </article>
+                            </div>
                         ))}
                     </div>
 
