@@ -652,7 +652,7 @@ export const CASES = [
     challenge: 'Micro-cortes de energia desprogramavam os robôs da linha de montagem, causando perdas de produção de até R$ 50.000 por hora parada.',
     solution: 'Instalação de condicionadores de tensão industriais e um sistema UPS de 500kVA dedicado à linha de automação, com filtragem ativa de harmônicas.',
     result: 'Eliminação total das paradas por distúrbios elétricos. O ROI (Retorno sobre Investimento) do projeto foi alcançado em apenas 4 meses de operação.',
-    image: 'https://images.unsplash.com/photo-1563968743333-044cef80053b?q=80&w=1965&auto=format&fit=crop', // Reusing industrial looking image
+    image: '/images/cases/industria-automotiva.webp',
     tags: ['Indústria', 'Automação', 'Qualidade de Energia']
   },
   {
