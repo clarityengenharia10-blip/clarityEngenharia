@@ -21,10 +21,10 @@ import { CartProvider } from './contexts/CartContext';
 
 // ScrollToTop helper component
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [pathname]);
+    window.scrollTo(0, 0);
+  }, [location.pathname, location.search, location.hash]);
   return null;
 };
 
@@ -46,7 +46,6 @@ const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
-            <Route path="/services" element={<ServiceDetail />} /> {/* Fallback or main list if needed, or redirect */}
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partner />} />

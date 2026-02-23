@@ -121,18 +121,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
-                      'Manutenção Preventiva de Nobreaks',
-                      'Manutenção Corretiva de Nobreaks',
-                      'Locação de Nobreak',
-                      'Contrato de Manutenção de Nobreak',
-                      'Ativação (Startup) de Nobreaks',
-                      'Calibração e Parametrização de Nobreaks',
-                      'Troca de Baterias de Nobreak',
-                      'Consultoria Técnica Especializada em Nobreak'
+                      { name: 'Manutenção Preventiva de Nobreaks', link: '/services/manutencao-preventiva' },
+                      { name: 'Manutenção Corretiva de Nobreaks', link: '/services/manutencao-corretiva' },
+                      { name: 'Locação de Nobreak', link: '/services/locacao-nobreak' },
+                      { name: 'Contrato de Manutenção de Nobreak', link: '/services/contrato-manutencao' },
+                      { name: 'Ativação (Startup) de Nobreaks', link: '/services/ativacao-startup' },
+                      { name: 'Calibração e Parametrização de Nobreaks', link: '/services/calibracao-parametrizacao' },
+                      { name: 'Troca de Baterias de Nobreak', link: '/services/troca-baterias' },
+                      { name: 'Consultoria Técnica Especializada em Nobreak', link: '/services/consultoria-tecnica' }
                     ].map((service) => (
-                      <li key={service}>
-                        <Link to="/services" className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
-                          {service}
+                      <li key={service.name}>
+                        <Link to={service.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
+                          {service.name}
                         </Link>
                       </li>
                     ))}
@@ -279,11 +279,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h5 className="font-bold text-[#002b5c] uppercase tracking-wide mb-6">Nossos Serviços</h5>
               <ul className="flex flex-col gap-3 text-sm font-medium">
-                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Manutenção de Nobreaks</Link></li>
-                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Locação de Equipamentos</Link></li>
-                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Instalação e Start-up</Link></li>
-                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Consultoria Técnica</Link></li>
-                <li><Link to="/services" className="hover:text-sky-400 transition-colors">Contratos de Manutenção</Link></li>
+                <li><Link to="/services/manutencao-preventiva" className="hover:text-sky-400 transition-colors">Manutenção de Nobreaks</Link></li>
+                <li><Link to="/services/locacao-nobreak" className="hover:text-sky-400 transition-colors">Locação de Equipamentos</Link></li>
+                <li><Link to="/services/ativacao-startup" className="hover:text-sky-400 transition-colors">Instalação e Start-up</Link></li>
+                <li><Link to="/services/consultoria-tecnica" className="hover:text-sky-400 transition-colors">Consultoria Técnica</Link></li>
+                <li><Link to="/services/contrato-manutencao" className="hover:text-sky-400 transition-colors">Contratos de Manutenção</Link></li>
               </ul>
             </div>
 
