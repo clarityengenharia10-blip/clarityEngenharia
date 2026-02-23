@@ -662,7 +662,7 @@ export const CASES = [
     challenge: 'Necessidade de duplicar a capacidade de processamento sem desligar o Data Center atual (Zero Downtime) e melhorar a eficiência energética (PUE).',
     solution: 'Substituição dos aparelhos de ar condicionado CRAC antigos por novas unidades In-row de alta eficiência e confinamento de corredor quente.',
     result: 'Redução do PUE de 2.2 para 1.5, gerando uma economia de energia de 30%. O upgrade foi realizado sem nenhuma interrupção nos serviços bancários.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2574&auto=format&fit=crop', // Server room
+    image: '/images/cases/data-center-financeiro.webp',
     tags: ['Data Center', 'Eficiência', 'Retrofit']
   },
   {
