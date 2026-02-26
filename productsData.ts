@@ -225,14 +225,26 @@ export const PRODUCTS: Product[] = [
     },
     {
         id: 'netcol5000-a',
-        name: 'NetCol5000-A (25–46kW)',
+        name: 'NetCol5000-A (25–46 kW)',
         category: 'smart_cooling',
         series: 'Série NetCol',
-        description: 'Refrigeração In-row Air-cooled.',
+        description: 'O NetCol5000-A é uma solução de refrigeração inteligente de precisão in-row a ar, equipada com compressor DC inverter e design voltado a alta temperatura do ar de retorno. Ele adapta-se à carga térmica de forma inteligente, garantindo alta eficiência, confiabilidade e facilidade operacional com o uso de algoritmos exclusivos.',
         image: '/images/products/Camada 26.png',
-        badge: 'Precisão',
-        specs: ['In-row', 'Air-cooled'],
-        brand: 'Huawei'
+        badge: 'In-Row Air-Cooled',
+        specs: ['Compressor DC Inverter', 'EC Fans', 'iCooling (Redução de 8%)', 'Tela 7" Colorida'],
+        brand: 'Huawei',
+        detailedSpecs: {
+            'Cenários de Aplicação': 'Data centers modulares, data centers de alta densidade e de pequeno ou médio porte. Obs: O NetCol5000-A050H com módulo a água é ideal para cenários com pé-direito muito alto ou tubulações muito longas.',
+            'Simplicidade': 'Painel de 7 polegadas com informações críticas ao vivo. Diagnóstico automático de falhas para facilitar a manutenção. Conexões Rotalock no compressor dispensam soldagem na manutenção.',
+            'Ecológico (Green)': 'Regulagem contínua (stepless) através do compressor e ventiladores Inverter para altíssima eficiência, com umidificação por filme úmido consumindo quase zero energia elétrica extra.',
+            'Inteligência': 'O algoritmo de controle iCooling otimiza a eficiência geral do sistema e corta o uso de energia em até 8%. Alarme preditivo caso detecte vazamento ou pouco fluido refrigerante (automático).',
+            'Confiabilidade': 'Os ventiladores internos podem ser substituídos de forma online de maneira rápida, e a válvula de expansão é programada para fechar automaticamente numa eventual queda súbita da energia, salvaguardando o compressor.',
+            'Capacidades de Refrigeração (Indoor)': '25 kW (Modelo A025H), 35 kW (Modelo A035H) e 46 kW (Modelo A050H).',
+            'Dimensões Indoor (LxPxA)': 'Com opções "Slim" de 300 x 1100 x 2000 mm, 300 x 1200 x 2000 mm, ou padrão de 600 x 1200 x 2000 mm.',
+            'Unidades Outdoor (Condensadoras)': 'Integração perfeita com unidades condensadoras (A040, A060, A080, A120) dependendo do modelo da evaporadora.',
+            'Alimentação Elétrica': '380/400/415Vac ou 208~220Vac (dependendo do modelo), com painéis com dupla redundância de energia inclusos ou configuráveis.',
+            'Refrigerante': 'Projetado para operar com R410A de alto rendimento global.'
+        }
     },
     {
         id: 'fusioncol5000-a',
