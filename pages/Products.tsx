@@ -53,7 +53,6 @@ const Products: React.FC = () => {
     { id: 'smart_modular_dc', label: 'Data Center Modular Inteligente', icon: 'dns' },
     { id: 'smart_power_supply', label: 'Energia Inteligente (UPS)', icon: 'bolt' },
     { id: 'smart_cooling', label: 'Resfriamento Inteligente', icon: 'ac_unit' },
-    { id: 'smart_dc_management', label: 'Gestão Inteligente (DCIM)', icon: 'monitor_heart' },
   ];
 
   return (
