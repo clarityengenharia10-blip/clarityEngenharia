@@ -49,7 +49,12 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
                     item.cartItemId === cartItemId ? { ...item, quantity: item.quantity + 1 } : item
                 );
             }
-            return [...prevItems, { ...product, cartItemId, selectedVariation, quantity: 1 }];
+
+            const finalImage = selectedVariation && product.variationImages && product.variationImages[selectedVariation]
+                ? product.variationImages[selectedVariation]
+                : product.image;
+
+            return [...prevItems, { ...product, image: finalImage, cartItemId, selectedVariation, quantity: 1 }];
         });
     };
 

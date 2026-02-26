@@ -21,8 +21,12 @@ const ProductDetail: React.FC = () => {
     );
   }
 
+  const currentImage = selectedVariation && product.variationImages?.[selectedVariation]
+    ? product.variationImages[selectedVariation]
+    : product.image;
+
   // Mock thumbnails based on the main image
-  const thumbnails = [product.image, product.image, product.image];
+  const thumbnails = [currentImage, currentImage, currentImage];
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen">
@@ -90,8 +94,8 @@ const ProductDetail: React.FC = () => {
                       key={variation}
                       onClick={() => setSelectedVariation(variation)}
                       className={`px-4 py-2 rounded text-sm font-medium transition-colors border ${selectedVariation === variation
-                          ? 'bg-primary text-white border-primary'
-                          : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-primary/50'
+                        ? 'bg-primary text-white border-primary'
+                        : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-primary/50'
                         }`}
                     >
                       {variation}

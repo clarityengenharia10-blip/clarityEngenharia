@@ -9,6 +9,7 @@ export interface Product {
   badge?: string;
   specs: string[];
   variations?: string[];
+  variationImages?: Record<string, string>;
   powerRange?: string;
   brand?: string;
   detailedSpecs?: { [key: string]: string };

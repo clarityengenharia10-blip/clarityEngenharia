@@ -12,6 +12,11 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/16.jpg',
     badge: 'Outdoor',
     specs: ['Implementação Rápida', 'IP55/IP65 Proteção'],
+    variations: ['40ft-IT-AIO', '20ft-ICT-AIO'],
+    variationImages: {
+      '40ft-IT-AIO': '/images/products/Camada 32.png',
+      '20ft-ICT-AIO': '/images/products/Camada 33.png'
+    },
     powerRange: 'Up to 54kW',
     brand: 'Huawei',
     detailedSpecs: {
@@ -32,7 +37,7 @@ export const PRODUCTS: Product[] = [
     category: 'prefabricated_modular_dc',
     series: 'Série FusionDC',
     description: 'Data center modular pré-fabricado de médio porte, ideal para expansão flexível e alta eficiência energética.',
-    image: '/images/products/14.jpg',
+    image: '/images/products/Camada 31.png',
     badge: 'Expansível',
     specs: ['Design Modular', 'Alta Eficiência PUE < 1.15'],
     brand: 'Huawei',
@@ -81,6 +86,9 @@ export const PRODUCTS: Product[] = [
     badge: 'Edge',
     specs: ['Tudo-em-um', 'Plug & Play'],
     variations: ['Padrão', 'Integrated Cooling Solution'],
+    variationImages: {
+      'Integrated Cooling Solution': '/images/products/Camada 30.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '3kW a 10kW por rack',
@@ -124,6 +132,10 @@ export const PRODUCTS: Product[] = [
     badge: 'Premiado',
     specs: ['AI Cooling', 'Certificação TIER-Ready'],
     variations: ['FusionModule2000', 'FusionModule2000-S'],
+    variationImages: {
+      'FusionModule2000': '/images/products/Camada 29.png',
+      'FusionModule2000-S': '/images/products/Camada 28.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Arquitetura': 'Totalmente Modular',
@@ -148,6 +160,12 @@ export const PRODUCTS: Product[] = [
     badge: '97% Eficiência',
     specs: ['Módulo de 100kVA/3U', 'Hot-swap total'],
     variations: ['400/500/600kVA', '800kVA', '1200kVA', '1600kVA'],
+    variationImages: {
+      '1600kVA': '/images/products/Camada 4.png',
+      '1200kVA': '/images/products/Camada 5.png',
+      '800kVA': '/images/products/Camada 6.png',
+      '400/500/600kVA': '/images/products/Camada 7.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '400kVA a 1600kVA por sistema',
@@ -170,6 +188,9 @@ export const PRODUCTS: Product[] = [
     badge: 'Li-ion',
     specs: ['Vida Útil 10+ Anos', '70% Menos Espaço'],
     variations: ['SmartLi 3.0'],
+    variationImages: {
+      'SmartLi 3.0': '/images/products/Camada 17.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Química': 'Lítio Ferro Fosfato (LiFePO4)',
@@ -191,6 +212,10 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/4.jpg',
     badge: 'PowerPOD',
     specs: ['Full Integration', 'Footprint Otimizado'],
+    variations: ['Standard', 'Painel Completo'],
+    variationImages: {
+      'Painel Completo': '/images/products/Camada 3.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Conceito': 'Power Supply & Distribution System (PowerPOD)',
@@ -213,6 +238,9 @@ export const PRODUCTS: Product[] = [
     badge: 'High Efficiency',
     specs: ['Rack/Tower', '95% Eficiência'],
     variations: ['15/20kVA'],
+    variationImages: {
+      '15/20kVA': '/images/products/Camada 20.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '15kVA a 20kVA',
@@ -229,6 +257,10 @@ export const PRODUCTS: Product[] = [
     badge: 'Compact',
     specs: ['Alta Densidade', 'Wi-Fi Embutido'],
     variations: ['6kVA', '10kVA'],
+    variationImages: {
+      '10kVA': '/images/products/Camada 18.png',
+      '6kVA': '/images/products/Camada 19.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '6kVA a 10kVA',
@@ -245,6 +277,12 @@ export const PRODUCTS: Product[] = [
     badge: 'Tower UPS',
     specs: ['Alta Confiabilidade', 'Até 96% de Eficiência'],
     variations: ['30/40kVA', '60kVA', '400/500kVA', '600kVA'],
+    variationImages: {
+      '600kVA': '/images/products/Camada 13.png',
+      '400/500kVA': '/images/products/Camada 14.png',
+      '60kVA': '/images/products/Camada 15.png',
+      '30/40kVA': '/images/products/Camada 16.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '30 a 600kVA',
@@ -261,6 +299,13 @@ export const PRODUCTS: Product[] = [
     badge: 'Modular',
     specs: ['Hot-swappable', 'Manutenção Rápida'],
     variations: ['120kVA-FM', '200/300kVA', '400/500kVA', '600kVA', '800kVA'],
+    variationImages: {
+      '800kVA': '/images/products/Camada 8.png',
+      '600kVA': '/images/products/Camada 9.png',
+      '400/500kVA': '/images/products/Camada 10.png',
+      '200/300kVA': '/images/products/Camada 11.png',
+      '120kVA-FM': '/images/products/Camada 12.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '30 a 800kVA',
@@ -277,6 +322,10 @@ export const PRODUCTS: Product[] = [
     badge: 'Distribuição',
     specs: ['Alta Precisão', 'Design Modular'],
     variations: ['Precision Power Distribution Cabinet', 'Modular Power Distribution Cabinet'],
+    variationImages: {
+      'Modular Power Distribution Cabinet': '/images/products/Camada 34.png',
+      'Precision Power Distribution Cabinet': '/images/products/Camada 35.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Arquitetura': 'Modular / Precisão',
@@ -295,6 +344,10 @@ export const PRODUCTS: Product[] = [
     badge: 'Precisão',
     specs: ['Controle Inverter', 'Alta Eficiência'],
     variations: ['FusionCol5000-A (46~65 kW) - (Air-cooled)', 'NetCol5000-A (25~46 kW) - (Air-cooled)'],
+    variationImages: {
+      'NetCol5000-A (25~46 kW) - (Air-cooled)': '/images/products/Camada 26.png',
+      'FusionCol5000-A (46~65 kW) - (Air-cooled)': '/images/products/Camada 27.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Tipo': 'Expansão Direta (DX) ou Água Gelada (CW)',
@@ -317,6 +370,11 @@ export const PRODUCTS: Product[] = [
     badge: 'Perimetral',
     specs: ['Downflow/Upflow', 'Modular Design'],
     variations: ['NetCol8000-A (45~120 kW) - (Air-cooled)', 'FusionCol8000-A (60kW) - (Air-cooled)', 'FusionCol8000-C210H -(Fan Wall Chilled Water Cooling)'],
+    variationImages: {
+      'NetCol8000-A (45~120 kW) - (Air-cooled)': '/images/products/Camada 25.png',
+      'FusionCol8000-A (60kW) - (Air-cooled)': '/images/products/Camada 24.png',
+      'FusionCol8000-C210H -(Fan Wall Chilled Water Cooling)': '/images/products/Camada 23.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Aplicação': 'Salas de Data Center médias e grandes',
@@ -339,6 +397,10 @@ export const PRODUCTS: Product[] = [
     badge: 'Free Cooling',
     specs: ['Economia Extrema', 'Sem Contaminação'],
     variations: ['FusionCol8000-E260 (260 kW)', 'FusionCol8000-E400 (400 kW)'],
+    variationImages: {
+      'FusionCol8000-E400 (400 kW)': '/images/products/Camada 21.png',
+      'FusionCol8000-E260 (260 kW)': '/images/products/Camada 22.png'
+    },
     brand: 'Huawei',
     detailedSpecs: {
       'Princípio': 'Evaporação indireta ar-ar',
