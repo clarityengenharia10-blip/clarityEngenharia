@@ -67,15 +67,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
-                      { name: 'Nobreak', link: '/products?category=ups' },
-                      { name: 'Bateria', link: '/products?category=batteries' },
-                      { name: 'Módulo/banco de baterias', link: '/products?category=battery_modules' },
-                      { name: 'PDU', link: '/products?category=accessories' },
-                      { name: 'ATS/STS', link: '/products?category=accessories' },
-                      { name: 'Transformador', link: '/products?category=stabilizers' },
-                      { name: 'Placa de Gerenciamento', link: '/products?category=accessories' },
-                      { name: 'Cabo de Energia', link: '/products?category=accessories' },
-                      { name: 'Gabinete', link: '/products?category=accessories' },
+                      { name: 'Data Center Pré-Fabricado', link: '/products?category=prefabricated_modular_dc' },
+                      { name: 'Data Center Modular Inteligente', link: '/products?category=smart_modular_dc' },
+                      { name: 'Energia Inteligente (UPS)', link: '/products?category=smart_power_supply' },
+                      { name: 'Resfriamento Inteligente', link: '/products?category=smart_cooling' },
                     ].map((item) => (
                       <li key={item.name}>
                         <Link to={item.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
@@ -186,8 +181,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="px-4 py-2">
                 <p className="text-xs font-bold text-slate-400 uppercase mb-2">Produtos</p>
                 <div className="flex flex-col gap-2 pl-2 border-l-2 border-slate-100">
-                  <Link to="/products?category=ups" className="text-sm text-slate-600">Nobreaks</Link>
-                  <Link to="/products?category=batteries" className="text-sm text-slate-600">Baterias</Link>
+                  <Link to="/products?category=prefabricated_modular_dc" className="text-sm text-slate-600">Data Center Pré-Fabricado</Link>
+                  <Link to="/products?category=smart_modular_dc" className="text-sm text-slate-600">Data Center Modular Inteligente</Link>
+                  <Link to="/products?category=smart_power_supply" className="text-sm text-slate-600">Energia Inteligente (UPS)</Link>
+                  <Link to="/products?category=smart_cooling" className="text-sm text-slate-600">Resfriamento Inteligente</Link>
                   <Link to="/products" className="text-sm text-[#002b5c] font-bold">Ver todos</Link>
                 </div>
               </div>
