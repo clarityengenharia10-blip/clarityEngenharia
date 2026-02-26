@@ -112,18 +112,27 @@ export const PRODUCTS: Product[] = [
     },
     {
         id: 'smartli',
-        name: 'SmartLi (Lithium Battery Cabinet)',
+        name: 'SmartLi (Sistema de Baterias de Lítio)',
         category: 'smart_power_supply',
         series: 'Série SmartLi',
-        description: 'Sistema de armazenamento de energia com baterias de íon-lítio inteligente e seguro.',
+        description: 'O SmartLi é um sistema de armazenamento de energia desenvolvido pela Huawei para UPS. Utiliza células LFP (Lítio Ferro Fosfato), as mais seguras do mercado. Sua tecnologia exclusiva de balanceamento ativo de corrente permite o uso misto de baterias novas e antigas, reduzindo Capex, enquanto o sistema BMS de três níveis garante gestão inteligente e economia de O&M.',
         image: '/images/products/5.jpg',
-        badge: 'Li-ion',
-        specs: ['Vida Útil 10+ Anos', '70% Menos Espaço'],
+        badge: 'Li-ion LFP',
+        specs: ['5000 Ciclos', 'Economia de 70% de Espaço', 'Uso Misto (Novas/Antigas)'],
         variations: ['SmartLi 3.0'],
         variationImages: {
             'SmartLi 3.0': '/images/products/Camada 17.png'
         },
-        brand: 'Huawei'
+        brand: 'Huawei',
+        detailedSpecs: {
+            'Cenários de Aplicação': 'Data centers corporativos (HQ), data centers de recuperação de desastres (Disaster Recovery), provedores de internet (IDC) e data centers de computação em nuvem.',
+            'Confiabilidade (Reliable)': 'Células LFP altamente estáveis (não propagam fogo após fuga térmica). Sistema de extinção de incêndio a nível de módulo (preciso e rápido). Vida útil longa de até 5000 ciclos (a 50% DOD).',
+            'Eficiência (Efficient)': 'Alta densidade de energia, economizando 70% do espaço ocupado em comparação a baterias VRLA. O sistema Smart BMS reduz custos de rotina (O&M) em até 80%.',
+            'Simplicidade (Simple)': 'Controle ativo de balanceamento de corrente suporta gabinetes mistos (novos e velhos) para expansão flexível. Strings com diferentes números de baterias de lítio podem ser ligadas em paralelo. Teste automático de capacidade.',
+            'Especificações': 'Célula: LiFePO4(6C). Tempo de vida de projeto: 15 anos. Compatibilidade: UPS Huawei e UPS/HVDC de terceiros. Proteção IP21.',
+            'Monitoramento e Comunicação': 'Sistema BMS em 3 níveis (Célula/BMU, Rack/BCU e Sistema/SBCU) integrado ao NetEco. Interfaces: FE, RS485, Contatos Secos.',
+            'Dimensões (LxPxA) e Peso': '600 x 850 x 2000 mm. Peso: De 900 kg a 1100 kg (dependendo do gabinete: 6+6, 7+7 ou 8+8 módulos).'
+        }
     },
     {
         id: 'fusionpower6000',
