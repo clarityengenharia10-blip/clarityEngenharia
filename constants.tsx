@@ -147,6 +147,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/6.jpg',
     badge: '97% Eficiência',
     specs: ['Módulo de 100kVA/3U', 'Hot-swap total'],
+    variations: ['400/500/600kVA', '800kVA', '1200kVA', '1600kVA'],
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '400kVA a 1600kVA por sistema',
@@ -168,6 +169,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/5.jpg',
     badge: 'Li-ion',
     specs: ['Vida Útil 10+ Anos', '70% Menos Espaço'],
+    variations: ['SmartLi 3.0'],
     brand: 'Huawei',
     detailedSpecs: {
       'Química': 'Lítio Ferro Fosfato (LiFePO4)',
@@ -201,6 +203,86 @@ export const PRODUCTS: Product[] = [
       { name: 'Solução FusionPower', url: '#', type: 'datasheet' }
     ]
   },
+  {
+    id: 'ups2000-g',
+    name: 'UPS2000-G - Soluções UPS',
+    category: 'smart_power_supply',
+    series: 'Série UPS2000',
+    description: 'UPS online de dupla conversão que oferece energia AC contínua e de alta qualidade. Ideal para cenários de pequeno porte.',
+    image: '/images/products/6.jpg',
+    badge: 'High Efficiency',
+    specs: ['Rack/Tower', '95% Eficiência'],
+    variations: ['15/20kVA'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '15kVA a 20kVA',
+      'Eficiência': 'Até 95%',
+    }
+  },
+  {
+    id: 'ups2000-h',
+    name: 'UPS2000-H - Soluções UPS',
+    category: 'smart_power_supply',
+    series: 'Série UPS2000',
+    description: 'Solução ideal de fornecimento de energia para cenários de pequeno porte com alta densidade, economizando espaço de instalação.',
+    image: '/images/products/6.jpg',
+    badge: 'Compact',
+    specs: ['Alta Densidade', 'Wi-Fi Embutido'],
+    variations: ['6kVA', '10kVA'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '6kVA a 10kVA',
+      'Eficiência': 'Até 96%',
+    }
+  },
+  {
+    id: 'ups5000-a',
+    name: 'UPS5000-A - Soluções UPS',
+    category: 'smart_power_supply',
+    series: 'Série UPS5000',
+    description: 'UPS de torre para data centers de médio e grande porte e cenários críticos de fornecimento de energia, com alta confiabilidade.',
+    image: '/images/products/6.jpg',
+    badge: 'Tower UPS',
+    specs: ['Alta Confiabilidade', 'Até 96% de Eficiência'],
+    variations: ['30/40kVA', '60kVA', '400/500kVA', '600kVA'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '30 a 600kVA',
+      'Eficiência': 'Até 96%',
+    }
+  },
+  {
+    id: 'ups5000-e',
+    name: 'UPS5000-E - Soluções UPS',
+    category: 'smart_power_supply',
+    series: 'Série UPS5000',
+    description: 'Solução modular de UPS para data centers de médio porte e cenários críticos. O design hot-swappable simplifica operações e manutenção.',
+    image: '/images/products/6.jpg',
+    badge: 'Modular',
+    specs: ['Hot-swappable', 'Manutenção Rápida'],
+    variations: ['120kVA-FM', '200/300kVA', '400/500kVA', '600kVA', '800kVA'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Capacidade': '30 a 800kVA',
+      'Eficiência': 'Até 96%',
+    }
+  },
+  {
+    id: 'pdu8000',
+    name: 'PDU8000 - Distribuição de Energia',
+    category: 'smart_power_supply',
+    series: 'Série PDU8000',
+    description: 'Gabinete de distribuição de energia de precisão e modular com medição de parâmetros elétricos e alarmes de risco.',
+    image: '/images/products/4.jpg',
+    badge: 'Distribuição',
+    specs: ['Alta Precisão', 'Design Modular'],
+    variations: ['Precision Power Distribution Cabinet', 'Modular Power Distribution Cabinet'],
+    brand: 'Huawei',
+    detailedSpecs: {
+      'Arquitetura': 'Modular / Precisão',
+      'Monitoramento': 'Medidores elétricos padronizados',
+    }
+  },
 
   // 4. Smart Cooling
   {
@@ -212,6 +294,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/03.jpg',
     badge: 'Precisão',
     specs: ['Controle Inverter', 'Alta Eficiência'],
+    variations: ['FusionCol5000-A (46~65 kW) - (Air-cooled)', 'NetCol5000-A (25~46 kW) - (Air-cooled)'],
     brand: 'Huawei',
     detailedSpecs: {
       'Tipo': 'Expansão Direta (DX) ou Água Gelada (CW)',
@@ -233,6 +316,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/2.jpg',
     badge: 'Perimetral',
     specs: ['Downflow/Upflow', 'Modular Design'],
+    variations: ['NetCol8000-A (45~120 kW) - (Air-cooled)', 'FusionCol8000-A (60kW) - (Air-cooled)', 'FusionCol8000-C210H -(Fan Wall Chilled Water Cooling)'],
     brand: 'Huawei',
     detailedSpecs: {
       'Aplicação': 'Salas de Data Center médias e grandes',
@@ -254,6 +338,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/01.jpg',
     badge: 'Free Cooling',
     specs: ['Economia Extrema', 'Sem Contaminação'],
+    variations: ['FusionCol8000-E260 (260 kW)', 'FusionCol8000-E400 (400 kW)'],
     brand: 'Huawei',
     detailedSpecs: {
       'Princípio': 'Evaporação indireta ar-ar',
