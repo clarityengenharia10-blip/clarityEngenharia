@@ -80,6 +80,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/10.jpg',
     badge: 'Edge',
     specs: ['Tudo-em-um', 'Plug & Play'],
+    variations: ['Padrão', 'Integrated Cooling Solution'],
     brand: 'Huawei',
     detailedSpecs: {
       'Capacidade': '3kW a 10kW por rack',
@@ -122,6 +123,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/products/8.jpg',
     badge: 'Premiado',
     specs: ['AI Cooling', 'Certificação TIER-Ready'],
+    variations: ['FusionModule2000', 'FusionModule2000-S'],
     brand: 'Huawei',
     detailedSpecs: {
       'Arquitetura': 'Totalmente Modular',

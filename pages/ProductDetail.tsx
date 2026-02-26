@@ -10,6 +10,7 @@ const ProductDetail: React.FC = () => {
   const [activeThumb, setActiveThumb] = useState(0);
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
+  const [selectedVariation, setSelectedVariation] = useState<string>(product?.variations?.[0] || '');
 
   if (!product) {
     return (
@@ -79,6 +80,27 @@ const ProductDetail: React.FC = () => {
               {product.description}
             </p>
 
+            {/* Variações do Produto */}
+            {product.variations && product.variations.length > 0 && (
+              <div className="flex flex-col gap-2 mt-2">
+                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Escolha a Variação:</span>
+                <div className="flex flex-wrap gap-2">
+                  {product.variations.map((variation) => (
+                    <button
+                      key={variation}
+                      onClick={() => setSelectedVariation(variation)}
+                      className={`px-4 py-2 rounded text-sm font-medium transition-colors border ${selectedVariation === variation
+                          ? 'bg-primary text-white border-primary'
+                          : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-primary/50'
+                        }`}
+                    >
+                      {variation}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Grid de Botões Secundários */}
             <div className="grid grid-cols-2 gap-4">
               <a href="#tech-specs" className="flex items-center justify-center gap-2 py-3 px-4 border border-slate-200 dark:border-white/10 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm">
@@ -97,7 +119,7 @@ const ProductDetail: React.FC = () => {
             {/* Botão Principal de Orçamento */}
             <button
               onClick={() => {
-                addToCart(product);
+                addToCart(product, selectedVariation || undefined);
                 setAdded(true);
                 setTimeout(() => setAdded(false), 2000);
               }}

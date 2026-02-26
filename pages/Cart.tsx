@@ -12,7 +12,11 @@ const Cart: React.FC = () => {
         let message = "*Olá! Gostaria de solicitar um orçamento para os seguintes itens:*\n\n";
 
         cartItems.forEach((item, index) => {
-            message += `${index + 1}. *${item.name}* (${item.series})\n   - Categoria: ${item.category}\n   - Quantidade: ${item.quantity}\n\n`;
+            message += `${index + 1}. *${item.name}* (${item.series})\n   - Categoria: ${item.category}\n   - Quantidade: ${item.quantity}`;
+            if (item.selectedVariation) {
+                message += `\n   - Variação: ${item.selectedVariation}`;
+            }
+            message += '\n\n';
         });
 
         message += "*Aguardo o retorno.*";
@@ -47,12 +51,15 @@ const Cart: React.FC = () => {
                                     <div className="flex-grow text-center sm:text-left">
                                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">{item.name}</h3>
                                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{item.series}</p>
+                                        {item.selectedVariation && (
+                                            <p className="text-sm font-medium text-primary mb-2">Variação: {item.selectedVariation}</p>
+                                        )}
                                         <span className="inline-block bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-md uppercase">
                                             Qty: {item.quantity}
                                         </span>
                                     </div>
                                     <button
-                                        onClick={() => removeFromCart(item.id)}
+                                        onClick={() => removeFromCart(item.cartItemId)}
                                         className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors"
                                         title="Remover item"
                                     >
