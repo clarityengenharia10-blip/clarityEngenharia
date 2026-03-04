@@ -215,6 +215,13 @@ const Home: React.FC = () => {
                 {/* Decorative Background Elements */}
                 <div className="absolute inset-0 bg-[#001f42] transform -skew-y-3 origin-top opacity-50"></div>
 
+                {/* Decorative Person Image */}
+                <img
+                    src="/images/homem1.png"
+                    alt=""
+                    className="absolute bottom-0 right-0 h-[90%] object-contain object-bottom pointer-events-none select-none z-0 opacity-90"
+                />
+
                 <div className="max-w-[1400px] mx-auto px-4 md:px-10 relative z-10">
                     <h2 className="text-center text-3xl font-black text-white mb-16 uppercase tracking-tight">Serviços</h2>
 
@@ -248,6 +255,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
+
 
             {/* Clients Section */}
             <section className="py-20 bg-white">
