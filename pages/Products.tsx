@@ -113,8 +113,8 @@ const Products: React.FC = () => {
             {filteredProducts.length > 0 ? (
               filteredProducts.map(p => (
                 <Link to={`/product/${p.id}`} key={p.id} className="group bg-white dark:bg-slate-900 p-2 rounded-2xl border border-slate-200 dark:border-white/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden flex flex-col cursor-pointer">
-                  <div className="relative aspect-square overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 mb-6 flex-shrink-0">
-                    <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="relative aspect-square rounded-xl bg-white dark:bg-slate-800 mb-6 flex-shrink-0 flex items-center justify-center p-6 border border-slate-100 dark:border-white/5">
+                    <img src={p.image} alt={p.name} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
                     {p.badge && (
                       <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                         {p.badge}
