@@ -360,7 +360,7 @@ const Home: React.FC = () => {
                 <div className="max-w-[1400px] mx-auto px-4 md:px-10 flex flex-col md:flex-row items-center gap-12">
                     <div className="flex-1 order-2 md:order-1 relative">
                         <div className="absolute -top-4 -left-4 w-20 h-20 bg-sky-500 -z-10 rounded-tl-3xl"></div>
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2670&auto=format&fit=crop" alt="Warehouse" className="rounded-xl shadow-2xl relative z-10" />
+                        <img src="/images/837.jpg" alt="Warehouse" className="rounded-xl shadow-2xl relative z-10" />
                     </div>
                     <div className="flex-1 order-1 md:order-2 text-right">
                         <h2 className="text-3xl md:text-4xl font-black text-[#002b5c] mb-6 leading-tight">
