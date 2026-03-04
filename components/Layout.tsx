@@ -55,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b-4 border-sky-500">
+      <header className="sticky top-0 z-50 w-full bg-white shadow-md border-b-4 border-sky-500 print:hidden">
         <div className="max-w-[1400px] mx-auto px-4 md:px-10 h-24 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
@@ -205,7 +205,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Footer */}
       {/* Mapa da Empresa */}
-      <section className="w-full bg-[#002b5c]">
+      <section className="w-full bg-[#002b5c] print:hidden">
         <div className="max-w-[1400px] mx-auto px-4 md:px-10 py-12">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             <div className="lg:w-1/3 text-white">
@@ -249,7 +249,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </section>
 
-      <footer className="bg-white border-t border-slate-200 text-slate-600 pt-16 pb-8">
+      <footer className="bg-white border-t border-slate-200 text-slate-600 pt-16 pb-8 print:hidden">
 
         <div className="max-w-[1400px] mx-auto px-4 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -327,7 +327,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         href="https://wa.me/5511947483910"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25d366] hover:bg-[#128c7e] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 animate-in slide-in-from-bottom-5"
+        className="fixed bottom-6 right-6 z-50 bg-[#25d366] hover:bg-[#128c7e] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 animate-in slide-in-from-bottom-5 print:hidden"
         aria-label="Fale conosco no WhatsApp"
       >
         <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
