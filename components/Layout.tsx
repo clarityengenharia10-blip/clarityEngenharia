@@ -195,7 +195,53 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Footer */}
+      {/* Mapa da Empresa */}
+      <section className="w-full bg-[#002b5c]">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-10 py-12">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="lg:w-1/3 text-white">
+              <p className="text-sky-400 text-xs font-bold uppercase tracking-widest mb-2">Onde estamos</p>
+              <h2 className="text-2xl font-black mb-4">Visite nossa sede</h2>
+              <div className="flex items-start gap-3 text-slate-300 text-sm mb-3">
+                <span className="material-symbols-outlined text-sky-500 mt-0.5 flex-shrink-0">location_on</span>
+                <span>R. Aparecida de São Manuel, 338 - Vila Nova York, São Paulo - SP, 03480-010</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-300 text-sm mb-3">
+                <span className="material-symbols-outlined text-sky-500 flex-shrink-0">call</span>
+                <span>(11) 2781-5588</span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-300 text-sm">
+                <span className="material-symbols-outlined text-sky-500 flex-shrink-0">mail</span>
+                <a href="mailto:contato@clarity.eng.br" className="hover:text-white transition-colors">contato@clarity.eng.br</a>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=R.+Aparecida+de+S%C3%A3o+Manuel,+338+-+Vila+Nova+York,+S%C3%A3o+Paulo+-+SP"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 bg-sky-500 hover:bg-sky-600 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors"
+              >
+                <span className="material-symbols-outlined text-lg">open_in_new</span>
+                Abrir no Google Maps
+              </a>
+            </div>
+            <div className="lg:w-2/3 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10" style={{ height: '380px' }}>
+              <iframe
+                title="Localização Clarity Engenharia"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0!2d-46.5!3d-23.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d8a2f0b1c27%3A0x4c4b3e7c6f5b2a1e!2sR.%20Aparecida%20de%20S%C3%A3o%20Manuel%2C%20338%20-%20Vila%20Nova%20York%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003480-010!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr&q=R.+Aparecida+de+S%C3%A3o+Manuel,+338+-+Vila+Nova+York,+S%C3%A3o+Paulo+-+SP,+03480-010"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-white border-t border-slate-200 text-slate-600 pt-16 pb-8">
+
         <div className="max-w-[1400px] mx-auto px-4 md:px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
