@@ -212,7 +212,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
               <div className="flex items-center gap-3 text-slate-300 text-sm">
                 <span className="material-symbols-outlined text-sky-500 flex-shrink-0">mail</span>
-                <a href="mailto:contato@clarity.eng.br" className="hover:text-white transition-colors">contato@clarity.eng.br</a>
+                <a href="mailto:contato@clarityengenharia.com.br" className="hover:text-white transition-colors">contato@clarityengenharia.com.br</a>
               </div>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=R.+Aparecida+de+S%C3%A3o+Manuel,+338+-+Vila+Nova+York,+S%C3%A3o+Paulo+-+SP"
@@ -300,7 +300,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sky-500">mail</span>
-                  <a href="mailto:contato@clarity.eng.br" className="hover:text-[#002b5c]">contato@clarity.eng.br</a>
+                  <a href="mailto:contato@clarityengenharia.com.br" className="hover:text-[#002b5c]">contato@clarityengenharia.com.br</a>
                 </li>
               </ul>
             </div>

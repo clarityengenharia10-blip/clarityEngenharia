@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
               {[
                 { icon: 'location_on', title: 'Sede Administrativa', content: 'R. Aparecida de São Manuel, 338 - Vila Nova York\nSão Paulo - SP, 03480-010' },
                 { icon: 'call', title: 'Telefones Diretos', content: '(11) 2781-5588' },
-                { icon: 'mail', title: 'Nossos E-mails', content: 'contato@clarity.eng.br\nsuporte@clarity.eng.br' }
+                { icon: 'mail', title: 'Nossos E-mails', content: 'contato@clarityengenharia.com.br\nsuporte@clarityengenharia.com.br' }
               ].map(item => (
                 <div key={item.title} className="flex items-start gap-4">
                   <div className="bg-[#002b5c] rounded-xl p-3 text-white flex items-center justify-center shadow-lg shadow-sky-900/20 flex-shrink-0">

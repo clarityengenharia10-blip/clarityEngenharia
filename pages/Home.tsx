@@ -24,13 +24,6 @@ const Home: React.FC = () => {
             subtitle: "Nobreaks, Baterias e infraestrutura completa para missão crítica.",
             cta: "Ver Produtos",
             link: "/products"
-        },
-        {
-            image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop", // Engineering/Consulting
-            title: "Engenharia e Consultoria Especializada",
-            subtitle: "Projetos elétricos e certificações com quem entende do assunto.",
-            cta: "Nossos Serviços",
-            link: "/services"
         }
     ];
 

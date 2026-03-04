@@ -100,7 +100,11 @@ const ProductDetail: React.FC = () => {
                   {product.variations.map((variation) => (
                     <button
                       key={variation}
-                      onClick={() => setSelectedVariation(variation)}
+                      onClick={() => {
+                        setSelectedVariation(variation);
+                        const idx = galleryEntries.findIndex(e => e.label === variation);
+                        if (idx !== -1) setActiveThumb(idx);
+                      }}
                       className={`px-4 py-2 rounded text-sm font-medium transition-colors border ${selectedVariation === variation
                         ? 'bg-primary text-white border-primary'
                         : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-primary/50'
