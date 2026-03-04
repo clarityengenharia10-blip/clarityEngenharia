@@ -8,6 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesModalOpen, setIsServicesModalOpen] = useState(false);
   const { getCartTotal } = useCart();
   const cartTotal = getCartTotal();
   const location = useLocation();
@@ -15,6 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Fecha o menu ao mudar de rota
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsServicesModalOpen(false);
   }, [location.pathname]);
 
   const navLinks = [
@@ -89,32 +91,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
-              {/* Serviços Dropdown */}
-              <div className="group relative">
-                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
-                  Serviços <span className="material-symbols-outlined text-lg">expand_more</span>
-                </button>
-                <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <ul className="flex flex-col py-2">
-                    {[
-                      { name: 'Manutenção Preventiva de Nobreaks', link: '/services/manutencao-preventiva' },
-                      { name: 'Manutenção Corretiva de Nobreaks', link: '/services/manutencao-corretiva' },
-                      { name: 'Locação de Nobreak', link: '/services/locacao-nobreak' },
-                      { name: 'Contrato de Manutenção de Nobreak', link: '/services/contrato-manutencao' },
-                      { name: 'Ativação (Startup) de Nobreaks', link: '/services/ativacao-startup' },
-                      { name: 'Calibração e Parametrização de Nobreaks', link: '/services/calibracao-parametrizacao' },
-                      { name: 'Troca de Baterias de Nobreak', link: '/services/troca-baterias' },
-                      { name: 'Consultoria Técnica Especializada em Nobreak', link: '/services/consultoria-tecnica' }
-                    ].map((service) => (
-                      <li key={service.name}>
-                        <Link to={service.link} className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002b5c] transition-colors border-l-4 border-transparent hover:border-sky-400">
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              {/* Serviços — abre modal ao clicar */}
+              <button
+                onClick={() => setIsServicesModalOpen(true)}
+                className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4"
+              >
+                Serviços <span className="material-symbols-outlined text-lg">expand_more</span>
+              </button>
 
               <Link to="/cases" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Cases</Link>
               <Link to="/blog" className="text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors">Blog</Link>
@@ -297,7 +280,75 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <path d="M12.04 2C6.5 2 2 6.5 2 12.04C2 13.81 2.46 15.55 3.36 17.1L2.34 21.08C2.3 21.24 2.34 21.41 2.44 21.54C2.55 21.67 2.7 21.74 2.87 21.74C2.91 21.74 2.94 21.74 2.98 21.73L7.09 20.67C8.6 21.53 10.3 22 12.04 22C17.58 22 22.08 17.5 22.08 11.96C22.08 6.42 17.58 2 12.04 2ZM12.04 20.19C10.51 20.19 9.04 19.78 7.76 19L7.38 18.78L4.54 19.51L5.3 16.75L5.06 16.36C4.24 15.06 3.81 13.56 3.81 12.04C3.81 7.5 7.5 3.81 12.04 3.81C16.58 3.81 20.27 7.5 20.27 12.04C20.27 16.58 16.58 20.19 12.04 20.19ZM16.49 14.59C16.29 14.53 16.11 14.47 15.96 14.41C15.89 14.38 15.7 14.32 15.54 14.24C15.11 14.04 14.73 13.75 14.4 13.42C14.07 13.09 13.78 12.71 13.58 12.28C13.5 12.12 13.44 11.93 13.41 11.86C13.35 11.72 13.29 11.53 13.23 11.33C12.98 10.61 12.96 9.87 13.16 9.17C13.29 8.68 13.53 8.23 13.88 7.84C14.18 7.5 14.51 7.27 14.95 7.23C15.02 7.22 15.09 7.22 15.15 7.22C15.39 7.22 15.62 7.31 15.81 7.48C16.23 7.83 16.53 8.3 16.66 8.83C16.71 9.02 16.73 9.22 16.7 9.42C16.67 9.77 16.55 10.12 16.34 10.42C16.24 10.57 16.12 10.71 15.99 10.84C15.98 10.85 15.97 10.87 15.96 10.88C15.89 10.95 15.83 11 15.78 11.02C15.61 11.1 15.42 11.08 15.26 10.96C15.15 10.87 15.07 10.77 15.01 10.66C15.01 10.66 15.01 10.65 15.01 10.65C14.96 10.56 14.93 10.46 14.91 10.36C14.91 10.3 14.9 10.25 14.9 10.19C14.9 9.94 14.95 9.7 15.06 9.47C15.09 9.42 15.11 9.37 15.12 9.32C15.14 9.27 15.17 9.23 15.19 9.18C15.06 9.35 14.97 9.55 14.91 9.76C14.81 10.09 14.82 10.45 14.94 10.77C14.97 10.85 15.01 10.92 15.05 10.99C15.16 11.19 15.29 11.37 15.45 11.53C15.6 11.68 15.78 11.82 15.98 11.92C16.05 11.96 16.13 12 16.2 12.03C16.53 12.15 16.89 12.16 17.22 12.06C17.43 12 17.62 11.91 17.79 11.78C17.84 11.73 17.89 11.67 17.96 11.6C17.97 11.59 17.98 11.57 17.99 11.56C18.12 11.41 18.25 11.2 18.33 10.98C18.52 10.48 18.53 9.91 18.35 9.42C18.16 8.91 17.8 8.48 17.34 8.21C17.15 8.1 16.94 8.02 16.72 7.98C16.59 7.96 16.47 7.96 16.34 7.96C15.79 7.96 15.27 8.16 14.87 8.5C14.46 8.85 14.21 9.35 14.16 9.92C14.13 10.23 14.17 10.54 14.28 10.83C14.39 11.14 14.56 11.43 14.78 11.67C15.04 11.96 15.38 12.17 15.75 12.28C16.05 12.37 16.36 12.39 16.65 12.33C16.9 12.28 17.13 12.18 17.32 12.04C17.39 12 17.43 11.95 17.48 11.91C17.54 11.87 17.57 11.88 17.58 11.89C17.71 11.95 17.83 12.03 17.93 12.13C18.27 12.44 18.49 12.87 18.54 13.34C18.57 13.62 18.53 13.9 18.43 14.16C18.33 14.44 18.17 14.68 17.96 14.89C17.56 15.28 17.03 15.5 16.49 14.59Z" />
         </svg>
       </a>
+
+      {/* Modal de Serviços */}
+      {isServicesModalOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+          onClick={() => setIsServicesModalOpen(false)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-[#001f42]/90 backdrop-blur-sm" />
+
+          {/* Modal */}
+          <div
+            className="relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-[#002b5c] px-8 py-6 flex items-center justify-between">
+              <div>
+                <p className="text-sky-400 text-xs font-bold uppercase tracking-widest mb-1">Nossos Serviços</p>
+                <h2 className="text-white text-2xl font-black">Qual serviço você precisa?</h2>
+              </div>
+              <button
+                onClick={() => setIsServicesModalOpen(false)}
+                className="text-white/60 hover:text-white transition-colors"
+              >
+                <span className="material-symbols-outlined text-3xl">close</span>
+              </button>
+            </div>
+
+            {/* Services Grid */}
+            <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                { name: 'Manutenção Preventiva de Nobreaks', link: '/services/manutencao-preventiva', icon: 'shield_check' },
+                { name: 'Manutenção Corretiva de Nobreaks', link: '/services/manutencao-corretiva', icon: 'build' },
+                { name: 'Locação de Nobreak', link: '/services/locacao-nobreak', icon: 'inventory_2' },
+                { name: 'Contrato de Manutenção de Nobreak', link: '/services/contrato-manutencao', icon: 'contract' },
+                { name: 'Ativação (Startup) de Nobreaks', link: '/services/ativacao-startup', icon: 'power_settings_new' },
+                { name: 'Calibração e Parametrização de Nobreaks', link: '/services/calibracao-parametrizacao', icon: 'tune' },
+                { name: 'Troca de Baterias de Nobreak', link: '/services/troca-baterias', icon: 'battery_charging_full' },
+                { name: 'Consultoria Técnica Especializada em Nobreak', link: '/services/consultoria-tecnica', icon: 'engineering' },
+              ].map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.link}
+                  className="flex items-center gap-4 p-4 rounded-xl border border-slate-100 hover:border-sky-500 hover:bg-sky-50 transition-all duration-200 group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[#002b5c]/10 group-hover:bg-[#002b5c] flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                    <span className="material-symbols-outlined text-[#002b5c] group-hover:text-white text-xl transition-colors duration-200">{service.icon}</span>
+                  </div>
+                  <span className="text-slate-700 font-semibold text-sm group-hover:text-[#002b5c] leading-tight">{service.name}</span>
+                  <span className="material-symbols-outlined text-slate-300 group-hover:text-sky-500 ml-auto text-lg transition-colors">chevron_right</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="px-6 pb-6">
+              <Link
+                to="/services"
+                className="block w-full text-center bg-[#002b5c] hover:bg-sky-600 text-white font-bold py-3 rounded-xl transition-colors"
+              >
+                Ver todos os serviços
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
+
   );
 };
 

@@ -12,6 +12,13 @@ const ProductDetail: React.FC = () => {
   const [added, setAdded] = useState(false);
   const [selectedVariation, setSelectedVariation] = useState<string>(product?.variations?.[0] || '');
 
+  // Monta lista real de thumbnails a partir das variationImages
+  const galleryEntries: { label: string; src: string }[] = product
+    ? product.variationImages && Object.keys(product.variationImages).length > 0
+      ? Object.entries(product.variationImages).map(([label, src]) => ({ label, src }))
+      : [{ label: '', src: product.image }]
+    : [];
+
   if (!product) {
     return (
       <div className="max-w-[1200px] mx-auto px-4 py-20 text-center">
@@ -21,12 +28,7 @@ const ProductDetail: React.FC = () => {
     );
   }
 
-  const currentImage = selectedVariation && product.variationImages?.[selectedVariation]
-    ? product.variationImages[selectedVariation]
-    : product.image;
-
-  // Mock thumbnails based on the main image
-  const thumbnails = [currentImage, currentImage, currentImage];
+  const currentImage = galleryEntries[activeThumb]?.src || product.image;
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen">
@@ -37,7 +39,7 @@ const ProductDetail: React.FC = () => {
           <div className="w-full lg:w-2/3 flex flex-col md:flex-row gap-4">
             <div className="flex-1 bg-white border border-slate-200 rounded-lg p-4 flex items-center justify-center min-h-[400px] md:min-h-[500px]">
               <img
-                src={thumbnails[activeThumb]}
+                src={currentImage}
                 alt={product.name}
                 className="max-w-full max-h-full object-contain"
               />
@@ -51,15 +53,21 @@ const ProductDetail: React.FC = () => {
                 </button>
               </div>
 
-              <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-visible no-scrollbar">
-                {thumbnails.map((img, idx) => (
+              <div className="flex md:flex-col gap-2 overflow-x-auto md:overflow-y-auto md:max-h-[500px] no-scrollbar">
+                {galleryEntries.map((entry, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setActiveThumb(idx)}
+                    onClick={() => {
+                      setActiveThumb(idx);
+                      if (entry.label && product.variations?.includes(entry.label)) {
+                        setSelectedVariation(entry.label);
+                      }
+                    }}
                     className={`size-20 md:size-24 border-2 rounded-lg p-1 flex-shrink-0 bg-white flex items-center justify-center transition-all ${activeThumb === idx ? 'border-primary' : 'border-slate-200 hover:border-slate-300'
                       }`}
+                    title={entry.label}
                   >
-                    <img src={img} className="max-w-full max-h-full object-contain" />
+                    <img src={entry.src} className="max-w-full max-h-full object-contain" alt={entry.label} />
                   </button>
                 ))}
               </div>

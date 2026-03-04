@@ -257,19 +257,7 @@ const Home: React.FC = () => {
             </section>
 
 
-            {/* Clients Section */}
-            <section className="py-20 bg-white">
-                <div className="max-w-[1400px] mx-auto px-4 md:px-10 text-center">
-                    <h2 className="text-3xl font-black text-slate-800 mb-16 uppercase tracking-tight">Clientes</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-8 gap-y-16 items-center">
-                        {CLIENTS.map((client, idx) => (
-                            <div key={idx} className="flex justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
-                                <img src={client.logo} alt={client.name} className="max-h-12 max-w-[120px] object-contain" />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* Testimonials Section */}
             <section className="py-20 bg-[#002b5c] text-white">
@@ -310,50 +298,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Saiba Mais / Blog Section */}
-            <section className="py-20 bg-slate-50">
-                <div className="max-w-[1400px] mx-auto px-4 md:px-10">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-black text-[#002b5c] uppercase tracking-tight mb-2">Saiba Mais</h2>
-                        <p className="text-slate-500">Confira nossas últimas postagens</p>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {BLOG_POSTS.slice(0, 3).map((post) => (
-                            <div key={post.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-slate-100 group flex flex-col h-full">
-                                <Link to={`/blog/${post.id}`} className="block h-48 overflow-hidden">
-                                    <img
-                                        src={post.image}
-                                        alt={post.title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                    />
-                                </Link>
-                                <div className="p-6 flex flex-col flex-1">
-                                    <span className="text-xs font-bold text-sky-500 uppercase mb-2 block">{post.category}</span>
-                                    <Link to={`/blog/${post.id}`} className="block mb-3">
-                                        <h3 className="font-bold text-lg text-slate-800 group-hover:text-[#002b5c] transition-colors line-clamp-2">
-                                            {post.title}
-                                        </h3>
-                                    </Link>
-                                    <p className="text-slate-500 text-sm mb-4 line-clamp-3">
-                                        {post.excerpt}
-                                    </p>
-                                    <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-                                        <span className="text-xs text-slate-400">{post.date}</span>
-                                        <Link to={`/blog/${post.id}`} className="text-[#002b5c] font-bold text-sm hover:underline">Ler mais</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <Link to="/blog" className="bg-[#002b5c] text-white px-8 py-3 rounded font-bold hover:bg-[#001f42] transition-colors shadow">
-                            Ver todas as postagens
-                        </Link>
-                    </div>
-                </div>
-            </section>
 
             {/* Final CTA / Warehouse Image */}
             <section className="py-20 bg-white">
