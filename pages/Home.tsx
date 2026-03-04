@@ -12,7 +12,7 @@ const Home: React.FC = () => {
 
     const heroSlides = [
         {
-            image: "https://images.unsplash.com/photo-1581093452413-48869b4d8d17?q=80&w=2670&auto=format&fit=crop", // Industrial/Maintenance
+            image: "/images/banner-home.jpg",
             title: "Não deixe sua operação parar",
             subtitle: "Manutenção Preventiva e Corretiva especializada para garantir a continuidade do seu negócio.",
             cta: "Fale Conosco",
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
                         {/* Smart UPS Card */}
                         <Link to="/products?category=smart_power_supply" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.id === 'ups5000-h')?.image || IMAGES.hero} alt="UPS Inteligente" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'ups5000-a')?.image || IMAGES.hero} alt="UPS Inteligente" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
                                 <span className="font-bold text-lg">UPS Inteligente</span>
@@ -140,7 +140,7 @@ const Home: React.FC = () => {
                         {/* Modular DC Card */}
                         <Link to="/products?category=smart_modular_dc" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.id === 'fusionmodule2000')?.image || IMAGES.hero} alt="Data Center Modular" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'smart-modular-dc')?.image || IMAGES.hero} alt="Data Center Modular" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
                                 <span className="font-bold text-lg">Data Center Modular</span>
@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                         {/* Cooling Card */}
                         <Link to="/products?category=smart_cooling" className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100">
                             <div className="h-48 p-6 flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors">
-                                <img src={PRODUCTS.find(p => p.id === 'netcol5000')?.image || IMAGES.hero} alt="Climatização" className="h-full object-contain mix-blend-multiply" />
+                                <img src={PRODUCTS.find(p => p.id === 'netcol5000-a')?.image || IMAGES.hero} alt="Climatização" className="h-full object-contain mix-blend-multiply" />
                             </div>
                             <div className="bg-[#002b5c] p-4 flex justify-between items-center text-white">
                                 <span className="font-bold text-lg">Climatização</span>
