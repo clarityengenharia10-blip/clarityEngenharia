@@ -61,9 +61,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Produtos Dropdown */}
               <div className="group relative">
-                <button className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
+                <Link to="/products" className="flex items-center gap-1 text-sm font-bold uppercase text-slate-600 hover:text-[#002b5c] transition-colors py-4">
                   Produtos <span className="material-symbols-outlined text-lg">expand_more</span>
-                </button>
+                </Link>
                 <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-b-lg border-t-4 border-[#002b5c] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <ul className="flex flex-col py-2">
                     {[
