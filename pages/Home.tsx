@@ -19,7 +19,7 @@ const Home: React.FC = () => {
             link: "/contact"
         },
         {
-            image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2574&auto=format&fit=crop", // Server/Tech
+            image: "/images/banner-home2.jpg",
             title: "Soluções de Energia de Alta Performance",
             subtitle: "Nobreaks, Baterias e infraestrutura completa para missão crítica.",
             cta: "Ver Produtos",
